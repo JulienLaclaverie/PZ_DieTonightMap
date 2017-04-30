@@ -667,6 +667,7 @@
   <object name="lot" type="../buildings/town/Workshop.tbx" x="8896" y="4608" width="1344" height="512"/>
   <object name="lot" type="../buildings/town/Housing3.tbx" x="8192" y="4608" width="640" height="320"/>
   <object name="lot" type="../buildings/town/CampingSite1.tbx" x="8192" y="3392" width="704" height="352"/>
+  <object name="lot" type="../buildings/town/CampingSite2.tbx" x="10048" y="4672" width="704" height="416"/>
  </objectgroup>
  <bmp-settings version="1">
   <rules-file file="../../../../PZMapTools/WorldEd/Rules.txt"/>
