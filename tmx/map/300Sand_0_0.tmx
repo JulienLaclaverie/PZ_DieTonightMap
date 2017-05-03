@@ -681,6 +681,8 @@
   <object name="lot" type="../buildings/town/WallSouth.tbx" x="7424" y="5152" width="3584" height="160"/>
   <object name="lot" type="../buildings/town/WallEast.tbx" x="10688" y="2944" width="384" height="2208"/>
   <object name="lot" type="../buildings/town/WallEastPlus.tbx" x="10624" y="2624" width="448" height="320"/>
+  <object name="lot" type="../buildings/town/WallNorth.tbx" x="7360" y="2592" width="3264" height="192"/>
+  <object name="lot" type="../buildings/town/WallWest.tbx" x="7360" y="2784" width="384" height="2368"/>
  </objectgroup>
  <bmp-settings version="1">
   <rules-file file="../../../../PZMapTools/WorldEd/Rules.txt"/>
