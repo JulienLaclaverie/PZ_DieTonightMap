@@ -149,16 +149,67 @@
   <tile enum="North" tile="fixtures_windows_01_001"/>
  </tile_entry>
  <user_tiles>
+  <tile tile="appliances_television_01_011"/>
+  <tile tile="camping_01_002"/>
+  <tile tile="camping_01_003"/>
+  <tile tile="camping_01_006"/>
+  <tile tile="carpentry_01_003"/>
+  <tile tile="carpentry_01_012"/>
+  <tile tile="carpentry_01_043"/>
+  <tile tile="carpentry_01_044"/>
+  <tile tile="carpentry_01_049"/>
+  <tile tile="carpentry_01_061"/>
   <tile tile="carpentry_02_040"/>
   <tile tile="carpentry_02_044"/>
   <tile tile="carpentry_02_100"/>
   <tile tile="constructedobjects_01_049"/>
+  <tile tile="constructedobjects_01_053"/>
   <tile tile="constructedobjects_01_059"/>
   <tile tile="constructedobjects_01_064"/>
   <tile tile="constructedobjects_01_065"/>
   <tile tile="construction_01_016"/>
+  <tile tile="d_floorleaves_1_003"/>
+  <tile tile="d_floorleaves_1_004"/>
+  <tile tile="d_generic_1_001"/>
+  <tile tile="d_generic_1_010"/>
+  <tile tile="d_generic_1_013"/>
+  <tile tile="d_generic_1_015"/>
+  <tile tile="d_generic_1_022"/>
   <tile tile="furniture_bedding_01_058"/>
   <tile tile="furniture_bedding_01_059"/>
+  <tile tile="furniture_seating_indoor_01_045"/>
+  <tile tile="furniture_shelving_01_026"/>
+  <tile tile="furniture_shelving_01_027"/>
+  <tile tile="furniture_storage_02_016"/>
+  <tile tile="furniture_storage_02_019"/>
+  <tile tile="furniture_storage_02_029"/>
+  <tile tile="industry_01_023"/>
+  <tile tile="overlay_blood_floor_01_005"/>
+  <tile tile="overlay_blood_floor_01_011"/>
+  <tile tile="overlay_grime_wall_01_020"/>
+  <tile tile="overlay_grime_wall_01_021"/>
+  <tile tile="trash_01_001"/>
+  <tile tile="trash_01_002"/>
+  <tile tile="trash_01_003"/>
+  <tile tile="trash_01_005"/>
+  <tile tile="trash_01_008"/>
+  <tile tile="trash_01_009"/>
+  <tile tile="trash_01_010"/>
+  <tile tile="trash_01_011"/>
+  <tile tile="trash_01_012"/>
+  <tile tile="trash_01_017"/>
+  <tile tile="trash_01_029"/>
+  <tile tile="trash_01_034"/>
+  <tile tile="trash_01_037"/>
+  <tile tile="trash_01_039"/>
+  <tile tile="trash_01_040"/>
+  <tile tile="trash_01_044"/>
+  <tile tile="trash_01_048"/>
+  <tile tile="trash_walls_01_003"/>
+  <tile tile="trash_walls_01_004"/>
+  <tile tile="trash_walls_01_007"/>
+  <tile tile="trash_walls_01_009"/>
+  <tile tile="trashcontainers_01_024"/>
   <tile tile="walls_exterior_wooden_01_025"/>
   <tile tile="walls_exterior_wooden_01_040"/>
   <tile tile="walls_exterior_wooden_01_041"/>
@@ -186,12 +237,57 @@
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0
 </rooms>
+  <tiles layer="Doors">
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,9,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0
+</tiles>
+  <tiles layer="FloorOverlay">
+0,0,0,0,0,0,0,0,0,
+0,52,55,36,54,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,50,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,37,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0
+</tiles>
   <tiles layer="Furniture">
+0,0,0,0,5,0,0,0,0,
+0,27,28,0,15,29,35,0,0,
+0,51,42,46,0,49,48,56,0,
+0,45,0,0,44,1,33,0,0,
+0,6,8,0,0,0,0,0,0,
+0,32,10,7,0,30,31,0,0,
+0,0,48,0,0,43,0,0,0,
+0,26,0,0,0,0,0,0,0,
+0,2,3,41,25,40,21,0,0,
+0,0,20,0,0,4,0,0,0,
+0,47,53,24,0,22,0,0,0,
+0,44,2,3,0,0,23,0,0,
+0,0,0,0,0,0,0,0,0
+</tiles>
+  <tiles layer="Furniture2">
 0,0,0,0,0,0,0,0,0,
-0,9,10,0,0,0,0,0,0,
+0,0,0,34,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,
+0,61,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
@@ -201,14 +297,44 @@
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0
 </tiles>
+  <tiles layer="WallFurniture">
+0,0,0,0,0,0,0,0,0,
+0,0,59,0,0,57,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,58,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,60,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0
+</tiles>
+  <tiles layer="WallOverlay">
+0,0,0,0,0,0,0,0,0,
+0,0,0,39,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,38,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,39,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0
+</tiles>
   <tiles layer="Walls">
 0,0,0,0,0,0,0,0,0,
-0,17,13,11,18,13,16,3,0,
-0,15,0,0,0,0,0,1,0,
-0,12,0,0,0,0,0,2,0,
-0,19,0,0,0,0,0,1,0,
-0,6,0,0,0,0,0,15,0,
-0,7,8,4,5,13,16,14,0,
+0,68,64,62,69,64,67,13,0,
+0,66,0,0,0,0,0,11,0,
+0,63,0,0,0,0,0,12,0,
+0,70,0,0,0,0,0,11,0,
+0,17,0,0,0,0,0,66,0,
+0,18,19,14,16,64,67,65,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
