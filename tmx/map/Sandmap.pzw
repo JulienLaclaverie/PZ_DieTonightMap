@@ -23,9 +23,73 @@
   <worldOrigin origin="0,0"/>
  </GenerateLots>
  <LuaSettings>
-  <spawnPointsFile path=""/>
-  <worldObjectsFile path=""/>
+  <spawnPointsFile path="spawnpoint.lua"/>
+  <worldObjectsFile path="objects.lua"/>
  </LuaSettings>
  <bmp path="300Sand.png" x="0" y="0" width="1" height="1"/>
- <cell x="0" y="0" map="300Sand_0_0.tmx"/>
+ <propertyenum name="Professions" choices="all,unemployed,policeofficer,constructionworker,securityguard,parkranger,fireofficer" multi="true"/>
+ <propertydef name="Professions" default="all" enum="Professions">
+  <description>Comma-separated list of professions that may spawn here.  Use &quot;all&quot; to allow any profession to spawn here.</description>
+ </propertydef>
+ <template name="SpawnPoint">
+  <description>This template holds the default set of properties for all spawn points in the world.</description>
+  <property name="Professions" value="all"/>
+ </template>
+ <objecttype name="SpawnPoint"/>
+ <cell x="0" y="0" map="300Sand_0_0.tmx">
+  <object type="SpawnPoint" x="142" y="111" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="131" y="101" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="122" y="101" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="128" y="91" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="130" y="109" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="135" y="109" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="122" y="122" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="121" y="135" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="125" y="141" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="124" y="131" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="133" y="146" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="133" y="156" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="122" y="151" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="161" y="154" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="162" y="150" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="163" y="139" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="161" y="129" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="140" y="91" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+ </cell>
 </world>

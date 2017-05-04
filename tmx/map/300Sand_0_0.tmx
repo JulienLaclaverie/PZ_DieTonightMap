@@ -1,622 +1,622 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="levelisometric" width="300" height="300" tilewidth="64" tileheight="32">
  <tileset firstgid="1" name="advertising_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/advertising_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/advertising_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="129" name="advertising_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/advertising_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/advertising_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="193" name="appliances_com_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/appliances_com_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/appliances_com_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="273" name="appliances_cooking_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/appliances_cooking_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/appliances_cooking_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="401" name="appliances_laundry_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/appliances_laundry_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/appliances_laundry_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="465" name="appliances_misc_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/appliances_misc_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/appliances_misc_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="529" name="appliances_radio_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/appliances_radio_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/appliances_radio_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="593" name="appliances_refrigeration_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/appliances_refrigeration_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/appliances_refrigeration_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="657" name="appliances_television_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/appliances_television_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/appliances_television_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="785" name="blends_grassoverlays_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/blends_grassoverlays_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/blends_grassoverlays_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="865" name="blends_natural_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/blends_natural_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/blends_natural_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="945" name="blends_natural_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/blends_natural_02.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/blends_natural_02.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="1025" name="blends_street_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/blends_street_01.png" width="512" height="2560"/>
+  <image source="../../../../PZMapTools/Tiles/blends_street_01.png" width="512" height="2560"/>
  </tileset>
  <tileset firstgid="1185" name="blends_streetoverlays_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/blends_streetoverlays_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/blends_streetoverlays_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="1265" name="blueprints_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/blueprints_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/blueprints_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="1329" name="books&amp;misc_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/books&amp;misc_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/books&amp;misc_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="1457" name="camping_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/camping_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/camping_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="1521" name="carpentry_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/carpentry_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/carpentry_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="1585" name="carpentry_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/carpentry_02.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/carpentry_02.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="1713" name="clothing_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/clothing_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/clothing_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="1777" name="constructedobjects_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/constructedobjects_01.png" width="512" height="1536"/>
+  <image source="../../../../PZMapTools/Tiles/constructedobjects_01.png" width="512" height="1536"/>
  </tileset>
  <tileset firstgid="1873" name="constructedobjects_signs_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/constructedobjects_signs_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/constructedobjects_signs_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="1937" name="construction_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/construction_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/construction_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="2001" name="crafted_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/crafted_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/crafted_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="2065" name="d_floorleaves_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/d_floorleaves_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/d_floorleaves_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2097" name="d_generic_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/d_generic_1.png" width="1024" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/d_generic_1.png" width="1024" height="1280"/>
  </tileset>
  <tileset firstgid="2257" name="d_plants_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/d_plants_1.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/d_plants_1.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="2321" name="d_streetcracks_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/d_streetcracks_1.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/d_streetcracks_1.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="2449" name="d_trash_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/d_trash_1.png" width="640" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/d_trash_1.png" width="640" height="1024"/>
  </tileset>
  <tileset firstgid="2529" name="d_wallcracks_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/d_wallcracks_1.png" width="576" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/d_wallcracks_1.png" width="576" height="1024"/>
  </tileset>
  <tileset firstgid="2601" name="e_americanholly_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_americanholly_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_americanholly_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2633" name="e_americanlinden_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_americanlinden_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_americanlinden_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2665" name="e_canadianhemlock_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_canadianhemlock_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_canadianhemlock_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2697" name="e_carolinasilverbell_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_carolinasilverbell_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_carolinasilverbell_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2729" name="e_cockspurhawthorn_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_cockspurhawthorn_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_cockspurhawthorn_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2761" name="e_dogwood_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_dogwood_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_dogwood_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2793" name="e_easternredbud_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_easternredbud_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_easternredbud_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2825" name="e_exterior_snow_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_exterior_snow_1.png" width="128" height="128"/>
+  <image source="../../../../PZMapTools/Tiles/e_exterior_snow_1.png" width="128" height="128"/>
  </tileset>
  <tileset firstgid="2827" name="e_newgrass_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_newgrass_1.png" width="384" height="1920"/>
+  <image source="../../../../PZMapTools/Tiles/e_newgrass_1.png" width="384" height="1920"/>
  </tileset>
  <tileset firstgid="2917" name="e_newgrassbase_snow_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_newgrassbase_snow_1.png" width="512" height="512"/>
+  <image source="../../../../PZMapTools/Tiles/e_newgrassbase_snow_1.png" width="512" height="512"/>
  </tileset>
  <tileset firstgid="2949" name="e_redmaple_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_redmaple_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_redmaple_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="2981" name="e_riverbirch_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_riverbirch_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_riverbirch_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="3013" name="e_roof_snow_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_roof_snow_1.png" width="512" height="1792"/>
+  <image source="../../../../PZMapTools/Tiles/e_roof_snow_1.png" width="512" height="1792"/>
  </tileset>
  <tileset firstgid="3125" name="e_virginiapine_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_virginiapine_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_virginiapine_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="3157" name="e_yellowwood_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/e_yellowwood_1.png" width="256" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/e_yellowwood_1.png" width="256" height="1024"/>
  </tileset>
  <tileset firstgid="3189" name="f_bushes_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/f_bushes_1.png" width="1024" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/f_bushes_1.png" width="1024" height="1024"/>
  </tileset>
  <tileset firstgid="3317" name="f_bushes_2" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/f_bushes_2.png" width="640" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/f_bushes_2.png" width="640" height="1024"/>
  </tileset>
  <tileset firstgid="3397" name="f_flowerbed_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/f_flowerbed_1.png" width="768" height="512"/>
+  <image source="../../../../PZMapTools/Tiles/f_flowerbed_1.png" width="768" height="512"/>
  </tileset>
  <tileset firstgid="3445" name="f_wallvines_1" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/f_wallvines_1.png" width="384" height="1536"/>
+  <image source="../../../../PZMapTools/Tiles/f_wallvines_1.png" width="384" height="1536"/>
  </tileset>
  <tileset firstgid="3517" name="fencing_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fencing_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/fencing_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="3645" name="fencing_burnt_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fencing_burnt_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/fencing_burnt_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="3709" name="fixtures_bathroom_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_bathroom_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_bathroom_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="3789" name="fixtures_bathroom_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_bathroom_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_bathroom_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="3853" name="fixtures_counters_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_counters_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_counters_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="3981" name="fixtures_doors_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_doors_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_doors_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="4109" name="fixtures_doors_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_doors_02.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_doors_02.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="4237" name="fixtures_doors_fences_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_doors_fences_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_doors_fences_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="4301" name="fixtures_doors_frames_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_doors_frames_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_doors_frames_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="4365" name="fixtures_escalators_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_escalators_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_escalators_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="4429" name="fixtures_fireplaces_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_fireplaces_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_fireplaces_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="4509" name="fixtures_railings_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_railings_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_railings_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="4637" name="fixtures_sinks_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_sinks_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_sinks_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="4701" name="fixtures_stairs_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_stairs_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_stairs_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="4829" name="fixtures_windows_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_windows_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_windows_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="4909" name="fixtures_windows_curtains_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_windows_curtains_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_windows_curtains_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="5037" name="fixtures_windows_curtains_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_windows_curtains_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_windows_curtains_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5101" name="fixtures_windows_detailing_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/fixtures_windows_detailing_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/fixtures_windows_detailing_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5165" name="floors_burnt_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/floors_burnt_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/floors_burnt_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5229" name="floors_exterior_natural_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/floors_exterior_natural_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/floors_exterior_natural_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5293" name="floors_exterior_street_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/floors_exterior_street_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/floors_exterior_street_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5357" name="floors_exterior_tilesandstone_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/floors_exterior_tilesandstone_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/floors_exterior_tilesandstone_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5421" name="floors_interior_carpet_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/floors_interior_carpet_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/floors_interior_carpet_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5485" name="floors_interior_tilesandwood_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/floors_interior_tilesandwood_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/floors_interior_tilesandwood_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5549" name="floors_rugs_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/floors_rugs_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/floors_rugs_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="5677" name="food_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/food_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/food_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="5805" name="foraging_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/foraging_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/foraging_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="5869" name="furniture_bedding_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_bedding_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_bedding_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="5997" name="furniture_seating_indoor_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_seating_indoor_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_seating_indoor_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6061" name="furniture_seating_indoor_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_seating_indoor_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_seating_indoor_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6125" name="furniture_seating_indoor_03" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_seating_indoor_03.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_seating_indoor_03.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6189" name="furniture_seating_outdoor_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_seating_outdoor_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_seating_outdoor_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6253" name="furniture_shelving_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_shelving_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_shelving_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6317" name="furniture_storage_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_storage_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_storage_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6381" name="furniture_storage_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_storage_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_storage_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6445" name="furniture_tables_high_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_tables_high_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_tables_high_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6509" name="furniture_tables_low_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/furniture_tables_low_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/furniture_tables_low_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6573" name="industry_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/industry_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6637" name="industry_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_02.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/industry_02.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="6765" name="industry_bunker_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_bunker_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/industry_bunker_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="6845" name="industry_railroad_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_railroad_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/industry_railroad_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6909" name="industry_railroad_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_railroad_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/industry_railroad_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="6973" name="industry_railroad_03" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_railroad_03.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/industry_railroad_03.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7037" name="industry_railroad_04" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_railroad_04.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/industry_railroad_04.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7101" name="industry_railroad_05" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_railroad_05.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/industry_railroad_05.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7165" name="industry_trucks_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_trucks_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/industry_trucks_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="7245" name="industry_trucks_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/industry_trucks_02.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/industry_trucks_02.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="7325" name="lighting_indoor_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/lighting_indoor_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/lighting_indoor_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7389" name="lighting_outdoor_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/lighting_outdoor_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/lighting_outdoor_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7453" name="location_barn_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_barn_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_barn_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7517" name="location_business_bank_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_business_bank_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_business_bank_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7581" name="location_business_machinery" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_business_machinery.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_business_machinery.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7645" name="location_business_machinery_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_business_machinery_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_business_machinery_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7709" name="location_business_office_generic_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_business_office_generic_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_business_office_generic_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="7773" name="location_community_cemetary_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_community_cemetary_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/location_community_cemetary_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="7853" name="location_community_church_small_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_community_church_small_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/location_community_church_small_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="7981" name="location_community_church_small_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_community_church_small_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_community_church_small_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="8045" name="location_community_medical_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_community_medical_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/location_community_medical_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="8173" name="location_community_park_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_community_park_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/location_community_park_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="8253" name="location_community_police_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_community_police_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_community_police_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="8317" name="location_community_school_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_community_school_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_community_school_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="8381" name="location_entertainment_theatre_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_entertainment_theatre_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/location_entertainment_theatre_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="8509" name="location_farm_accesories_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_farm_accesories_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/location_farm_accesories_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="8589" name="location_hospitality_sunstarmotel_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_hospitality_sunstarmotel_01.png" width="512" height="1152"/>
+  <image source="../../../../PZMapTools/Tiles/location_hospitality_sunstarmotel_01.png" width="512" height="1152"/>
  </tileset>
  <tileset firstgid="8661" name="location_hospitality_sunstarmotel_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_hospitality_sunstarmotel_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_hospitality_sunstarmotel_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="8725" name="location_restaurant_bar_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_bar_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_bar_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="8789" name="location_restaurant_diner_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_diner_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_diner_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="8853" name="location_restaurant_generic_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_generic_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_generic_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="8917" name="location_restaurant_pie_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_pie_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_pie_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="8981" name="location_restaurant_pileocrepe_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_pileocrepe_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_pileocrepe_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="9045" name="location_restaurant_pizzawhirled_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_pizzawhirled_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_pizzawhirled_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="9173" name="location_restaurant_seahorse_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_seahorse_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_seahorse_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="9301" name="location_restaurant_spiffos_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_spiffos_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_spiffos_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="9381" name="location_restaurant_spiffos_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_spiffos_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_spiffos_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="9445" name="location_restaurant_spiffos_03" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_restaurant_spiffos_03.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_restaurant_spiffos_03.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="9509" name="location_services_beauty_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_services_beauty_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/location_services_beauty_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="9589" name="location_sewer_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_sewer_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_sewer_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="9653" name="location_shop_accessories_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_accessories_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_accessories_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="9717" name="location_shop_accessories_genericsigns_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_accessories_genericsigns_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_accessories_genericsigns_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="9845" name="location_shop_bargNclothes_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_bargNclothes_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_bargNclothes_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="9909" name="location_shop_fossoil_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_fossoil_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_fossoil_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="9973" name="location_shop_gas2go_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_gas2go_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_gas2go_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="10037" name="location_shop_generic_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_generic_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_generic_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="10165" name="location_shop_greenes_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_greenes_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_greenes_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="10245" name="location_shop_mall_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_mall_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_mall_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="10373" name="location_shop_mall_signs_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_mall_signs_01.png" width="512" height="2304"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_mall_signs_01.png" width="512" height="2304"/>
  </tileset>
  <tileset firstgid="10517" name="location_shop_mall_signs_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_mall_signs_02.png" width="512" height="2304"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_mall_signs_02.png" width="512" height="2304"/>
  </tileset>
  <tileset firstgid="10661" name="location_shop_zippee_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_shop_zippee_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_shop_zippee_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="10725" name="location_trailer_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_trailer_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_trailer_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="10789" name="location_trailer_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/location_trailer_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/location_trailer_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="10853" name="missing_tileset_666" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/missing_tileset_666.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/missing_tileset_666.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="10917" name="overlay_blood_fence_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/overlay_blood_fence_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/overlay_blood_fence_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="10981" name="overlay_blood_floor_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/overlay_blood_floor_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/overlay_blood_floor_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11045" name="overlay_blood_wall_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/overlay_blood_wall_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/overlay_blood_wall_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11109" name="overlay_graffiti_wall_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/overlay_graffiti_wall_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/overlay_graffiti_wall_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11173" name="overlay_grime_floor_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/overlay_grime_floor_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/overlay_grime_floor_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11237" name="overlay_grime_wall_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/overlay_grime_wall_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/overlay_grime_wall_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11301" name="overlay_messages_wall_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/overlay_messages_wall_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/overlay_messages_wall_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11365" name="papernotices_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/papernotices_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/papernotices_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11429" name="recreational_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/recreational_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/recreational_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11493" name="recreational_sports_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/recreational_sports_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/recreational_sports_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="11557" name="roofs_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/roofs_01.png" width="512" height="1920"/>
+  <image source="../../../../PZMapTools/Tiles/roofs_01.png" width="512" height="1920"/>
  </tileset>
  <tileset firstgid="11677" name="roofs_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/roofs_02.png" width="512" height="1920"/>
+  <image source="../../../../PZMapTools/Tiles/roofs_02.png" width="512" height="1920"/>
  </tileset>
  <tileset firstgid="11797" name="roofs_03" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/roofs_03.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/roofs_03.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="11925" name="roofs_04" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/roofs_04.png" width="512" height="1920"/>
+  <image source="../../../../PZMapTools/Tiles/roofs_04.png" width="512" height="1920"/>
  </tileset>
  <tileset firstgid="12045" name="roofs_05" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/roofs_05.png" width="512" height="1920"/>
+  <image source="../../../../PZMapTools/Tiles/roofs_05.png" width="512" height="1920"/>
  </tileset>
  <tileset firstgid="12165" name="roofs_accents_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/roofs_accents_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/roofs_accents_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="12245" name="roofs_burnt_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/roofs_burnt_01.png" width="512" height="1920"/>
+  <image source="../../../../PZMapTools/Tiles/roofs_burnt_01.png" width="512" height="1920"/>
  </tileset>
  <tileset firstgid="12365" name="security_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/security_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/security_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="12445" name="signs_miscbrands_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/signs_miscbrands_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/signs_miscbrands_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="12509" name="signs_one-off_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/signs_one-off_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/signs_one-off_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="12637" name="street_curbs_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/street_curbs_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/street_curbs_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="12717" name="street_decoration_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/street_decoration_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/street_decoration_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="12845" name="street_roadsigns_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/street_roadsigns_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/street_roadsigns_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="12925" name="street_trafficlines_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/street_trafficlines_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/street_trafficlines_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="12989" name="trash&amp;junk_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/trash&amp;junk_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/trash&amp;junk_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="13069" name="trash_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/trash_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/trash_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13133" name="trash_walls_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/trash_walls_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/trash_walls_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13197" name="trashcontainers_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/trashcontainers_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/trashcontainers_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13261" name="vegetation_farm_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/vegetation_farm_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/vegetation_farm_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13325" name="vegetation_farming_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/vegetation_farming_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/vegetation_farming_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="13405" name="vegetation_foliage_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/vegetation_foliage_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/vegetation_foliage_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13469" name="vegetation_groundcover_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/vegetation_groundcover_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/vegetation_groundcover_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13533" name="vegetation_indoor_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/vegetation_indoor_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/vegetation_indoor_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13597" name="vegetation_ornamental_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/vegetation_ornamental_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/vegetation_ornamental_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13661" name="vegetation_trees_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/vegetation_trees_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/vegetation_trees_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13725" name="vegetation_wall_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/vegetation_wall_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/vegetation_wall_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13789" name="walls_burnt_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_burnt_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_burnt_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="13853" name="walls_burnt_roofs_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_burnt_roofs_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_burnt_roofs_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="13933" name="walls_commercial_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_commercial_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/walls_commercial_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="14061" name="walls_commercial_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_commercial_02.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_commercial_02.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="14141" name="walls_commercial_03" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_commercial_03.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_commercial_03.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="14205" name="walls_decoration_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_decoration_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_decoration_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="14269" name="walls_detailing_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_detailing_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/walls_detailing_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="14397" name="walls_exterior_house_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_house_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_house_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="14461" name="walls_exterior_house_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_house_02.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_house_02.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="14589" name="walls_exterior_roofs_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="14669" name="walls_exterior_roofs_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_02.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_02.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="14749" name="walls_exterior_roofs_03" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_03.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_03.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="14829" name="walls_exterior_roofs_04" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_04.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_04.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="14909" name="walls_exterior_roofs_05" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_05.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_05.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="14989" name="walls_exterior_roofs_06" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_06.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_06.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="15053" name="walls_exterior_roofs_07" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_07.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_07.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="15133" name="walls_exterior_roofs_08" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_08.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_08.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="15213" name="walls_exterior_roofs_09" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_roofs_09.png" width="512" height="1792"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_roofs_09.png" width="512" height="1792"/>
  </tileset>
  <tileset firstgid="15325" name="walls_exterior_wooden_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_wooden_01.png" width="512" height="1280"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_wooden_01.png" width="512" height="1280"/>
  </tileset>
  <tileset firstgid="15405" name="walls_exterior_wooden_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_exterior_wooden_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_exterior_wooden_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="15469" name="walls_garage_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_garage_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_garage_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="15533" name="walls_garage_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_garage_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_garage_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="15597" name="walls_interior_bathroom_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_interior_bathroom_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_interior_bathroom_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="15661" name="walls_interior_detailing_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_interior_detailing_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/walls_interior_detailing_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="15789" name="walls_interior_house_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_interior_house_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_interior_house_01.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="15853" name="walls_interior_house_02" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_interior_house_02.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_interior_house_02.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="15917" name="walls_interior_house_03" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_interior_house_03.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/walls_interior_house_03.png" width="512" height="1024"/>
  </tileset>
  <tileset firstgid="15981" name="walls_interior_house_04" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_interior_house_04.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/walls_interior_house_04.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="16109" name="walls_special_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/walls_special_01.png" width="512" height="2048"/>
+  <image source="../../../../PZMapTools/Tiles/walls_special_01.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="16237" name="weapons_01" tilewidth="64" tileheight="128">
-  <image source="S:/Projets/Zomboid/PZMapTools/Tiles/weapons_01.png" width="512" height="1024"/>
+  <image source="../../../../PZMapTools/Tiles/weapons_01.png" width="512" height="1024"/>
  </tileset>
  <layer name="0_Floor" width="300" height="300">
   <data encoding="base64" compression="zlib">
