@@ -154,6 +154,8 @@
   <tile tile="carpentry_02_083"/>
   <tile tile="constructedobjects_01_026"/>
   <tile tile="constructedobjects_01_067"/>
+  <tile tile="overlay_blood_wall_01_019"/>
+  <tile tile="overlay_blood_wall_01_030"/>
   <tile tile="walls_exterior_wooden_01_064"/>
   <tile tile="walls_exterior_wooden_01_065"/>
   <tile tile="walls_exterior_wooden_01_070"/>
@@ -186,17 +188,29 @@
 0,0,0,0,0,0,0,
 0,0,0,0,4,0,0
 </tiles>
+  <tiles layer="WallOverlay">
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,7,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,6,0,0
+</tiles>
   <tiles layer="Walls">
 0,0,0,0,0,0,0,
 2,2,2,2,2,1,0,
 0,0,0,0,0,1,0,
 2,2,2,1,0,1,0,
 0,0,0,1,0,1,0,
-0,0,0,6,2,3,0,
-0,0,0,10,0,0,0,
-0,0,8,5,0,0,0,
-0,0,6,0,0,0,0,
-0,0,7,7,9,0,0
+0,0,0,8,2,3,0,
+0,0,0,12,0,0,0,
+0,0,10,5,0,0,0,
+0,0,8,0,0,0,0,
+0,0,9,9,11,0,0
 </tiles>
   <tiles layer="Walls2">
 0,0,0,0,0,0,0,
