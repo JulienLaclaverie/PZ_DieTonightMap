@@ -204,15 +204,14 @@
   <tile tile="trash_01_046"/>
   <tile tile="trash_01_047"/>
   <tile tile="trashcontainers_01_026"/>
+  <tile tile="walls_exterior_wooden_01_025"/>
+  <tile tile="walls_exterior_wooden_01_040"/>
   <tile tile="walls_exterior_wooden_01_041"/>
+  <tile tile="walls_exterior_wooden_01_044"/>
   <tile tile="walls_exterior_wooden_01_045"/>
   <tile tile="walls_exterior_wooden_01_050"/>
-  <tile tile="walls_exterior_wooden_01_064"/>
-  <tile tile="walls_exterior_wooden_01_065"/>
+  <tile tile="walls_exterior_wooden_01_052"/>
   <tile tile="walls_exterior_wooden_01_067"/>
-  <tile tile="walls_exterior_wooden_01_068"/>
-  <tile tile="walls_exterior_wooden_01_069"/>
-  <tile tile="walls_exterior_wooden_01_076"/>
  </user_tiles>
  <used_tiles>4</used_tiles>
  <used_furniture></used_furniture>
@@ -290,14 +289,14 @@
 </tiles>
   <tiles layer="Walls">
 0,0,0,0,0,0,0,0,0,0,
-0,18,20,17,19,22,23,63,60,59,
-0,16,0,0,0,0,0,0,0,62,
-0,24,0,0,0,0,0,0,0,64,
-0,21,0,0,0,0,0,0,0,62,
-0,58,0,0,0,0,0,0,0,59,
-0,14,14,57,56,13,0,0,0,64,
-0,0,0,0,0,16,0,0,0,59,
-0,0,0,0,0,19,22,17,22,61,
+0,18,20,17,19,22,23,60,56,57,
+0,16,0,0,0,0,0,0,0,57,
+0,24,0,0,0,0,0,0,0,62,
+0,21,0,0,0,0,0,0,0,59,
+0,61,0,0,0,0,0,0,0,57,
+0,14,14,60,58,13,0,0,0,62,
+0,0,0,0,0,16,0,0,0,57,
+0,0,0,0,0,19,22,17,22,63,
 0,0,0,0,0,0,0,0,0,0
 </tiles>
  </floor>
