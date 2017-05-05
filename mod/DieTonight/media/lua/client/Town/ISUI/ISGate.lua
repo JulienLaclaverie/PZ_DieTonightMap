@@ -20,19 +20,23 @@ ISGate = {
     gates = {
         northGate = {
             startPos = { x = 7944, y = 6382 },
-            endPos = { x = 7934, y = 6382 }
+            endPos = { x = 7934, y = 6382 },
+            sprite = "fencing_01_57"
         },
         southGate = {
             startPos = { x = 7948, y = 6464 },
-            endPos = { x = 7938, y = 6464 }
+            endPos = { x = 7938, y = 6464 },
+            sprite = "fencing_01_57"
         },
         westGate = {
-            startPos = { x = 7918, y = 6426 }, -- fencing_01_58
-            endPos = { x = 7918, y = 6416 } -- fencing_01_58
+            startPos = { x = 7918, y = 6426 },
+            endPos = { x = 7918, y = 6416 },
+            sprite = "fencing_01_58"
         },
         eastGate = {
             startPos = { x = 6429, y = 7971 },
-            endPos = { x = 6419, y = 7971 }
+            endPos = { x = 6419, y = 7971 },
+            sprite = "fencing_01_58"
         }
     }
 };
@@ -59,46 +63,23 @@ end
 -- Check if the gate passed in parameter is open
 ISGate.isOpen = function(gate)
     local isOpen = true;
-    -- if gate direction is on X axis
-    if gate.startPos.x == gate.endPos.x then
-        local gateLength = gate.startPos.y - gate.endPos.y;
-        for i=0,gateLength do
-            local sq = getCell():getGridSquare(gate.startPos.x, gate.startPos.y-i, 0);
-            isOpen = not hasFence(sq);
+    browseGateSquares(gate, function(square)
+        if square then
+            isOpen = not hasFence(square);
         end
-    -- if gate direction is on Y axis
-    elseif gate.startPos.y == gate.endPos.y then
-        local gateLength = gate.startPos.x - gate.endPos.x;
-        for i=0,gateLength do
-            local sq = getCell():getGridSquare(gate.startPos.x-i, gate.startPos.y, 0);
-            isOpen = not hasFence(sq);
-        end
-    else
-        return nil;
-    end
-
+    end)
     return isOpen;
 end
 
 ISGate.open = function(gate)
     -- if gate direction is on X axis
-    if gate.startPos.x == gate.endPos.x then
-        local gateLength = gate.startPos.y - gate.endPos.y;
-        for i=0,gateLength do
-            local sq = getCell():getGridSquare(gate.startPos.x, gate.startPos.y-i, 0);
-            isOpen = not hasFence(sq);
+    browseGateSquares(gate, function(square)
+        if square then
+            local fence = IsoObject.new(getCell(), square, "location_shop_mall_01_19");
+            sq:getObjects():add(fence);
+            sq:RecalcProperties();
         end
-        -- if gate direction is on Y axis
-    elseif gate.startPos.y == gate.endPos.y then
-        local gateLength = gate.startPos.x - gate.endPos.x;
-        for i=0,gateLength do
-            local sq = getCell():getGridSquare(gate.startPos.x-i, gate.startPos.y, 0);
-            isOpen = not hasFence(sq);
-        end
-    end
-    --[[local object = IsoObject.new(getCell(), sq, "location_shop_mall_01_19");
-    sq:getObjects():add(object);
-    sq:RecalcProperties();]]
+    end)
 end
 
 ISGate.close = function(gate)
