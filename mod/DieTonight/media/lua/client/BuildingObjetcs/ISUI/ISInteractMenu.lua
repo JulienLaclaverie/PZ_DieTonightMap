@@ -16,7 +16,7 @@ ISInteractMenu.doInteractMenu = function(player, context, worldobjects, test)
 
     if ISInteractMenu.isGateSecurityTerminal(object, terminal) then
         print("ISInteractMenu: found the Security Terminal for ".. terminal.gate .." !")
-        local interactOption = context:addOption("Open gate", worldobjects, ISGate.toggle, terminal.gate);
+        local interactOption = context:addOption("Toggle gate", worldobjects, ISGate.toggle, terminal.gate);
     end
 end
 

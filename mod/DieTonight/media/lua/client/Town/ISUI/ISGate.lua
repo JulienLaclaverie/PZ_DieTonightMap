@@ -9,7 +9,7 @@
 -- local variables
 local fenceSpriteName = "fencing_01";
 -- local functions
-local browseGateSquares, hasFence;
+local browseGateSquares, squareHasFence;
 
 
 --
@@ -19,8 +19,8 @@ local browseGateSquares, hasFence;
 ISGate = {
     gates = {
         northGate = {
-            startPos = { x = 7944, y = 6382 },
-            endPos = { x = 7934, y = 6382 },
+            startPos = { x = 7944, y = 6384 },
+            endPos = { x = 7934, y = 6384 },
             sprite = "fencing_01_57"
         },
         southGate = {
@@ -34,8 +34,8 @@ ISGate = {
             sprite = "fencing_01_58"
         },
         eastGate = {
-            startPos = { x = 6429, y = 7971 },
-            endPos = { x = 6419, y = 7971 },
+            startPos = { x = 7971, y = 6429 },
+            endPos = { x = 7971, y = 6419 },
             sprite = "fencing_01_58"
         }
     }
@@ -47,13 +47,14 @@ ISGate = {
 --
 
 ISGate.toggle = function(target, gateName)
-    print( "Asking to toggle the gate " .. tostring(gateName) )
     local gate = ISGate.gates[gateName];
     if gate then
         if ISGate.isOpen(gate) then
-            print( "ISGate: " .. gateName .. " is open !" );
+            print( "ISGate: " .. gateName .. " is opened ! Closing..." );
+            ISGate.close(gate);
         else
-            print( "ISGate: " .. gateName .. " is close !" );
+            print( "ISGate: " .. gateName .. " is closed ! Opening..." );
+            ISGate.open(gate);
         end
     else
         print( "ISGate: Not gate found for this security terminal ! The gate registered for this terminal is " .. gateName );
@@ -65,29 +66,41 @@ ISGate.isOpen = function(gate)
     local isOpen = true;
     browseGateSquares(gate, function(square)
         if square then
-            isOpen = not hasFence(square);
+            isOpen = not squareHasFence(square);
         end
     end)
     return isOpen;
 end
 
-ISGate.open = function(gate)
-    -- if gate direction is on X axis
+ISGate.close = function(gate)
+    -- print( "ISGate: closing gate --> " .. gate.startPos.x .. ", " .. gate.startPos.y )
     browseGateSquares(gate, function(square)
         if square then
-            local fence = IsoObject.new(getCell(), square, "location_shop_mall_01_19");
-            sq:getObjects():add(fence);
-            sq:RecalcProperties();
+            local fence = IsoObject.new(getCell(), square, gate.sprite);
+            square:getObjects():add(fence);
+            -- square:RecalcProperties();
         end
     end)
 end
 
-ISGate.close = function(gate)
-    --[[local obj = square:getObjects():get(i);
-    if obj:getType() == IsoObjectType.fence then -- fence is not the real type
-        square:transmitRemoveItemFromSquare(thump);
-        square:getObjects():remove(thump);
-    end]]
+ISGate.open = function(gate)
+    -- print( "ISGate: opening gate --> " .. gate.startPos.x .. ", " .. gate.startPos.y )
+    browseGateSquares(gate, function(square)
+        if square then
+            -- print( "ISGate: square --> " .. tostring(square:getX()) .. "," .. tostring(square:getY()) )
+            for i=0,square:getObjects():size()-1 do
+                local obj = square:getObjects():get(i);
+                -- print( "ISGate: obj sprite --> " .. obj:getSprite():getName() )
+                if luautils.stringStarts(obj:getSprite():getName(), fenceSpriteName) then
+                    -- print( "ISGate: removing fence from square" )
+                    -- square:transmitRemoveItemFromSquare(obj);
+                    square:getObjects():remove(obj);
+                    -- square:RecalcProperties();
+                    break;
+                end
+            end
+        end
+    end)
 end
 
 
@@ -95,26 +108,29 @@ end
 -- Local functions
 --
 
---function browseGateSquares(gate, callback)
---    -- if gate direction is on X axis
---    if gate.startPos.x == gate.endPos.x then
---        local gateLength = gate.startPos.y - gate.endPos.y;
---        for i=0,gateLength do
---            local sq = getCell():getGridSquare(gate.startPos.x, gate.startPos.y-i, 0);
---            callback(sq);
---        end
---        -- if gate direction is on Y axis
---    elseif gate.startPos.y == gate.endPos.y then
---        local gateLength = gate.startPos.x - gate.endPos.x;
---        for i=0,gateLength do
---            local sq = getCell():getGridSquare(gate.startPos.x-i, gate.startPos.y, 0);
---            callback(sq);
---        end
---    end
---end
+-- Iterate on the gate squares
+function browseGateSquares(gate, callback)
+    -- if gate direction is on X axis
+    if gate.startPos.x == gate.endPos.x then
+        local gateLength = gate.startPos.y - gate.endPos.y;
+        for i=0,gateLength do
+            local sq = getCell():getGridSquare(gate.startPos.x, gate.startPos.y-i, 0);
+            callback(sq);
+        end
+    -- if gate direction is on Y axis
+    elseif gate.startPos.y == gate.endPos.y then
+        local gateLength = gate.startPos.x - gate.endPos.x;
+        for i=0,gateLength do
+            local sq = getCell():getGridSquare(gate.startPos.x-i, gate.startPos.y, 0);
+            callback(sq);
+        end
+    else
+        callback(nil);
+    end
+end
 
 -- Check if square contains a fence
-function hasFence(square)
+function squareHasFence(square)
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
         if luautils.stringStarts(obj:getSprite():getName(), fenceSpriteName) then
