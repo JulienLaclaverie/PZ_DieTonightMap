@@ -686,7 +686,7 @@
  </user_tiles>
  <used_tiles>6 30 26 15 5 7 8 9 31 32 10 33 11 13 4 1 2 59 27 28 29 35 34 36 37 38 39 40 41 42 43 44 45 46 47 49 48 55 54 53 52 51 50 16 20 17 18 19 23 22 21 24 25 14 12</used_tiles>
  <used_furniture>0</used_furniture>
- <room Name="BaseRoom" InternalName="room1" Color="200 200 200" InteriorWall="53" InteriorWallTrim="28" Floor="21" GrimeFloor="24" GrimeWall="25"/>
+ <room Name="BaseRoom" InternalName="storageunit" Color="200 200 200" InteriorWall="53" InteriorWallTrim="28" Floor="21" GrimeFloor="24" GrimeWall="25"/>
  <floor>
   <object type="door" FrameTile="4" x="8" y="6" dir="W" Tile="0"/>
   <object type="window" CurtainsTile="1" ShuttersTile="0" x="7" y="9" dir="N" Tile="0"/>

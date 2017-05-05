@@ -2911,7 +2911,7 @@
  <room Name="Hallway2" InternalName="policestorage" Color="128 128 128" InteriorWall="152" InteriorWallTrim="100" Floor="69" GrimeFloor="96" GrimeWall="97"/>
  <room Name="Rooftop" InternalName="policestorage" Color="170 170 0" InteriorWall="152" InteriorWallTrim="100" Floor="69" GrimeFloor="96" GrimeWall="97"/>
  <room Name="Bankroom" InternalName="housewarestore" Color="170 0 0" InteriorWall="123" InteriorWallTrim="105" Floor="49" GrimeFloor="95" GrimeWall="97"/>
- <room Name="Bedroomhall" InternalName="hall" Color="170 170 0" InteriorWall="163" InteriorWallTrim="0" Floor="50" GrimeFloor="0" GrimeWall="0"/>
+ <room Name="Bedroomhall" InternalName="storageunit" Color="170 170 0" InteriorWall="163" InteriorWallTrim="0" Floor="50" GrimeFloor="0" GrimeWall="0"/>
  <floor>
   <object type="stairs" x="4" y="3" dir="N" Tile="202"/>
   <object type="stairs" x="6" y="3" dir="N" Tile="202"/>

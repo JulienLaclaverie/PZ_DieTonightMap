@@ -909,7 +909,7 @@
  </user_tiles>
  <used_tiles>7 75 67 47 21 22 23 19 20 16 17 18 15 10 8 9 6 11 12 13 14 24 26 25 37 35 33 31 29 27 28 30 32 34 36 5 4 38 39 46 40 41 43 42 44 45 77 78 68 69 70 71 74 72 73 76 79 80 81 82 84 87 83 85 86 65 66 64 56 55 57 51 52 53 54 50 49 48 59 58 61 60 63 62 3 92 2 1 91</used_tiles>
  <used_furniture></used_furniture>
- <room Name="Mainroom" InternalName="room1" Color="200 200 200" InteriorWall="85" InteriorWallTrim="73" Floor="58" GrimeFloor="64" GrimeWall="65"/>
+ <room Name="Mainroom" InternalName="storageunit" Color="200 200 200" InteriorWall="85" InteriorWallTrim="73" Floor="58" GrimeFloor="64" GrimeWall="65"/>
  <floor>
   <object type="door" FrameTile="3" x="11" y="3" dir="W" Tile="0"/>
   <object type="window" CurtainsTile="2" ShuttersTile="0" x="1" y="5" dir="W" Tile="92"/>

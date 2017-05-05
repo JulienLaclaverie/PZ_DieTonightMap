@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<world version="1.0" width="3" height="3">
+ <BMPToTMX>
+  <tmxexportdir path="."/>
+  <rulesfile path=""/>
+  <blendsfile path=""/>
+  <mapbasefile path=""/>
+  <assign-maps-to-world checked="true"/>
+  <warn-unknown-colors checked="true"/>
+  <compress checked="true"/>
+  <copy-pixels checked="true"/>
+  <update-existing checked="false"/>
+ </BMPToTMX>
+ <TMXToBMP>
+  <mainImage generate="true"/>
+  <vegetationImage generate="true"/>
+  <buildingsImage path="" generate="false"/>
+ </TMXToBMP>
+ <GenerateLots>
+  <exportdir path="lots"/>
+  <ZombieSpawnMap path="dietonight_ZombieSpawnMap.BMP"/>
+  <TileDefFolder path="../../../PZMapTools/Tiles"/>
+  <worldOrigin origin="25,20"/>
+ </GenerateLots>
+ <LuaSettings>
+  <spawnPointsFile path="spawnpoint.lua"/>
+  <worldObjectsFile path="objects.lua"/>
+ </LuaSettings>
+ <bmp path="edesert.bmp" x="2" y="1" width="1" height="1"/>
+ <bmp path="ndesert.bmp" x="1" y="0" width="1" height="1"/>
+ <bmp path="northeasetdesert.bmp" x="2" y="0" width="1" height="1"/>
+ <bmp path="nwdesert.bmp" x="0" y="0" width="1" height="1"/>
+ <bmp path="southdesert.bmp" x="1" y="2" width="1" height="1"/>
+ <bmp path="southeastdesert.bmp" x="2" y="2" width="1" height="1"/>
+ <bmp path="wesdesert.bmp" x="0" y="1" width="1" height="1"/>
+ <bmp path="southwestdesertzone.bmp" x="0" y="2" width="1" height="1"/>
+ <bmp path="townarea.bmp" x="1" y="1" width="1" height="1"/>
+ <propertyenum name="Professions" choices="all,unemployed,policeofficer,constructionworker,securityguard,parkranger,fireofficer" multi="true"/>
+ <propertydef name="Professions" default="all" enum="Professions">
+  <description>Comma-separated list of professions that may spawn here.  Use &quot;all&quot; to allow any profession to spawn here.</description>
+ </propertydef>
+ <template name="SpawnPoint">
+  <description>This template holds the default set of properties for all spawn points in the world.</description>
+  <property name="Professions" value="all"/>
+ </template>
+ <objecttype name="SpawnPoint"/>
+ <objecttype name="TownZone"/>
+ <objecttype name="Forest"/>
+ <objecttype name="DeepForest"/>
+ <objecttype name="Nav"/>
+ <objecttype name="Vegitation"/>
+ <objecttype name="TrailerPark"/>
+ <objecttype name="Farm"/>
+ <objectgroup name="TownZone" color="#aa0000" defaulttype="TownZone"/>
+ <objectgroup name="Forest" color="#00aa00" defaulttype="Forest"/>
+ <objectgroup name="Nav" color="#55aaff" defaulttype="Nav"/>
+ <objectgroup name="DeepForest" color="#003500" defaulttype="DeepForest"/>
+ <objectgroup name="Vegitation" color="#b3b300" defaulttype="Vegitation"/>
+ <objectgroup name="TrailerPark" color="#f50000" defaulttype="TrailerPark"/>
+ <objectgroup name="Farm" color="#55ff7f" defaulttype="Farm"/>
+ <cell x="0" y="0" map="nwdesert_0_0.tmx"/>
+ <cell x="1" y="0" map="ndesert_1_0.tmx"/>
+ <cell x="2" y="0" map="northeasetdesert_2_0.tmx"/>
+ <cell x="0" y="1" map="wesdesert_0_1.tmx"/>
+ <cell x="1" y="1" map="townarea_1_1.tmx">
+  <lot x="128" y="116" level="0" width="21" height="16" map="../tmx/buildings/town/HallBank.tbx"/>
+  <lot x="129" y="132" level="0" width="11" height="11" map="../tmx/buildings/town/WatchTower.tbx"/>
+  <lot x="129" y="144" level="0" width="10" height="10" map="../tmx/buildings/town/Housing3.tbx"/>
+  <lot x="130" y="155" level="0" width="8" height="5" map="../tmx/buildings/town/CampingSite3.tbx"/>
+  <lot x="116" y="161" level="0" width="56" height="5" map="../tmx/buildings/town/WallSouth.tbx"/>
+  <object type="SpawnPoint" x="138" y="130" level="0" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object group="TownZone" type="TownZone" x="115" y="84" level="0" width="59" height="80"/>
+ </cell>
+ <cell x="2" y="1" map="edesert_2_1.tmx"/>
+ <cell x="0" y="2" map="southwestdesertzone_0_2.tmx"/>
+ <cell x="1" y="2" map="southdesert_1_2.tmx"/>
+ <cell x="2" y="2" map="southeastdesert_2_2.tmx"/>
+</world>
