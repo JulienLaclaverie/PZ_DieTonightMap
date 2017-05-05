@@ -221,21 +221,20 @@
   <tile tile="trash_01_012"/>
   <tile tile="trash_01_040"/>
   <tile tile="trash_01_053"/>
-  <tile tile="walls_exterior_wooden_01_060"/>
-  <tile tile="walls_exterior_wooden_01_064"/>
-  <tile tile="walls_exterior_wooden_01_065"/>
-  <tile tile="walls_exterior_wooden_01_066"/>
+  <tile tile="walls_exterior_wooden_01_040"/>
+  <tile tile="walls_exterior_wooden_01_041"/>
+  <tile tile="walls_exterior_wooden_01_042"/>
+  <tile tile="walls_exterior_wooden_01_043"/>
+  <tile tile="walls_exterior_wooden_01_044"/>
+  <tile tile="walls_exterior_wooden_01_045"/>
+  <tile tile="walls_exterior_wooden_01_048"/>
+  <tile tile="walls_exterior_wooden_01_052"/>
+  <tile tile="walls_exterior_wooden_01_053"/>
+  <tile tile="walls_exterior_wooden_01_056"/>
   <tile tile="walls_exterior_wooden_01_067"/>
-  <tile tile="walls_exterior_wooden_01_068"/>
-  <tile tile="walls_exterior_wooden_01_069"/>
-  <tile tile="walls_exterior_wooden_01_070"/>
-  <tile tile="walls_exterior_wooden_01_072"/>
-  <tile tile="walls_exterior_wooden_01_073"/>
-  <tile tile="walls_exterior_wooden_01_076"/>
  </user_tiles>
  <used_tiles>1 5 4 2</used_tiles>
  <used_furniture></used_furniture>
- <room Name="Gate" InternalName="cityGate" Color="200 200 200" InteriorWall="0" InteriorWallTrim="0" Floor="0" GrimeFloor="0" GrimeWall="0"/>
  <floor>
   <rooms>
 0,0,0,0,0,
@@ -251,7 +250,7 @@
 0,0,0,0,0,
 0,0,0,0,0,
 0,0,0,0,0,
-0,0,0,0,1,
+0,0,0,0,0,
 0,0,0,0,0,
 0,0,0,0,0,
 0,0,0,0,0,
@@ -847,20 +846,20 @@
   <tiles layer="Walls">
 0,0,13,0,13,0,
 0,0,13,0,13,0,
-0,0,14,14,75,0,
-0,0,0,75,78,0,
-0,0,0,82,0,0,
-0,0,0,79,0,0,
-0,0,77,78,0,0,
-0,0,84,0,0,0,
+0,0,14,14,74,0,
+0,0,0,74,84,0,
+0,0,0,80,0,0,
+0,0,0,78,0,0,
+0,0,76,77,0,0,
+0,0,80,0,0,0,
 0,0,33,37,0,0,
 0,0,31,32,31,0,
 0,0,31,0,31,0,
 0,0,31,37,34,0,
 0,0,32,34,0,0,
-0,0,84,0,0,0,
-0,0,76,79,0,0,
-0,0,0,75,0,0,
+0,0,80,0,0,0,
+0,0,75,78,0,0,
+0,0,0,74,0,0,
 0,0,15,14,13,0,
 0,0,13,0,14,13,
 0,0,14,13,0,13,
@@ -894,16 +893,16 @@
 0,0,13,13,0,0,
 0,0,13,14,13,0,
 0,0,14,13,13,0,
-0,0,81,14,16,0,
-0,0,75,0,0,0,
-0,0,83,76,79,0,
-0,0,0,0,75,0,
-0,0,0,0,82,0,
+0,0,79,14,16,0,
+0,0,74,0,0,0,
+0,0,82,75,78,0,
 0,0,0,0,74,0,
-0,0,0,0,79,0,
-0,0,0,0,75,0,
-0,0,0,77,78,0,
-0,0,0,84,0,0,
+0,0,0,0,80,0,
+0,0,0,0,83,0,
+0,0,0,0,78,0,
+0,0,0,0,74,0,
+0,0,0,76,77,0,
+0,0,0,81,0,0,
 0,0,15,13,0,0,
 0,0,13,13,0,0,
 0,0,13,14,13,0,
@@ -924,7 +923,7 @@
 0,0,0,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,16,0,
-0,0,0,80,0,0,
+0,0,0,79,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,
@@ -933,7 +932,7 @@
 0,0,0,0,0,0,
 0,0,0,0,0,0,
 0,0,0,32,0,0,
-0,0,79,0,0,0,
+0,0,78,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,
@@ -970,7 +969,7 @@
 0,0,0,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,
-0,0,0,0,0,0,
+0,0,78,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,

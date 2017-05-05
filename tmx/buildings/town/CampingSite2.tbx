@@ -204,7 +204,6 @@
   <tile tile="trashcontainers_01_013"/>
   <tile tile="trashcontainers_01_024"/>
   <tile tile="trashcontainers_01_027"/>
-  <tile tile="vegetation_trees_01_001"/>
  </user_tiles>
  <used_tiles>4</used_tiles>
  <used_furniture></used_furniture>
@@ -289,7 +288,7 @@
 0,0,0,0,0,0,0,0,23,0,0,
 0,0,0,0,0,0,0,0,0,0,0,
 0,0,29,0,0,0,0,0,0,0,0,
-0,0,0,0,56,0,0,25,0,0,0,
+0,0,0,0,0,0,0,25,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,24,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,26,0,
