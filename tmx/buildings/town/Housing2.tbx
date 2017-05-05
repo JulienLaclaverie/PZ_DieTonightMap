@@ -209,19 +209,18 @@
  </user_tiles>
  <used_tiles>3</used_tiles>
  <used_furniture>0 2 1</used_furniture>
- <room Name="Taudis" InternalName="storageunit" Color="170 85 0" InteriorWall="0" InteriorWallTrim="0" Floor="0" GrimeFloor="0" GrimeWall="0"/>
  <floor>
   <object type="furniture" FurnitureTiles="0" orient="N" x="2" y="2"/>
   <object type="furniture" FurnitureTiles="1" orient="N" x="5" y="2"/>
   <rooms>
-1,1,1,1,1,1,1,1,
-1,1,1,1,1,1,1,1,
-1,1,1,1,1,1,1,1,
-1,1,1,1,1,1,1,1,
-1,1,1,1,1,1,1,1,
-1,1,1,1,1,1,1,1,
-1,1,1,1,1,1,1,1,
-1,1,1,1,1,1,1,1
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
 </rooms>
   <tiles layer="Curtains">
 0,0,0,0,0,0,0,0,0,
