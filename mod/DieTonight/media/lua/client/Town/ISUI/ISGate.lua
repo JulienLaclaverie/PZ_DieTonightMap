@@ -6,17 +6,14 @@
 -- To change this template use File | Settings | File Templates.
 --
 
--- local variables
-local fenceSpriteName = "fencing_01";
--- local functions
-local browseGateSquares, squareHasFence;
-
 
 --
 -- Properties
 --
 
 ISGate = {
+    fenceSpriteName = "fencing_01",
+
     gates = {
         northGate = {
             startPos = { x = 7944, y = 6384 },
@@ -46,7 +43,7 @@ ISGate = {
 -- Methods
 --
 
-ISGate.toggle = function(target, gateName)
+ISGate.toggle = function(target, player, gateName, terminalTile)
     local gate = ISGate.gates[gateName];
     if gate then
         if ISGate.isOpen(gate) then
@@ -54,7 +51,7 @@ ISGate.toggle = function(target, gateName)
             ISGate.close(gate);
         else
             print( "ISGate: " .. gateName .. " is closed ! Opening..." );
-            ISGate.open(gate);
+            ISTimedActionQueue.add(ISOpenGate:new(player, gate, terminalTile));
         end
     else
         print( "ISGate: Not gate found for this security terminal ! The gate registered for this terminal is " .. gateName );
@@ -63,19 +60,19 @@ end
 
 -- Check if the gate passed in parameter is open
 ISGate.isOpen = function(gate)
-    local isOpen = true;
-    browseGateSquares(gate, function(square)
+    local isOpened = true;
+    ISGate.browseGateSquares(gate, function(square)
         if square then
-            isOpen = not squareHasFence(square);
+            isOpened = not ISGate.squareHasFence(square);
         end
     end)
-    return isOpen;
+    return isOpened;
 end
 
 -- Close the gate passed in parameter
 ISGate.close = function(gate)
     -- print( "ISGate: closing gate --> " .. gate.startPos.x .. ", " .. gate.startPos.y )
-    browseGateSquares(gate, function(square)
+    ISGate.browseGateSquares(gate, function(square)
         if square then
             local fence = IsoObject.new(getCell(), square, gate.sprite);
             square:getObjects():add(fence);
@@ -84,16 +81,17 @@ ISGate.close = function(gate)
     end)
 end
 
+-- DEPRECATED
 -- Open the gate passed in parameter
 ISGate.open = function(gate)
     -- print( "ISGate: opening gate --> " .. gate.startPos.x .. ", " .. gate.startPos.y )
-    browseGateSquares(gate, function(square)
+    ISGate.browseGateSquares(gate, function(square)
         if square then
             -- print( "ISGate: square --> " .. tostring(square:getX()) .. "," .. tostring(square:getY()) )
             for i=0,square:getObjects():size()-1 do
                 local obj = square:getObjects():get(i);
                 -- print( "ISGate: obj sprite --> " .. obj:getSprite():getName() )
-                if luautils.stringStarts(obj:getSprite():getName(), fenceSpriteName) then
+                if luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
                     -- print( "ISGate: removing fence from square" )
                     square:getObjects():remove(obj);
                     -- square:RecalcProperties();
@@ -104,13 +102,8 @@ ISGate.open = function(gate)
     end)
 end
 
-
---
--- Local functions
---
-
 -- Iterate on the gate squares
-function browseGateSquares(gate, callback)
+ISGate.browseGateSquares = function(gate, callback)
     -- if gate direction is on X axis
     if gate.startPos.x == gate.endPos.x then
         local gateLength = gate.startPos.y - gate.endPos.y;
@@ -130,11 +123,24 @@ function browseGateSquares(gate, callback)
     end
 end
 
--- Check if square contains a fence
-function squareHasFence(square)
+ISGate.removeFenceOnSquare = function(square)
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
-        if luautils.stringStarts(obj:getSprite():getName(), fenceSpriteName) then
+        -- print( "ISGate: obj sprite --> " .. obj:getSprite():getName() )
+        if luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
+            -- print( "ISGate: removing fence from square" )
+            square:getObjects():remove(obj);
+            -- square:RecalcProperties();
+            break;
+        end
+    end
+end
+
+-- Check if square contains a fence
+ISGate.squareHasFence = function(square)
+    for i=0,square:getObjects():size()-1 do
+        local obj = square:getObjects():get(i);
+        if luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
             return true;
         end
     end

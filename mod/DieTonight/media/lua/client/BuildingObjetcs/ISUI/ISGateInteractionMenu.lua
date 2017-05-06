@@ -3,8 +3,8 @@ ISGateInteractionMenu = {};
 ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
 
-    local object = nil;
-    local terminal = nil;
+    local object;
+    local terminal;
 
     for i,v in ipairs(worldobjects) do
         -- print( "ISGateInteractionMenu: item seleted  --> " .. v:getSprite():getName() .. ", " .. tostring(v:getSquare():getX()) .. ", " .. tostring(v:getSquare():getY()) )
@@ -14,7 +14,7 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
 
     if ISGateInteractionMenu.isGateSecurityTerminal(object, terminal) then
         print("ISGateInteractionMenu: found the Security Terminal for ".. terminal.gate .." !")
-        local interactOption = context:addOption("Toggle gate", worldobjects, ISGate.toggle, terminal.gate);
+        context:addOption("Toggle gate", worldobjects, ISGate.toggle, getSpecificPlayer(player), terminal.gate, object);
     end
 end
 
