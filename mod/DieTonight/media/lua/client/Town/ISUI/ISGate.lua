@@ -61,33 +61,26 @@ end
 -- Check if the gate passed in parameter is open
 ISGate.isOpen = function(gate)
     local isOpened = true;
-    ISGate.browseGateSquares(gate, function(square)
-        if square then
-            isOpened = not ISGate.squareHasFence(square);
-        end
-    end)
-    return isOpened;
-end
 
--- Iterate on the gate squares
-ISGate.browseGateSquares = function(gate, callback)
     -- if gate direction is on X axis
     if gate.startPos.x == gate.endPos.x then
         local gateLength = gate.startPos.y - gate.endPos.y;
         for i=0,gateLength do
             local sq = getCell():getGridSquare(gate.startPos.x, gate.startPos.y-i, 0);
-            callback(sq);
+            isOpened = not ISGate.squareHasFence(sq);
         end
     -- if gate direction is on Y axis
     elseif gate.startPos.y == gate.endPos.y then
         local gateLength = gate.startPos.x - gate.endPos.x;
         for i=0,gateLength do
             local sq = getCell():getGridSquare(gate.startPos.x-i, gate.startPos.y, 0);
-            callback(sq);
+            isOpened = not ISGate.squareHasFence(sq);
         end
     else
-        callback(nil);
+        return nil;
     end
+
+    return isOpened;
 end
 
 -- Add fence on the square passed in parameter

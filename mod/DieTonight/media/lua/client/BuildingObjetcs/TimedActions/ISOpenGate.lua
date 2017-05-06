@@ -10,10 +10,9 @@ require "TimedActions/ISBaseTimedAction"
 
 ISOpenGate = ISBaseTimedAction:derive("ISOpenGate");
 
+-- This method is required by ISBaseTimedAction
+-- but not by our algorithm
 function ISOpenGate:isValid()
-    -- local opened = ISGate.isOpen(self.gate);
-    -- print("ISOpenGate: isValid --> " .. tostring(opened))
-    -- return not opened;
     return true;
 end
 
