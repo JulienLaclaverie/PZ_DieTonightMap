@@ -72,6 +72,7 @@ ISGate.isOpen = function(gate)
     return isOpen;
 end
 
+-- Close the gate passed in parameter
 ISGate.close = function(gate)
     -- print( "ISGate: closing gate --> " .. gate.startPos.x .. ", " .. gate.startPos.y )
     browseGateSquares(gate, function(square)
@@ -83,6 +84,7 @@ ISGate.close = function(gate)
     end)
 end
 
+-- Open the gate passed in parameter
 ISGate.open = function(gate)
     -- print( "ISGate: opening gate --> " .. gate.startPos.x .. ", " .. gate.startPos.y )
     browseGateSquares(gate, function(square)
@@ -93,7 +95,6 @@ ISGate.open = function(gate)
                 -- print( "ISGate: obj sprite --> " .. obj:getSprite():getName() )
                 if luautils.stringStarts(obj:getSprite():getName(), fenceSpriteName) then
                     -- print( "ISGate: removing fence from square" )
-                    -- square:transmitRemoveItemFromSquare(obj);
                     square:getObjects():remove(obj);
                     -- square:RecalcProperties();
                     break;
