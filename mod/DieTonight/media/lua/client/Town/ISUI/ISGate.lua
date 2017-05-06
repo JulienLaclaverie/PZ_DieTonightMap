@@ -48,7 +48,7 @@ ISGate.toggle = function(target, player, gateName, terminalTile)
     if gate then
         if ISGate.isOpen(gate) then
             print( "ISGate: " .. gateName .. " is opened ! Closing..." );
-            ISGate.close(gate);
+            ISTimedActionQueue.add(ISCloseGate:new(player, gate, terminalTile));
         else
             print( "ISGate: " .. gateName .. " is closed ! Opening..." );
             ISTimedActionQueue.add(ISOpenGate:new(player, gate, terminalTile));
@@ -67,39 +67,6 @@ ISGate.isOpen = function(gate)
         end
     end)
     return isOpened;
-end
-
--- Close the gate passed in parameter
-ISGate.close = function(gate)
-    -- print( "ISGate: closing gate --> " .. gate.startPos.x .. ", " .. gate.startPos.y )
-    ISGate.browseGateSquares(gate, function(square)
-        if square then
-            local fence = IsoObject.new(getCell(), square, gate.sprite);
-            square:getObjects():add(fence);
-            -- square:RecalcProperties();
-        end
-    end)
-end
-
--- DEPRECATED
--- Open the gate passed in parameter
-ISGate.open = function(gate)
-    -- print( "ISGate: opening gate --> " .. gate.startPos.x .. ", " .. gate.startPos.y )
-    ISGate.browseGateSquares(gate, function(square)
-        if square then
-            -- print( "ISGate: square --> " .. tostring(square:getX()) .. "," .. tostring(square:getY()) )
-            for i=0,square:getObjects():size()-1 do
-                local obj = square:getObjects():get(i);
-                -- print( "ISGate: obj sprite --> " .. obj:getSprite():getName() )
-                if luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
-                    -- print( "ISGate: removing fence from square" )
-                    square:getObjects():remove(obj);
-                    -- square:RecalcProperties();
-                    break;
-                end
-            end
-        end
-    end)
 end
 
 -- Iterate on the gate squares
@@ -123,12 +90,17 @@ ISGate.browseGateSquares = function(gate, callback)
     end
 end
 
+-- Add fence on the square passed in parameter
+ISGate.addFenceOnSquare = function(square, sprite)
+    local fence = IsoObject.new(getCell(), square, sprite);
+    square:getObjects():add(fence);
+end
+
+-- Remove fence on the square passed in parameter
 ISGate.removeFenceOnSquare = function(square)
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
-        -- print( "ISGate: obj sprite --> " .. obj:getSprite():getName() )
         if luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
-            -- print( "ISGate: removing fence from square" )
             square:getObjects():remove(obj);
             -- square:RecalcProperties();
             break;

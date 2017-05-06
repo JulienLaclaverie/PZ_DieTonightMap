@@ -8,52 +8,52 @@
 
 require "TimedActions/ISBaseTimedAction"
 
-ISOpenGate = ISBaseTimedAction:derive("ISOpenGate");
+ISCloseGate = ISBaseTimedAction:derive("ISCloseGate");
 
-function ISOpenGate:isValid()
+function ISCloseGate:isValid()
     -- local opened = ISGate.isOpen(self.gate);
-    -- print("ISOpenGate: isValid --> " .. tostring(opened))
+    -- print("ISCloseGate: isValid --> " .. tostring(opened))
     -- return not opened;
     return true;
 end
 
-function ISOpenGate:update()
+function ISCloseGate:update()
     -- self.character:faceThisObject(self.terminalTile)
-    if self.squareIndex <= self.gateLength and (self.nbIteration == 0 or self.nbIteration%self.intervalIteration == 0) then
+    if self.squareIndex >= 0 and (self.nbIteration == 0 or self.nbIteration%self.intervalIteration == 0) then
 
         -- if gate direction is on X axis
         if self.gate.startPos.x == self.gate.endPos.x then
             local sq = getCell():getGridSquare(self.gate.startPos.x, self.gate.startPos.y-self.squareIndex, 0);
-            ISGate.removeFenceOnSquare(sq);
+            ISGate.addFenceOnSquare(sq, self.gate.sprite);
         -- if gate direction is on Y axis
         elseif self.gate.startPos.y == self.gate.endPos.y then
             local sq = getCell():getGridSquare(self.gate.startPos.x-self.squareIndex, self.gate.startPos.y, 0);
-            ISGate.removeFenceOnSquare(sq);
+            ISGate.addFenceOnSquare(sq, self.gate.sprite);
         end
-        self.squareIndex = self.squareIndex+1;
+        self.squareIndex = self.squareIndex-1;
 
     end
     self.nbIteration = self.nbIteration+1;
 end
 
-function ISOpenGate:start()
+function ISCloseGate:start()
     -- TODO: find the most appropriated sound
     self.terminalTile:getSquare():playSound("shoveling", true);
 end
 
-function ISOpenGate:stop()
+function ISCloseGate:stop()
     if self.sound and self.sound:isPlaying() then
         self.sound:stop();
     end
     ISBaseTimedAction.stop(self);
 end
 
-function ISOpenGate:perform()
-    print("ISOpenGate: Gate open !")
+function ISCloseGate:perform()
+    print("ISCloseGate: Gate close !")
     ISBaseTimedAction.perform(self);
 end
 
-function ISOpenGate:new(character, gate, terminalTile)
+function ISCloseGate:new(character, gate, terminalTile)
     local o = {}
     setmetatable(o, self)
     self.__index = self
@@ -65,7 +65,6 @@ function ISOpenGate:new(character, gate, terminalTile)
     o.gate = gate;
     o.terminalTile = terminalTile;
 
-    o.squareIndex = 0; -- the index of the square to remove (start from 0)
     -- calculate and store the gate length
     o.gateLength = 0;
     if gate.startPos.x == gate.endPos.x then
@@ -73,7 +72,8 @@ function ISOpenGate:new(character, gate, terminalTile)
     elseif gate.startPos.y == gate.endPos.y then
         o.gateLength = gate.startPos.x - gate.endPos.x;
     end
-    -- nb iterations by the method ISOpenGate.update()
+    o.squareIndex = o.gateLength; -- the index of the square to remove (start from the last square)
+    -- nb iterations by the method ISCloseGate.update()
     o.nbIteration = 0;
     -- nb iterations between 2 square update (open or close)
     o.intervalIteration = math.floor(o.maxTime/o.gateLength);
