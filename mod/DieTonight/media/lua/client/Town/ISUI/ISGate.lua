@@ -87,6 +87,7 @@ end
 ISGate.addFenceOnSquare = function(square, sprite)
     local fence = IsoObject.new(getCell(), square, sprite);
     square:getObjects():add(fence);
+    square:RecalcProperties();
 end
 
 -- Remove fence on the square passed in parameter
@@ -96,6 +97,8 @@ ISGate.removeFenceOnSquare = function(square)
         if luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
             square:getObjects():remove(obj);
             -- square:RecalcProperties();
+            -- FIXME: Remove break to prevent duplicated fence on the same square
+            -- but some problems appears : the index of the table has changed after deletion
             break;
         end
     end
