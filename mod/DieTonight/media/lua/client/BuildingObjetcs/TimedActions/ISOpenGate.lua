@@ -37,7 +37,7 @@ end
 
 function ISOpenGate:start()
     -- TODO: find the most appropriated sound
-    self.terminalTile:getSquare():playSound("shoveling", true);
+    self.terminalTile:getSquare():playSound(GateAnimationConf.soundPlayed, true);
 end
 
 function ISOpenGate:stop()
@@ -57,10 +57,10 @@ function ISOpenGate:new(character, gate, terminalTile)
     setmetatable(o, self)
     self.__index = self
     o.character = character;
-    o.stopOnWalk = false;
-    o.stopOnRun = false;
-    o.caloriesModifier = 1;
-    o.maxTime = 100; -- 100=2sec , 250=6sec
+    o.stopOnWalk = GateAnimationConf.stopOnWalk;
+    o.stopOnRun = GateAnimationConf.stopOnRun;
+    o.caloriesModifier = GateAnimationConf.caloriesModifier;
+    o.maxTime = GateAnimationConf.maxTime;
     o.gate = gate;
     o.terminalTile = terminalTile;
 
