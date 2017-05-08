@@ -47,14 +47,14 @@ ISGate.toggle = function(target, player, gateName, terminalTile)
     local gate = ISGate.gates[gateName];
     if gate then
         if ISGate.isOpen(gate) then
-            print( "ISGate: " .. gateName .. " is opened ! Closing..." );
+            print( "[DT-INFO] ISGate: " .. gateName .. " is opened ! Closing..." );
             ISTimedActionQueue.add(ISCloseGate:new(player, gate, terminalTile));
         else
-            print( "ISGate: " .. gateName .. " is closed ! Opening..." );
+            print( "[DT-INFO] ISGate: " .. gateName .. " is closed ! Opening..." );
             ISTimedActionQueue.add(ISOpenGate:new(player, gate, terminalTile));
         end
     else
-        print( "ISGate: Not gate found for this security terminal ! The gate registered for this terminal is " .. gateName );
+        print( "[DT-INFO] ISGate: Not gate found for this security terminal ! The gate registered for this terminal is " .. gateName );
     end
 end
 
@@ -110,7 +110,7 @@ end
 ISGate.squareHasFence = function(square)
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
-        -- print( "ISGate: square contains --> " .. tostring(obj:getSprite():getName()) .. " ("..tostring(obj)..") |--> obj is IsoWorldInventoryObject : " .. tostring(instanceof(obj, "IsoWorldInventoryObject")) )
+        -- print( "[DT-INFO] ISGate: square contains --> " .. tostring(obj:getSprite():getName()) .. " ("..tostring(obj)..") |--> obj is IsoWorldInventoryObject : " .. tostring(instanceof(obj, "IsoWorldInventoryObject")) )
         if obj:getSprite():getName() and luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
             return true;
         end

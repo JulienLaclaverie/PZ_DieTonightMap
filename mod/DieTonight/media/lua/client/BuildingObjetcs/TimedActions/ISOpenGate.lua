@@ -75,7 +75,7 @@ function ISOpenGate:stop()
 end
 
 function ISOpenGate:perform()
-    print("ISOpenGate: Gate opened !")
+    print("[DT-INFO] ISOpenGate: Gate opened !")
     ISBaseTimedAction.perform(self);
 end
 

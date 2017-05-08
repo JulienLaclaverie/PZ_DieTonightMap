@@ -74,7 +74,7 @@ function ISCloseGate:stop()
 end
 
 function ISCloseGate:perform()
-    print("ISCloseGate: Gate closed !")
+    print("[DT-INFO] ISCloseGate: Gate closed !")
     ISBaseTimedAction.perform(self);
 end
 

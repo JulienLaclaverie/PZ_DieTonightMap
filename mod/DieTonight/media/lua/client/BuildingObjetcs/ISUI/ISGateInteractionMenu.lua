@@ -7,13 +7,13 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
     local terminal;
 
     for i,v in ipairs(worldobjects) do
-        -- print( "ISGateInteractionMenu: item seleted  --> " .. v:getSprite():getName() .. ", " .. tostring(v:getSquare():getX()) .. ", " .. tostring(v:getSquare():getY()) )
+        -- print( "[DT-INFO] ISGateInteractionMenu: item seleted  --> " .. v:getSprite():getName() .. ", " .. tostring(v:getSquare():getX()) .. ", " .. tostring(v:getSquare():getY()) )
         terminal = ISGateSecurityTerminal.terminals[v:getSprite():getName()];
         object = v;
     end
 
     if ISGateInteractionMenu.isGateSecurityTerminal(object, terminal) then
-        print("ISGateInteractionMenu: found the Security Terminal for ".. terminal.gate .." !")
+        print("[DT-INFO] ISGateInteractionMenu: found the Security Terminal for ".. terminal.gate .." !")
         context:addOption("Toggle gate", worldobjects, ISGate.toggle, getSpecificPlayer(player), terminal.gate, object);
     end
 end
