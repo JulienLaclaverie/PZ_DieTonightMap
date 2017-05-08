@@ -80,9 +80,9 @@ function ISOpenGate:perform()
 end
 
 function ISOpenGate:new(character, gate, terminalTile)
-    local o = {}
-    setmetatable(o, self)
-    self.__index = self
+    local o = {};
+    setmetatable(o, self);
+    self.__index = self;
     o.character = character;
     o.stopOnWalk = GateAnimationConf.stopOnWalk;
     o.stopOnRun = GateAnimationConf.stopOnRun;

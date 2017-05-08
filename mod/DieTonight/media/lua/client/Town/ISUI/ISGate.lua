@@ -94,11 +94,11 @@ end
 ISGate.removeFenceOnSquare = function(square)
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
-        if luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
+        if obj:getSprite():getName() and luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
             square:getObjects():remove(obj);
             -- square:RecalcProperties();
             -- FIXME: Remove break to prevent duplicated fence on the same square
-            -- but some problems appears : the index of the table has changed after deletion
+            -- but some problems appear : the index of the table has changed after deletion
             break;
         end
     end
@@ -108,7 +108,8 @@ end
 ISGate.squareHasFence = function(square)
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
-        if luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
+        -- print( "ISGate: square contains --> " .. tostring(obj:getSprite():getName()) .. " ("..tostring(obj)..") |--> obj is IsoWorldInventoryObject : " .. tostring(instanceof(obj, "IsoWorldInventoryObject")) )
+        if obj:getSprite():getName() and luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
             return true;
         end
     end
