@@ -85,7 +85,9 @@ end
 
 -- Add fence on the square passed in parameter
 ISGate.addFenceOnSquare = function(square, sprite)
-    local fence = IsoObject.new(getCell(), square, sprite);
+    local fence = IsoThumpable.new(getCell(), square, sprite, false, {});
+    -- TODO: Check the thump domages that a gate can handle
+    fence:setThumpDmg(GateAnimationConf.thumpDmg);
     square:getObjects():add(fence);
     square:RecalcProperties();
 end
