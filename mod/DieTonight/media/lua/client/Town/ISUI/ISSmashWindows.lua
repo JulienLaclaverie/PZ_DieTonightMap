@@ -55,8 +55,8 @@ ISSmashWindows.smashCity = function(player)
 
                         if (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_1"))
                         or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_0"))
-                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_16")
-                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_17")
+                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_16"))
+                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_17"))
                         or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_32"))
                         or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_33")) then
                         
