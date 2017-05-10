@@ -64,7 +64,7 @@ end
 
 function ISOpenGate:start()
     -- TODO: find the most appropriated sound
-    self.terminalTile:getSquare():playSound(GateAnimationConf.soundPlayed, true);
+    self.terminalTile:getSquare():playSound(GateProperties.soundPlayed, true);
 end
 
 function ISOpenGate:stop()
@@ -84,10 +84,10 @@ function ISOpenGate:new(character, gate, terminalTile)
     setmetatable(o, self);
     self.__index = self;
     o.character = character;
-    o.stopOnWalk = GateAnimationConf.stopOnWalk;
-    o.stopOnRun = GateAnimationConf.stopOnRun;
-    o.caloriesModifier = GateAnimationConf.caloriesModifier;
-    o.maxTime = GateAnimationConf.maxTime;
+    o.stopOnWalk = GateProperties.stopOnWalk;
+    o.stopOnRun = GateProperties.stopOnRun;
+    o.caloriesModifier = GateProperties.caloriesModifier;
+    o.maxTime = GateProperties.maxTime;
     o.gate = gate;
     o.terminalTile = terminalTile;
 

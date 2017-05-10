@@ -6,13 +6,14 @@
 -- ================================================
 
 
-GateAnimationConf = {
+GateProperties = {
 
     stopOnWalk = false,
     stopOnRun = false,
     caloriesModifier = 1,
     maxTime = 100 ,              -- 100=2sec , 250=6sec
     soundPlayed = "shoveling",    -- see media/lua/shared/SoundBanks/SoundBanks.lua
-    thumpDmg = 120
+    thumpDmg = 1,
+    maxHealth = 200
 
 }

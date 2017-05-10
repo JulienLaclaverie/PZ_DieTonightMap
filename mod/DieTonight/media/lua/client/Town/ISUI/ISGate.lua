@@ -84,12 +84,10 @@ ISGate.isOpen = function(gate)
 end
 
 -- Add fence on the square passed in parameter
-ISGate.addFenceOnSquare = function(square, sprite)
-    local fence = IsoThumpable.new(getCell(), square, sprite, false, {});
-    -- TODO: Check the thump domages that a gate can handle
-    fence:setThumpDmg(GateAnimationConf.thumpDmg);
-    square:getObjects():add(fence);
-    square:RecalcProperties();
+ISGate.addFenceOnSquare = function(square, sprite, isNorth)
+    local fence = ISGate.newFence(square, sprite, isNorth);
+    square:AddSpecialObject(fence);
+    fence:transmitCompleteItemToServer();
 end
 
 -- Remove fence on the square passed in parameter
@@ -97,8 +95,7 @@ ISGate.removeFenceOnSquare = function(square)
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
         if obj:getSprite():getName() and luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
-            square:getObjects():remove(obj);
-            -- square:RecalcProperties();
+            square:RemoveTileObject(obj);
             -- FIXME: Remove break to prevent duplicated fence on the same square
             -- but some problems appear : the index of the table has changed after deletion
             break;
@@ -116,4 +113,27 @@ ISGate.squareHasFence = function(square)
         end
     end
     return false;
+end
+
+ISGate.newFence = function(square, sprite, isNorth)
+    local fence = IsoThumpable.new(getCell(), square, sprite, isNorth, {});
+    fence:setCanPassThrough(false);
+    fence:setCanBarricade(false);
+    -- TODO: Check the thump domages that a gate can handle
+    fence:setThumpDmg(GateProperties.thumpDmg);
+    fence:setMaxHealth(GateProperties.maxHealth);
+    fence:setIsContainer(false);
+    fence:setIsDoor(false);
+    fence:setIsDoorFrame(false);
+    fence:setCrossSpeed(1.0);
+    fence:setBlockAllTheSquare(false);
+    fence:setName("Object");
+    fence:setIsDismantable(false);
+    fence:setCanBePlastered(false);
+    fence:setIsHoppable(false);
+    fence:setIsThumpable(true);
+    fence:setModData({});
+    -- the sound that will be played when our furniture will be broken
+    fence:setBreakSound("breakdoor");
+    return fence;
 end

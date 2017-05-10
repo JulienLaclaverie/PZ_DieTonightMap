@@ -24,36 +24,36 @@ function ISCloseGate:update()
     if type(self.squareIndex) == "table" then
         if (self.squareIndex.bottom < self.squareIndex.top) and (self.nbIteration == 0 or self.nbIteration%self.intervalIteration == 0) then
 
-            -- if gate direction is on X axis
+            -- if gate direction to the south
             if self.gate.startPos.x == self.gate.endPos.x then
                 local squares = {
                     top = getCell():getGridSquare(self.gate.startPos.x, self.gate.startPos.y-self.squareIndex.top, 0),
                     bottom = getCell():getGridSquare(self.gate.startPos.x, self.gate.startPos.y-self.squareIndex.bottom, 0)
                 };
-                ISGate.addFenceOnSquare(squares.top, self.gate.sprite);
-                ISGate.addFenceOnSquare(squares.bottom, self.gate.sprite);
-            -- if gate direction is on Y axis
+                ISGate.addFenceOnSquare(squares.top, self.gate.sprite, false);
+                ISGate.addFenceOnSquare(squares.bottom, self.gate.sprite, false);
+            -- if gate direction to the north
             elseif self.gate.startPos.y == self.gate.endPos.y then
                 local squares = {
                     top = getCell():getGridSquare(self.gate.startPos.x-self.squareIndex.top, self.gate.startPos.y, 0),
                     bottom = getCell():getGridSquare(self.gate.startPos.x-self.squareIndex.bottom, self.gate.startPos.y, 0)
                 };
-                ISGate.addFenceOnSquare(squares.top, self.gate.sprite);
-                ISGate.addFenceOnSquare(squares.bottom, self.gate.sprite);
+                ISGate.addFenceOnSquare(squares.top, self.gate.sprite, true);
+                ISGate.addFenceOnSquare(squares.bottom, self.gate.sprite, true);
             end
             self.squareIndex = { bottom = self.squareIndex.bottom+1, top = self.squareIndex.top-1 };
 
         elseif (self.squareIndex.top == math.floor(self.gateLength/2) and self.squareIndex.bottom == math.floor(self.gateLength/2)) and (self.nbIteration == 0 or self.nbIteration%self.intervalIteration == 0) then
 
             self.squareIndex = math.floor(self.gateLength/2);
-            -- if gate direction is on X axis
+            -- if gate direction to the south
             if self.gate.startPos.x == self.gate.endPos.x then
                 local sq = getCell():getGridSquare(self.gate.startPos.x, self.gate.startPos.y-self.squareIndex, 0);
-                ISGate.addFenceOnSquare(sq, self.gate.sprite);
-            -- if gate direction is on Y axis
+                ISGate.addFenceOnSquare(sq, self.gate.sprite, false);
+            -- if gate direction to the north
             elseif self.gate.startPos.y == self.gate.endPos.y then
                 local sq = getCell():getGridSquare(self.gate.startPos.x-self.squareIndex, self.gate.startPos.y, 0);
-                ISGate.addFenceOnSquare(sq, self.gate.sprite);
+                ISGate.addFenceOnSquare(sq, self.gate.sprite, true);
             end
 
         end
@@ -63,7 +63,7 @@ end
 
 function ISCloseGate:start()
     -- TODO: find the most appropriated sound
-    self.terminalTile:getSquare():playSound(GateAnimationConf.soundPlayed, true);
+    self.terminalTile:getSquare():playSound(GateProperties.soundPlayed, true);
 end
 
 function ISCloseGate:stop()
@@ -83,10 +83,10 @@ function ISCloseGate:new(character, gate, terminalTile)
     setmetatable(o, self);
     self.__index = self;
     o.character = character;
-    o.stopOnWalk = GateAnimationConf.stopOnWalk;
-    o.stopOnRun = GateAnimationConf.stopOnRun;
-    o.caloriesModifier = GateAnimationConf.caloriesModifier;
-    o.maxTime = GateAnimationConf.maxTime;
+    o.stopOnWalk = GateProperties.stopOnWalk;
+    o.stopOnRun = GateProperties.stopOnRun;
+    o.caloriesModifier = GateProperties.caloriesModifier;
+    o.maxTime = GateProperties.maxTime;
     o.gate = gate;
     o.terminalTile = terminalTile;
 
