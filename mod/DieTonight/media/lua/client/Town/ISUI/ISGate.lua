@@ -119,7 +119,6 @@ ISGate.newFence = function(square, sprite, isNorth)
     local fence = IsoThumpable.new(getCell(), square, sprite, isNorth, {});
     fence:setCanPassThrough(false);
     fence:setCanBarricade(false);
-    -- TODO: Check the thump domages that a gate can handle
     fence:setThumpDmg(GateProperties.thumpDmg);
     fence:setMaxHealth(GateProperties.maxHealth);
     fence:setIsContainer(false);

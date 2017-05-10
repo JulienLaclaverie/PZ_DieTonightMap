@@ -62,7 +62,6 @@ function ISCloseGate:update()
 end
 
 function ISCloseGate:start()
-    -- TODO: find the most appropriated sound
     self.terminalTile:getSquare():playSound(GateProperties.soundPlayed, true);
 end
 
