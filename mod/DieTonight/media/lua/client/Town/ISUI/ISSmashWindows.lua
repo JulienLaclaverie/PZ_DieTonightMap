@@ -15,7 +15,7 @@ ISSmashWindows = {
         -- y coordinates
         y = {
             start = 6381,
-            finish = 6564
+            finish = 6565
         },
 
         -- z coordinates
@@ -52,12 +52,17 @@ ISSmashWindows.smashCity = function(player)
                         -- Searching for windows
                         -- print("[DT-INFO] Searching for windows...");
                         local tileObject = sq:getObjects():get(i);
+
                         if (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_1"))
                         or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_0"))
+                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_16")
+                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_17")
                         or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_32"))
                         or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_33")) then
                         
                             print("[DT-INFO] Window index found !");
+                            print("[DT-INFO] Coords : " .. x .. ", " .. y .. ", " .. z);
+                            print("[DT-INFO] Tile : " .. tileObject:getSprite():getName());
                             object = ISSmashWindows.getBarricadeAble(x, y, z, tileObject:getObjectIndex());
                             if object then
                                 print("[DT-INFO] Window object found !");
