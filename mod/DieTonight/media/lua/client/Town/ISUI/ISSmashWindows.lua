@@ -4,18 +4,18 @@
 
 ISSmashWindows = {
 
-    area = {
+    city = {
 
         -- x coordinates
         x = {
-            start = 7931,
-            finish = 7946
+            start = 7915,
+            finish = 7971
         },
 
         -- y coordinates
         y = {
-            start = 6417,
-            finish = 6428
+            start = 6381,
+            finish = 6564
         },
 
         -- z coordinates
@@ -33,15 +33,15 @@ ISSmashWindows = {
 --
 
 -- Smash all windows within range
-ISSmashWindows.initialize = function(player)
+ISSmashWindows.smashCity = function(player)
 
     print("[DT-INFO] Smashing windows...");
 
     -- Check all the city squares to find windows
 
-    for z = ISSmashWindows.area.z.start, ISSmashWindows.area.z.finish do
-	    for y = ISSmashWindows.area.y.start, ISSmashWindows.area.y.finish do
-		    for x = ISSmashWindows.area.x.start, ISSmashWindows.area.x.finish do
+    for z = ISSmashWindows.city.z.start, ISSmashWindows.city.z.finish do
+	    for y = ISSmashWindows.city.y.start, ISSmashWindows.city.y.finish do
+		    for x = ISSmashWindows.city.x.start, ISSmashWindows.city.x.finish do
 
                 local sq = getCell():getGridSquare(x, y, z);
 
@@ -49,9 +49,13 @@ ISSmashWindows.initialize = function(player)
 
                     for i=0,sq:getObjects():size()-1 do
 
-                        print("[DT-INFO] Searching for windows...");
+                        -- Searching for windows
+                        -- print("[DT-INFO] Searching for windows...");
                         local tileObject = sq:getObjects():get(i);
-                        if (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_1")) or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_0")) then
+                        if (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_1"))
+                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_0"))
+                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_32"))
+                        or (luautils.stringStarts(tileObject:getSprite():getName(), "fixtures_windows_01_33")) then
                         
                             print("[DT-INFO] Window index found !");
                             object = ISSmashWindows.getBarricadeAble(x, y, z, tileObject:getObjectIndex());
@@ -83,4 +87,4 @@ ISSmashWindows.getBarricadeAble = function(x, y, z, index)
     return nil
 end
 
-Events.OnFillWorldObjectContextMenu.Add(ISSmashWindows.initialize);
+Events.OnNewGame.Add(ISSmashWindows.smashCity);
