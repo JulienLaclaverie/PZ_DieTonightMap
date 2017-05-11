@@ -67,6 +67,49 @@ ISSmashWindows.smashCity = function(player)
                             if object then
                                 print("[DT-INFO] Window object found !");
                                 object:smashWindow();
+
+                            	local character = getSpecificPlayer(0);
+								local args = {};
+
+								local randomBaricade = ZombRand(1,101);
+								print("[DT-INFO] Random percentage for baricade : " .. randomBaricade);
+
+								if (randomBaricade >= 95) then
+									print("[DT-INFO] This window is metal sheet");
+									local args = { x, y, z, i, isMetal=true, isMetalBar=false, itemID='Base.MetalBar', condition=100 }
+									ISSmashWindows.placeBarricade(args, object, character);
+								elseif (randomBaricade < 95) and (randomBaricade >= 87) then
+									print("[DT-INFO] This window is metal bars");
+									local args = { x, y, z, i, isMetal=false, isMetalBar=true, itemID='Base.SheetMetal', condition=100 }
+									ISSmashWindows.placeBarricade(args, object, character);
+								elseif (randomBaricade < 87) and (randomBaricade >= 79) then
+									print("[DT-INFO] This window has four planks");
+									local args = { x, y, z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
+									ISSmashWindows.placeBarricade(args, object, character);
+									ISSmashWindows.placeBarricade(args, object, character);
+									ISSmashWindows.placeBarricade(args, object, character);
+									ISSmashWindows.placeBarricade(args, object, character);
+								elseif (randomBaricade < 79) and (randomBaricade >= 67) then
+									print("[DT-INFO] This window has three planks");
+									local args = { x, y, z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
+									ISSmashWindows.placeBarricade(args, object, character);
+									ISSmashWindows.placeBarricade(args, object, character);
+									ISSmashWindows.placeBarricade(args, object, character);
+								elseif (randomBaricade < 67) and (randomBaricade >= 49) then
+									print("[DT-INFO] This window has two planks");
+									local args = { x, y, z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
+									ISSmashWindows.placeBarricade(args, object, character);
+									ISSmashWindows.placeBarricade(args, object, character);
+								elseif (randomBaricade < 49) and (randomBaricade >= 27) then
+									print("[DT-INFO] This window has one plank");
+									local args = { x, y, z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
+									ISSmashWindows.placeBarricade(args, object, character);
+								else
+									print("[DT-INFO] This window has no baricade");
+								end
+
+								ISSmashWindows.placeBarricade(args, object, character);
+
                             end
 
                         end
@@ -90,6 +133,48 @@ ISSmashWindows.getBarricadeAble = function(x, y, z, index)
         end
     end
     return nil
+end
+
+ISSmashWindows.placeBarricade = function(args, object, character)
+
+
+	if isClient() then
+
+		print("[DT-INFO] Baricade Client is valid");
+		sendClientCommand(character, 'object', 'barricade', args);
+
+	else
+
+		local barricade = IsoBarricade.AddBarricadeToObject(object, character);
+
+	    if barricade then
+	        print("[DT-INFO] Baricade Server is valid");
+	        if args.isMetal then
+	            local metal = InventoryItemFactory.CreateItem('Base.SheetMetal')
+	            metal:setCondition(args.condition);
+	            barricade:addMetal(character, metal);
+	            barricade:transmitCompleteItemToClients();
+	        elseif args.isMetalBar then
+	            local metal = InventoryItemFactory.CreateItem('Base.MetalBar');
+	            metal:setCondition(args.condition);
+	            barricade:addMetalBar(character, metal);
+	            barricade:transmitCompleteItemToClients();
+	        else
+	            local plank = InventoryItemFactory.CreateItem('Base.Plank');
+	            plank:setCondition(args.condition);
+	            barricade:addPlank(character, plank);
+	            if barricade:getNumPlanks() == 1 then
+	                barricade:transmitCompleteItemToClients();
+	            else
+	                barricade:sendObjectChange('state');
+	            end
+	        end
+	    else
+	        print("[DT-ERROR] Barricade not created");
+	    end
+
+	end
+
 end
 
 Events.OnNewGame.Add(ISSmashWindows.smashCity);
