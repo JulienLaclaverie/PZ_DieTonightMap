@@ -2,7 +2,7 @@
 -- Properties
 --
 
-ISCityObjects = {
+CityObjects = {
 
     objects = {
 
@@ -36,14 +36,14 @@ ISCityObjects = {
 --
 
 -- Initialize objects with special behaviors (campfire, baricades, etc...)
-ISCityObjects.initialize = function(player)
+CityObjects.initialize = function(player)
 
     print("[DT-INFO] Initializing all the objects of the map...");
 
     -- Check if initialization has not been done for previous characters
     -- [ Check needs to be implemented here ]
 
-    for k, object in pairs(ISCityObjects.objects) do
+    for k, object in pairs(CityObjects.objects) do
 
         local sq = getWorld():getCell():getGridSquare(object.args.x, object.args.y, object.args.z);
 
@@ -69,7 +69,7 @@ ISCityObjects.initialize = function(player)
                     if isClient() then
                         sendClientCommand(nil, object.source, object.action, object.args);
                     else
-                        ISCityObjects.placeBarricade(player, object.args);
+                        CityObjects.placeBarricade(player, object.args);
                     end
 
                 end
@@ -91,9 +91,9 @@ ISCityObjects.initialize = function(player)
     
 end
 
--- ISCityObjects.barricade = function(player, args)
-ISCityObjects.placeBarricade = function(player, args)
-    local object = ISCityObjects.getBarricadeAble(args.x, args.y, args.z, args.index)
+-- CityObjects.barricade = function(player, args)
+CityObjects.placeBarricade = function(player, args)
+    local object = CityObjects.getBarricadeAble(args.x, args.y, args.z, args.index)
 
     if object then
         print("[DT-INFO] Found Barricadeable");
@@ -134,7 +134,7 @@ ISCityObjects.placeBarricade = function(player, args)
 end
 
 -- Get the baricadeable object from coords
-ISCityObjects.getBarricadeAble = function(x, y, z, index)
+CityObjects.getBarricadeAble = function(x, y, z, index)
     local sq = getCell():getGridSquare(x, y, z)
     if sq and index >= 0 and index < sq:getObjects():size() then
         o = sq:getObjects():get(index)
@@ -146,7 +146,7 @@ ISCityObjects.getBarricadeAble = function(x, y, z, index)
 end
 
 -- Get sprite & coordinates 
-ISCityObjects.getCoords = function(player, context, worldobjects, test)
+CityObjects.getCoords = function(player, context, worldobjects, test)
 
     for i,v in ipairs(worldobjects) do
 
@@ -160,5 +160,5 @@ ISCityObjects.getCoords = function(player, context, worldobjects, test)
 end
 
 -- Events are curently off because of the work in progress state
--- Events.OnFillWorldObjectContextMenu.Add(ISCityObjects.getCoords);
--- Events.OnNewGame.Add(ISCityObjects.initialize);
+-- Events.OnFillWorldObjectContextMenu.Add(CityObjects.getCoords);
+-- Events.OnNewGame.Add(CityObjects.initialize);

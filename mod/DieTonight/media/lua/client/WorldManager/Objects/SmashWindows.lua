@@ -2,7 +2,7 @@
 -- Properties
 --
 
-ISSmashWindows = {
+SmashWindows = {
 
     city = {
 
@@ -32,7 +32,7 @@ ISSmashWindows = {
 -- Methods
 --
 
-ISSmashWindows.loadGridsquare = function(sq)
+SmashWindows.loadGridsquare = function(sq)
 
     for i=0,sq:getObjects():size()-1 do
 
@@ -53,7 +53,7 @@ ISSmashWindows.loadGridsquare = function(sq)
 	            print("[DT-INFO] Window index found !");
 	            print("[DT-INFO] Coords : " .. coords.x .. ", " .. coords.y .. ", " .. coords.z);
 	            print("[DT-INFO] Tile : " .. tileObject:getSprite():getName());
-	            object = ISSmashWindows.getBarricadeAble(coords.x, coords.y, coords.z, tileObject:getObjectIndex());
+	            object = SmashWindows.getBarricadeAble(coords.x, coords.y, coords.z, tileObject:getObjectIndex());
 
 	            if object then
 	                print("[DT-INFO] Window object found !");
@@ -68,38 +68,38 @@ ISSmashWindows.loadGridsquare = function(sq)
 					if (randomBaricade >= 95) then
 						print("[DT-INFO] This window is metal sheet");
 						local args = { coords.x, coords.y, coords.z, i, isMetal=true, isMetalBar=false, itemID='Base.MetalBar', condition=100 }
-						ISSmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 95) and (randomBaricade >= 87) then
 						print("[DT-INFO] This window is metal bars");
 						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=true, itemID='Base.SheetMetal', condition=100 }
-						ISSmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 87) and (randomBaricade >= 79) then
 						print("[DT-INFO] This window has four planks");
 						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
-						ISSmashWindows.placeBarricade(args, object, character);
-						ISSmashWindows.placeBarricade(args, object, character);
-						ISSmashWindows.placeBarricade(args, object, character);
-						ISSmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 79) and (randomBaricade >= 67) then
 						print("[DT-INFO] This window has three planks");
 						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
-						ISSmashWindows.placeBarricade(args, object, character);
-						ISSmashWindows.placeBarricade(args, object, character);
-						ISSmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 67) and (randomBaricade >= 49) then
 						print("[DT-INFO] This window has two planks");
 						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
-						ISSmashWindows.placeBarricade(args, object, character);
-						ISSmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 49) and (randomBaricade >= 27) then
 						print("[DT-INFO] This window has one plank");
 						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
-						ISSmashWindows.placeBarricade(args, object, character);
+						SmashWindows.placeBarricade(args, object, character);
 					else
 						print("[DT-INFO] This window has no baricade");
 					end
 
-					ISSmashWindows.placeBarricade(args, object, character);
+					SmashWindows.placeBarricade(args, object, character);
 
 	            end
 
@@ -111,7 +111,7 @@ ISSmashWindows.loadGridsquare = function(sq)
 
 end
 
-ISSmashWindows.getBarricadeAble = function(x, y, z, index)
+SmashWindows.getBarricadeAble = function(x, y, z, index)
     local sq = getCell():getGridSquare(x, y, z)
     if sq and index >= 0 and index < sq:getObjects():size() then
         o = sq:getObjects():get(index)
@@ -122,7 +122,7 @@ ISSmashWindows.getBarricadeAble = function(x, y, z, index)
     return nil
 end
 
-ISSmashWindows.placeBarricade = function(args, object, character)
+SmashWindows.placeBarricade = function(args, object, character)
 
 
 	if isClient() then
@@ -164,5 +164,5 @@ ISSmashWindows.placeBarricade = function(args, object, character)
 
 end
 
-Events.LoadGridsquare.Add(ISSmashWindows.loadGridsquare);
---Events.OnNewGame.Add(ISSmashWindows.smashCity);
+Events.LoadGridsquare.Add(SmashWindows.loadGridsquare);
+--Events.OnNewGame.Add(SmashWindows.smashCity);
