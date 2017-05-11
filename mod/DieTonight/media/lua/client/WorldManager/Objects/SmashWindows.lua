@@ -2,31 +2,7 @@
 -- Properties
 --
 
-SmashWindows = {
-
-    city = {
-
-        -- x coordinates
-        x = {
-            start = 7915,
-            finish = 7971
-        },
-
-        -- y coordinates
-        y = {
-            start = 6381,
-            finish = 6565
-        },
-
-        -- z coordinates
-        z = {
-            start = 0,
-            finish = 3
-        },
-
-    }
-
-};
+SmashWindows = {};
 
 --
 -- Methods
