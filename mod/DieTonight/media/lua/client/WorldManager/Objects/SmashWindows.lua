@@ -38,44 +38,42 @@ SmashWindows.loadGridsquare = function(sq)
 	            	local character = getSpecificPlayer(0);
 	            	local args = {}
 
-					local randomBaricade = ZombRand(1,101);
+					local randomBaricade = ZombRand(0,100);
 					print("[DT-INFO] Random percentage for baricade : " .. randomBaricade);
 
 					if (randomBaricade >= 95) then
 						print("[DT-INFO] This window is metal sheet");
-						local args = { coords.x, coords.y, coords.z, i, isMetal=true, isMetalBar=false, itemID='Base.MetalBar', condition=100 }
+						local args = { coords.x, coords.y, coords.z, i, isMetal=true, isMetalBar=false, itemID='Base.MetalBar', condition=10 }
 						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 95) and (randomBaricade >= 87) then
 						print("[DT-INFO] This window is metal bars");
-						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=true, itemID='Base.SheetMetal', condition=100 }
+						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=true, itemID='Base.SheetMetal', condition=10 }
 						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 87) and (randomBaricade >= 79) then
 						print("[DT-INFO] This window has four planks");
-						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
+						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10 }
 						SmashWindows.placeBarricade(args, object, character);
 						SmashWindows.placeBarricade(args, object, character);
 						SmashWindows.placeBarricade(args, object, character);
 						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 79) and (randomBaricade >= 67) then
 						print("[DT-INFO] This window has three planks");
-						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
+						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10 }
 						SmashWindows.placeBarricade(args, object, character);
 						SmashWindows.placeBarricade(args, object, character);
 						SmashWindows.placeBarricade(args, object, character);
 					elseif (randomBaricade < 67) and (randomBaricade >= 49) then
 						print("[DT-INFO] This window has two planks");
-						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
+						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10 }
 						SmashWindows.placeBarricade(args, object, character);
 						SmashWindows.placeBarricade(args, object, character);
-					elseif (randomBaricade < 49) and (randomBaricade >= 27) then
+					elseif (randomBaricade < 49) and (randomBaricade >= 30) then
 						print("[DT-INFO] This window has one plank");
-						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=100 }
+						local args = { coords.x, coords.y, coords.z, i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10 }
 						SmashWindows.placeBarricade(args, object, character);
 					else
 						print("[DT-INFO] This window has no baricade");
 					end
-
-					SmashWindows.placeBarricade(args, object, character);
 
 	            end
 
@@ -124,7 +122,7 @@ SmashWindows.placeBarricade = function(args, object, character)
 	            barricade:transmitCompleteItemToClients();
 	        else
 	            local plank = InventoryItemFactory.CreateItem('Base.Plank');
-	            plank:setCondition(args.condition);
+	            --plank:setCondition(args.condition);
 	            barricade:addPlank(character, plank);
 	            if barricade:getNumPlanks() == 1 then
 	                barricade:transmitCompleteItemToClients();
