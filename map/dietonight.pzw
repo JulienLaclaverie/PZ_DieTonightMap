@@ -140,6 +140,10 @@
   <object type="SpawnPoint" x="139" y="92" level="0" width="1" height="1">
    <template name="SpawnPoint"/>
   </object>
+  <object group="Forest" type="Forest" x="85" y="166" level="0" width="120" height="37"/>
+  <object group="Forest" type="Forest" x="85" y="80" level="0" width="30" height="86"/>
+  <object group="Forest" type="Forest" x="85" y="50" level="0" width="120" height="30"/>
+  <object group="Forest" type="Forest" x="174" y="80" level="0" width="31" height="86"/>
  </cell>
  <cell x="2" y="1" map="edesert_2_1.tmx"/>
  <cell x="0" y="2" map="southwestdesertzone_0_2.tmx"/>
