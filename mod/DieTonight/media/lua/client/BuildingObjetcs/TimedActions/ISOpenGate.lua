@@ -110,8 +110,8 @@ function ISOpenGate:new(character, gate, terminalTile)
     o.nbIteration = 0;
     -- nb iterations between 2 square update (open or close)
     ---- it seems like update() is called 25 times more than self.maxTime
-    ---- fixme: I wrote 22 because it can arrive that update() is triggered only 23 or 24 times... :'(
-    o.intervalIteration = math.ceil((o.maxTime+22)*2/o.gateLength);
+    ---- fixme: I wrote 20 because it can arrive that update() is triggered only 23 or 24 times... :'(
+    o.intervalIteration = math.ceil((o.maxTime+20)*2/o.gateLength);
 
     return o
 end
