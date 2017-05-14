@@ -84,5 +84,9 @@ objects = {
     properties = {
       Professions = "all"
     }
-  }
+  },
+  { name = "", type = "Forest", x = 7885, y = 6466, z = 0, width = 120, height = 37 },
+  { name = "", type = "Forest", x = 7885, y = 6380, z = 0, width = 30, height = 86 },
+  { name = "", type = "Forest", x = 7885, y = 6350, z = 0, width = 120, height = 30 },
+  { name = "", type = "Forest", x = 7974, y = 6380, z = 0, width = 31, height = 86 }
 }
