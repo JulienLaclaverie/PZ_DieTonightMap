@@ -5,16 +5,9 @@ ISWorldObjectContextMenu.doScavengeOptions = function(context, player, scavengeZ
     print("[DT-INFO] ISWorldObjectContextMenu.doScavengeOptions is properly overitten : ");
 
     local playerObj = getSpecificPlayer(player)
-
-    -- In the desert, you can't forage without a shovel
-    if playerObj:getInventory():contains("HandShovel") or playerObj:getInventory():contains("Shovel") then  
-        print("[DT-INFO] Player have shovel "); 
-    else
-        print("[DT-INFO] Player does'nt have shovel ");
-    end
-
     local text = "";
     local zone = ISScavengeAction.getScavengingZone(clickedSquare:getX(), clickedSquare:getY());
+
     if not zone then
         text = "(100" .. getText("ContextMenu_FullPercent") .. ")"
     else
@@ -44,5 +37,15 @@ ISWorldObjectContextMenu.doScavengeOptions = function(context, player, scavengeZ
         end
     end
 
-    context:addOption(getText("ContextMenu_Forage") .. " " .. text, nil, ISWorldObjectContextMenu.onScavenge, getSpecificPlayer(player), scavengeZone, clickedSquare);
+    local scavengeOption = context:addOption("Scavenge " .. text, nil, ISWorldObjectContextMenu.onScavenge, getSpecificPlayer(player), scavengeZone, clickedSquare);
+
+    -- In the desert, you can't forage without a shovel
+    if (playerObj:getInventory():contains("HandShovel") == false) and (playerObj:getInventory():contains("Shovel") == false) then  
+        scavengeOption.notAvailable = true;
+        local tooltip = ISWorldObjectContextMenu.addToolTip();
+        tooltip:setName("Scavenge the desert");
+        tooltip.description = "You need a shovel or a trovel to scavenge";
+        scavengeOption.toolTip = tooltip;
+    end
+
 end

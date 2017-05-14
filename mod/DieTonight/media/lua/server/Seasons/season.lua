@@ -126,7 +126,8 @@ season.updateBodyTemperature = function()
 			local heatSourceTemp = getCell():getHeatSourceTemperature(player:getX(), player:getY(), player:getZ())
 			-- can up the maximum body Temp only by 10 (so you can't set up 50 campfire and be always hot, even during high winter)
 			heatSourceTemp = math.min(heatSourceTemp, 10)
-			local vehicleTemp = VehicleUtils.getBodyTemperature(player)
+			--TODO: Activate this when vehicle update hits
+			--local vehicleTemp = VehicleUtils.getBodyTemperature(player)
 			local goalTemp = player:getPlayerClothingTemperature() + getWorld():getGlobalTemperature() + heatSourceTemp
 			local playerTemp = player:getTemperature()
 --			noise(goalTemp..' '..playerTemp)
