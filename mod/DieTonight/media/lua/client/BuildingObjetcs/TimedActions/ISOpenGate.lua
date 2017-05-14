@@ -19,7 +19,6 @@ end
 -- Animation to open the gate
 -- The gate opens from middle to each side
 function ISOpenGate:update()
-    -- self.character:faceThisObject(self.terminalTile)
     if type(self.squareIndex) == "number" then
         if self.squareIndex <= self.gateLength and (self.nbIteration == 0 or self.nbIteration%self.intervalIteration == 0) then
 
@@ -63,7 +62,7 @@ function ISOpenGate:update()
 end
 
 function ISOpenGate:start()
-    -- TODO: find the most appropriated sound
+    self.character:faceThisObject(self.terminalTile);
     self.terminalTile:getSquare():playSound(GateProperties.soundPlayed, true);
 end
 

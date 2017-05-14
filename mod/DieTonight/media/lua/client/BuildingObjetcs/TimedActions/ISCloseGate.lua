@@ -19,8 +19,6 @@ end
 -- Animation to close the gate
 -- The gate is closing from each side to the middle
 function ISCloseGate:update()
-    -- self.character:faceThisObject(self.terminalTile)
-
     if type(self.squareIndex) == "table" then
         if (self.squareIndex.bottom < self.squareIndex.top) and (self.nbIteration == 0 or self.nbIteration%self.intervalIteration == 0) then
 
@@ -62,6 +60,7 @@ function ISCloseGate:update()
 end
 
 function ISCloseGate:start()
+    self.character:faceThisObject(self.terminalTile);
     self.terminalTile:getSquare():playSound(GateProperties.soundPlayed, true);
 end
 
