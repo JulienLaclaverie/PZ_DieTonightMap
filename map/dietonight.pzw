@@ -87,6 +87,7 @@
   <lot x="148" y="85" level="0" width="21" height="41" map="../tmx/buildings/town/ConstructionSite.tbx"/>
   <lot x="158" y="126" level="0" width="9" height="9" map="../tmx/buildings/town/Housing1.tbx"/>
   <lot x="139" y="108" level="0" width="9" height="9" map="../tmx/buildings/town/Housing2.tbx"/>
+  <lot x="241" y="250" level="0" width="31" height="21" map="../tmx/buildings/wasteland/Warehouses01.tbx"/>
   <object group="TownZone" type="TownZone" x="115" y="84" level="0" width="59" height="80"/>
   <object type="SpawnPoint" x="161" y="154" level="0" width="1" height="1">
    <template name="SpawnPoint"/>
