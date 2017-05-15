@@ -43,18 +43,19 @@ ISGate = {
 -- Methods
 --
 
-ISGate.toggle = function(target, player, gateName, terminalTile)
-    local gate = ISGate.gates[gateName];
-    if gate then
+ISGate.toggle = function(target, player, terminal, terminalTile)
+    local gate = ISGate.gates[terminal.gate];
+    -- We check if the player hasn't moved after the Toggle Gate option showed up
+    if gate and ISGateInteractionMenu.isOnInteractionZone(terminal, player) then
         if ISGate.isOpen(gate) then
-            print( "[DT-INFO] ISGate: " .. gateName .. " is opened ! Closing..." );
+            print( "[DT-INFO] ISGate: " .. terminal.gate .. " is opened ! Closing..." );
             ISTimedActionQueue.add(ISCloseGate:new(player, gate, terminalTile));
         else
-            print( "[DT-INFO] ISGate: " .. gateName .. " is closed ! Opening..." );
+            print( "[DT-INFO] ISGate: " .. terminal.gate .. " is closed ! Opening..." );
             ISTimedActionQueue.add(ISOpenGate:new(player, gate, terminalTile));
         end
     else
-        print( "[DT-INFO] ISGate: Not gate found for this security terminal ! The gate registered for this terminal is " .. gateName );
+        print( "[DT-INFO] ISGate: No gate found for this security terminal ! The gate registered for this terminal is " .. terminal.gate );
     end
 end
 
