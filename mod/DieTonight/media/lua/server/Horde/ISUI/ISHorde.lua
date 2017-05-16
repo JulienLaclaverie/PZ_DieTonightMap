@@ -60,7 +60,7 @@ ISHorde.countPlayersInTown = function()
     if players then
         for i=0,players:size()-1 do
             local p = players:get(i);
-            print("[DT-INFO] ISHorde: player online --> name="..tostring(p:getSurname())..", isInTown="..tostring(ISHorde.isPlayerInTown(getPlayer())));
+            print("[DT-INFO] ISHorde: player online --> name="..tostring(p:getUsername())..", isInTown="..tostring(ISHorde.isPlayerInTown(p)));
             if ISHorde.isPlayerInTown(p) then
                 playerCount = playerCount + 1;
             end
@@ -88,7 +88,7 @@ end
 ISHorde.spawn = function()
     local nbZombiesToSpawn = ISHorde.countPlayersInTown();
     for i,region in ipairs(ISHorde.spawnPoints) do
-        spawnHorde(region.x,region.y,region.x2,region.y2, 0, ISHorde.countZombiesToSpawn());
+        spawnHorde(region.x,region.y,region.x2,region.y2, 0, nbZombiesToSpawn);
         -- addSound(getPlayer(), 13986, 5833, getPlayer():getZ(), 600, 600);
         -- addSound(self:getTrapObject(), square:getX(),square:getY(),square:getZ(), 40, 10);
     end
@@ -97,13 +97,13 @@ end
 ISHorde.Tick = function()
     if getPlayer() == nil then return end;
 
-    --print( "[DT-INFO] ISHorde.Tick() --> hour=".. getGameTime():getHour() .. ", day="..getGameTime():getDaysSurvived());
+    print( "[DT-INFO] ISHorde.Tick() --> hour=".. getGameTime():getHour() .. ", day="..getGameTime():getDaysSurvived());
 
     -- FIXME: I saw 24 displayed one time...
     if getGameTime():getHour() == 0 or getGameTime():getHour() == 24 then
         print( "[DT-INFO] ISHorde: It's midnight !");
-        -- ISHorde.spawn();
-        ISHorde.countZombiesToSpawn();
+        ISHorde.spawn();
+        -- ISHorde.countZombiesToSpawn();
     end
 end
 
