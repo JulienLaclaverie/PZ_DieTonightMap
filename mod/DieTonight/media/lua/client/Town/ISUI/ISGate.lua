@@ -97,6 +97,7 @@ ISGate.removeFenceOnSquare = function(square)
         local obj = square:getObjects():get(i);
         if obj:getSprite():getName() and luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
             square:RemoveTileObject(obj);
+            square:transmitRemoveItemFromSquare(obj);
             -- FIXME: Remove break to prevent duplicated fence on the same square
             -- but some problems appear : the index of the table has changed after deletion
             break;
