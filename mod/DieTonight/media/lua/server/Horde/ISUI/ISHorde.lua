@@ -10,7 +10,7 @@ ISHorde = {
     spawnPoints = {
         -- north gate
         {
-            x = 7939, y = 6378, x2 = 7936, y2 = 6376,
+            x = 7936, y = 6376, x2 = 7939, y2 = 6378,
             noiseSource = {x = 7939, y = 6389, z = 0}
         },
         -- south gate
@@ -20,7 +20,7 @@ ISHorde = {
         },
         -- west gate
         {
-            x = 7913, y = 6416, x2 = 7911, y2 = 6421,
+            x = 7911, y = 6421, x2 = 7913, y2 = 6416,
             noiseSource = {x = 7921, y = 6420, z = 0}
         },
         -- east gate
@@ -104,15 +104,33 @@ ISHorde.isPlayerInTown = function(player)
     return false;
 end
 
-ISHorde.spawn = function()
+ISHorde.spawn = function(region, nbZombiesToSpawn)
+    spawnHorde(region.x,region.y,region.x2,region.y2, 0, nbZombiesToSpawn);
+    local squareNoiseSrc = getCell():getGridSquare(region.noiseSource.x, region.noiseSource.y, region.noiseSource.z);
+    getSoundManager():PlayWorldSound("scream", squareNoiseSrc, ISHorde.noiseProps.pitchVar, ISHorde.noiseProps.radius, ISHorde.noiseProps.maxGain, ISHorde.noiseProps.ignoreOutside);
+end
+
+ISHorde.buildHorde = function()
     local nbZombiesToSpawn = ISHorde.countZombiesToSpawn();
     print("[DT-INFO] ISHorde: preparing "..nbZombiesToSpawn.." zombies to spawn in front of each gate")
     for i,region in ipairs(ISHorde.spawnPoints) do
         --- TODO: make the spawn asynchrone if spawnHorde() didn't work because squares doesn't exist
         --- If spawn not work, stack the nb of zombies and wait the loading of the squares
-        spawnHorde(region.x,region.y,region.x2,region.y2, 0, nbZombiesToSpawn);
-        local squareNoiseSrc = getCell():getGridSquare(region.noiseSource.x, region.noiseSource.y, region.noiseSource.z);
-        getSoundManager():PlayWorldSound("fscream", squareNoiseSrc, ISHorde.noiseProps.pitchVar, ISHorde.noiseProps.radius, ISHorde.noiseProps.maxGain, ISHorde.noiseProps.ignoreOutside);
+
+        if getCell():getGridSquare(region.x,region.y, 0) and getCell():getGridSquare(region.x2,region.y2, 0) then
+            print("[DT-INFO] ISHorde: spawn region n°"..i.." OK");
+            ISHorde.spawn(region, nbZombiesToSpawn);
+            -- spawnHorde(region.x,region.y,region.x2,region.y2, 0, nbZombiesToSpawn);
+            -- local squareNoiseSrc = getCell():getGridSquare(region.noiseSource.x, region.noiseSource.y, region.noiseSource.z);
+            -- getSoundManager():PlayWorldSound("scream", squareNoiseSrc, ISHorde.noiseProps.pitchVar, ISHorde.noiseProps.radius, ISHorde.noiseProps.maxGain, ISHorde.noiseProps.ignoreOutside);
+        else
+            if getGameTime():getModData()["DT_Horde_"..i]  then
+                getGameTime():getModData()["DT_Horde_"..i] = getGameTime():getModData()["DT_Horde_"..i] + nbZombiesToSpawn;
+            else
+                getGameTime():getModData()["DT_Horde_"..i] = nbZombiesToSpawn;
+            end
+            print("[DT-INFO] ISHorde: spawn region "..i.." doesn't exist, saving "..getGameTime():getModData()["DT_Horde_"..i].." zombies...");
+        end
     end
 end
 
@@ -123,10 +141,26 @@ ISHorde.Tick = function()
     -- print("[DT-INFO] ISHorde: preparing "..ISHorde.countZombiesToSpawn().." zombies to spawn in front of each gate")
 
     -- FIXME: I saw 24 displayed one time... Just in case :B
-    if getGameTime():getHour() == 0 or getGameTime():getHour() == 24 then
+    -- if getGameTime():getHour() == 0 or getGameTime():getHour() == 24 then
         print( "[DT-INFO] ISHorde: It's midnight ! Spawning horde...");
-        ISHorde.spawn();
+        ISHorde.buildHorde();
+    -- end
+end
+
+ISHorde.checkHordeSpawn = function(sq)
+    for i,region in ipairs(ISHorde.spawnPoints) do
+        if sq:getX() >= region.x and
+           sq:getX() <= region.x2 and
+           sq:getY() >= region.y and
+           sq:getY() <= region.y2 then
+            if getGameTime():getModData()["DT_Horde_"..i] then
+                print("[DT-INFO] ISHorde: horde spawn region "..i.." loadedd. Spawning zombies...");
+                ISHorde.spawn(region, getGameTime():getModData()["DT_Horde_"..i]);
+                getGameTime():getModData()["DT_Horde_"..i] = nil;
+            end
+        end
     end
 end
 
 Events.EveryHours.Add(ISHorde.Tick);
+Events.LoadGridsquare.Add(ISHorde.checkHordeSpawn);
