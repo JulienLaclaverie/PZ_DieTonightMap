@@ -23,7 +23,7 @@
   <worldOrigin origin="25,20"/>
  </GenerateLots>
  <LuaSettings>
-  <spawnPointsFile path="spawnpoint.lua"/>
+  <spawnPointsFile path="spawnpoints.lua"/>
   <worldObjectsFile path="objects.lua"/>
  </LuaSettings>
  <bmp path="edesert.bmp" x="2" y="1" width="1" height="1"/>
@@ -88,6 +88,16 @@
   <lot x="158" y="126" level="0" width="9" height="9" map="../tmx/buildings/town/Housing1.tbx"/>
   <lot x="139" y="108" level="0" width="9" height="9" map="../tmx/buildings/town/Housing2.tbx"/>
   <lot x="241" y="250" level="0" width="31" height="21" map="../tmx/buildings/wasteland/Warehouses01.tbx"/>
+  <lot x="5" y="38" level="0" width="12" height="12" map="../tmx/buildings/wasteland/LostHouse01.tbx"/>
+  <lot x="267" y="31" level="0" width="11" height="13" map="../tmx/buildings/wasteland/Warehouses02.tbx"/>
+  <lot x="74" y="274" level="0" width="11" height="11" map="../tmx/buildings/wasteland/LostHouse02.tbx"/>
+  <lot x="17" y="200" level="0" width="13" height="11" map="../tmx/buildings/wasteland/Warehouses03.tbx"/>
+  <lot x="183" y="284" level="0" width="16" height="13" map="../tmx/buildings/wasteland/ScavengeSite02.tbx"/>
+  <lot x="245" y="74" level="0" width="6" height="6" map="../tmx/buildings/wasteland/Decoration01.tbx"/>
+  <lot x="278" y="202" level="0" width="8" height="6" map="../tmx/buildings/wasteland/Decoration02.tbx"/>
+  <lot x="41" y="85" level="0" width="6" height="9" map="../tmx/buildings/wasteland/Decoration03.tbx"/>
+  <lot x="87" y="249" level="0" width="7" height="7" map="../tmx/buildings/wasteland/Decoration04.tbx"/>
+  <lot x="73" y="0" level="0" width="21" height="16" map="../tmx/buildings/wasteland/ScavengeSite01.tbx"/>
   <object group="TownZone" type="TownZone" x="115" y="84" level="0" width="59" height="80"/>
   <object type="SpawnPoint" x="161" y="154" level="0" width="1" height="1">
    <template name="SpawnPoint"/>
@@ -145,6 +155,16 @@
   <object group="Forest" type="Forest" x="88" y="36" level="0" width="144" height="24"/>
   <object group="Forest" type="Forest" x="203" y="60" level="0" width="29" height="159"/>
   <object group="Forest" type="Forest" x="88" y="189" level="0" width="115" height="30"/>
+  <object group="DeepForest" type="DeepForest" x="180" y="281" level="0" width="22" height="19"/>
+  <object group="DeepForest" type="DeepForest" x="70" y="-3" level="0" width="27" height="22"/>
+  <object group="Forest" type="Forest" x="0" y="281" level="0" width="180" height="19"/>
+  <object group="Forest" type="Forest" x="202" y="281" level="0" width="98" height="19"/>
+  <object group="Forest" type="Forest" x="0" y="0" level="0" width="70" height="19"/>
+  <object group="Forest" type="Forest" x="97" y="0" level="0" width="203" height="19"/>
+  <object group="Forest" type="Forest" x="0" y="19" level="0" width="58" height="262"/>
+  <object group="Forest" type="Forest" x="58" y="19" level="0" width="242" height="17"/>
+  <object group="Forest" type="Forest" x="232" y="36" level="0" width="68" height="245"/>
+  <object group="Forest" type="Forest" x="58" y="219" level="0" width="174" height="62"/>
  </cell>
  <cell x="2" y="1" map="edesert_2_1.tmx"/>
  <cell x="0" y="2" map="southwestdesertzone_0_2.tmx"/>
