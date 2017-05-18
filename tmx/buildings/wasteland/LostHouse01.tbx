@@ -178,8 +178,8 @@
   <tile tile="d_streetcracks_1_019"/>
   <tile tile="d_wallcracks_1_002"/>
   <tile tile="d_wallcracks_1_029"/>
+  <tile tile="fixtures_doors_fences_01_024"/>
   <tile tile="fixtures_doors_fences_01_025"/>
-  <tile tile="fixtures_doors_fences_01_027"/>
   <tile tile="fixtures_windows_01_032"/>
   <tile tile="fixtures_windows_01_033"/>
   <tile tile="floors_rugs_01_008"/>
@@ -243,9 +243,9 @@
   <tiles layer="Doors">
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,30,0,0,0,0,0,
+0,0,0,0,0,0,31,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,31,0,0,0,
+0,0,0,0,0,0,0,0,30,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
