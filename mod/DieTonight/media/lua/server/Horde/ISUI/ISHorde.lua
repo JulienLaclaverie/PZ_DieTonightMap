@@ -85,6 +85,9 @@ ISHorde.countPlayersInTown = function()
             end
             print("[DT-INFO] ISHorde: "..playerCount.."/"..(players.size() or 1).." player(s) are in the town");
         end
+        if playerCount < math.floor(players:size()/2) and math.floor(players:size()/2) > 0 then
+            playerCount = math.floor(players:size()/2);
+        end
     -- else
     --     print("[DT-INFO] ISHorde: offline player --> name="..tostring(getPlayer():getUsername())..", isInTown="..tostring(ISHorde.isPlayerInTown(getPlayer())));
     end
