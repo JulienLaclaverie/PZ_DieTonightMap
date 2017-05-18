@@ -1,6 +1,6 @@
-CustomCommandsHandler = {};
+PlaceWindowsBaricades = {};
 
-CustomCommandsHandler.loadGridsquare = function(sq)
+PlaceWindowsBaricades.loadGridsquare = function(sq)
 
     if isClient() == false then
 
@@ -23,7 +23,7 @@ CustomCommandsHandler.loadGridsquare = function(sq)
                     print("[DT-INFO] Window index found !");
                     print("[DT-INFO] Coords : " .. coords.x .. ", " .. coords.y .. ", " .. coords.z);
                     print("[DT-INFO] Tile : " .. tileObject:getSprite():getName());
-                    object = CustomCommandsHandler.getBarricadeAble(coords.x, coords.y, coords.z, tileObject:getObjectIndex());
+                    object = PlaceWindowsBaricades.getBarricadeAble(coords.x, coords.y, coords.z, tileObject:getObjectIndex());
 
                     if object then
                         print("[DT-INFO] Window object found !");
@@ -36,27 +36,27 @@ CustomCommandsHandler.loadGridsquare = function(sq)
                         if (randomBaricade >= 95) then
                             print("[DT-INFO] This window is metal sheet");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=true, isMetalBar=false, itemID='Base.MetalBar', condition=10, amount=1 }
-                            CustomCommandsHandler.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object);
                         elseif (randomBaricade < 95) and (randomBaricade >= 87) then
                             print("[DT-INFO] This window is metal bars");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=true, itemID='Base.SheetMetal', condition=10, amount=1 }
-                            CustomCommandsHandler.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object);
                         elseif (randomBaricade < 87) and (randomBaricade >= 79) then
                             print("[DT-INFO] This window has four planks");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10, amount=4 }
-                            CustomCommandsHandler.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object);
                         elseif (randomBaricade < 79) and (randomBaricade >= 67) then
                             print("[DT-INFO] This window has three planks");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10, amount=3 }
-                            CustomCommandsHandler.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object);
                         elseif (randomBaricade < 67) and (randomBaricade >= 49) then
                             print("[DT-INFO] This window has two planks");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10, amount=2 }
-                            CustomCommandsHandler.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object);
                         elseif (randomBaricade < 49) and (randomBaricade >= 30) then
                             print("[DT-INFO] This window has one plank");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10, amount=1 }
-                            CustomCommandsHandler.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object);
                         else
                             print("[DT-INFO] This window has no baricade");
                         end
@@ -75,7 +75,7 @@ CustomCommandsHandler.loadGridsquare = function(sq)
 
 end
 
-CustomCommandsHandler.getBarricadeAble = function(x, y, z, index)
+PlaceWindowsBaricades.getBarricadeAble = function(x, y, z, index)
     local sq = getCell():getGridSquare(x, y, z)
     if sq and index >= 0 and index < sq:getObjects():size() then
         o = sq:getObjects():get(index)
@@ -86,7 +86,7 @@ CustomCommandsHandler.getBarricadeAble = function(x, y, z, index)
     return nil
 end
 
-CustomCommandsHandler.placeBarricade = function(args, object)
+PlaceWindowsBaricades.placeBarricade = function(args, object)
 
     local barricade = IsoBarricade.AddBarricadeToObject(object, false) ;
 
@@ -121,4 +121,4 @@ CustomCommandsHandler.placeBarricade = function(args, object)
 
 end
 
-Events.LoadGridsquare.Add(CustomCommandsHandler.loadGridsquare);
+Events.LoadGridsquare.Add(PlaceWindowsBaricades.loadGridsquare);
