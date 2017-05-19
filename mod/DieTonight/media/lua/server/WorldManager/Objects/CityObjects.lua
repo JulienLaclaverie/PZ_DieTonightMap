@@ -14,7 +14,10 @@ CityObjects.loadGridsquare = function(sq)
     for i=0,sq:getObjects():size()-1 do
 
         -- Searching for objects
-        local tileObject = sq:getObjects():get(i);
+        local tileObjects = sq:getObjects();
+        if tileObjects then
+            local tileObject = tileObjects:get(i);
+        end
 
         if tileObject then
 
