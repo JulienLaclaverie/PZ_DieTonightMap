@@ -68,7 +68,6 @@ ISHorde.countDayFactor = function()
         end
         last = d;
     end
-    -- print("CURRENTDAY= "..currentDay..", INTERVAL="..interval..", MULTIPLICATOR="..tostring(ISHorde.daysMultiplicator["day"..interval]))
     return currentDay + ISHorde.daysMultiplicator["day"..interval];
 end
 
@@ -79,17 +78,14 @@ ISHorde.countPlayersInTown = function()
     if players then
         for i=0,players:size()-1 do
             local p = players:get(i);
-            -- print("[DT-INFO] ISHorde: player online --> name="..tostring(p:getUsername())..", isInTown="..tostring(ISHorde.isPlayerInTown(p)));
             if ISHorde.isPlayerInTown(p) then
                 playerCount = playerCount + 1;
             end
-            print("[DT-INFO] ISHorde: "..playerCount.."/"..(players.size() or 1).." player(s) are in the town");
+            print("[DT-INFO] ISHorde: "..playerCount.."/"..(players:size() or 1).." player(s) are in the town");
         end
         if playerCount < math.floor(players:size()/2) and math.floor(players:size()/2) > 0 then
             playerCount = math.floor(players:size()/2);
         end
-    -- else
-    --     print("[DT-INFO] ISHorde: offline player --> name="..tostring(getPlayer():getUsername())..", isInTown="..tostring(ISHorde.isPlayerInTown(getPlayer())));
     end
     return playerCount;
 end
@@ -134,9 +130,6 @@ end
 
 ISHorde.Tick = function()
     if getPlayer() == nil then return end;
-
-    -- print("[DT-INFO] ISHorde.Tick() --> hour=".. getGameTime():getHour() .. ", day="..getGameTime():getDaysSurvived());
-    -- print("[DT-INFO] ISHorde: preparing "..ISHorde.countZombiesToSpawn().." zombies to spawn in front of each gate")
 
     -- FIXME: I saw 24 displayed one time... Just in case :B
     if getGameTime():getHour() == 0 or getGameTime():getHour() == 24 then
