@@ -4,7 +4,6 @@
  
 CityObjects = {}
 
---
 -- Methods
 --
 
@@ -14,10 +13,7 @@ CityObjects.loadGridsquare = function(sq)
     for i=0,sq:getObjects():size()-1 do
 
         -- Searching for objects
-        local tileObjects = sq:getObjects();
-        if tileObjects then
-            local tileObject = tileObjects:get(i);
-        end
+        local tileObject = sq:getObjects():get(i);
 
         if tileObject then
 
@@ -30,7 +26,9 @@ CityObjects.loadGridsquare = function(sq)
                     sendClientCommand(nil, 'camping', 'addCampfire', args);
                 else
                     camping.addCampfire(sq);
-                    --camping:transmitCompleteItemToClients();
+                    if isServer() then 
+                        camping:transmitCompleteItemToClients();
+                    end
                 end
 
                 -- Remove the placeholder 
