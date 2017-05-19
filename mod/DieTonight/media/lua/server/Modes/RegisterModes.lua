@@ -1,0 +1,16 @@
+-- ================================================
+--           PZ Die Tonight Map & mod              
+--           File created by Sylvain              
+--           Date: 18/05/2017                        
+--           Time: 18:42                        
+-- ================================================
+
+--RegisterModes = {};
+--
+--RegisterModes.onResetLua = function()
+--    local options = getSandboxOptions();
+--    getSandboxOptions():copyValuesFrom(options);
+--    options:set("ElecShutModifier", options:randomElectricityShut(elecShut))
+--    options:toLua()
+--end
+--Events.OnResetLua.Add(RegisterModes.onResetLua);

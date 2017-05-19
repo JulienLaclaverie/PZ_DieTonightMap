@@ -20,16 +20,18 @@ CityObjects.loadGridsquare = function(sq)
             -- Place a campfire
             if tileObject:getSprite():getName() == "location_community_park_01_16" then
 
-                -- Remove the placeholder 
-                sq:RemoveTileObject(tileObject);
-
                 -- Place the campfire
                 local args = { x = sq:getX(), y = sq:getY(), z = sq:getZ() };
                 if isClient() then
                     sendClientCommand(nil, 'camping', 'addCampfire', args);
                 else
                     camping.addCampfire(sq);
+                    camping:transmitCompleteItemToClients();
                 end
+
+                -- Remove the placeholder 
+                sq:transmitRemoveItemFromSquare(tileObject);
+                sq:RemoveTileObject(tileObject);
 
             end
 
@@ -38,8 +40,11 @@ CityObjects.loadGridsquare = function(sq)
 
                 -- Remove the placeholder & load metal drum
                 print("[DT-INFO] Add Metal drum to map");
-                sq:RemoveTileObject(tileObject);
+                tileObject:transmitCompleteItemToClients();
                 CityObjects.createMetalDrum(sq);
+
+                sq:transmitRemoveItemFromSquare(tileObject);
+                sq:RemoveTileObject(tileObject);
 
             end
 
@@ -48,8 +53,11 @@ CityObjects.loadGridsquare = function(sq)
 
                 -- Remove the placeholder & load the furnace
                 print("[DT-INFO] Add Compost to map");
-                sq:RemoveTileObject(tileObject);
+                tileObject:transmitCompleteItemToClients();
                 CityObjects.createCompost(sq);
+
+                sq:transmitRemoveItemFromSquare(tileObject);
+                sq:RemoveTileObject(tileObject);
 
             end
 
@@ -104,19 +112,4 @@ CityObjects.createCompost = function(sq)
     
 end
 
--- Get sprite & coordinates 
-CityObjects.getCoords = function(player, context, worldobjects, test)
-
-    for i,v in ipairs(worldobjects) do
-
-        print( "---------------------------------------------------------------");
-        print( "Square Coordinates --> " .. tostring(v:getSquare():getX()) .. ", " .. tostring(v:getSquare():getY()) .. ", " .. tostring(v:getSquare():getZ()) );
-        print( "Selected Item --> " .. v:getSprite():getName());
-        print( "---------------------------------------------------------------");
-
-    end
-
-end
-
 Events.LoadGridsquare.Add(CityObjects.loadGridsquare);
-Events.OnFillWorldObjectContextMenu.Add(CityObjects.getCoords);
