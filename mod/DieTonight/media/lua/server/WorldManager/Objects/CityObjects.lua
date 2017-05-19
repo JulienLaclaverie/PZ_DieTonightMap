@@ -27,7 +27,7 @@ CityObjects.loadGridsquare = function(sq)
                     sendClientCommand(nil, 'camping', 'addCampfire', args);
                 else
                     camping.addCampfire(sq);
-                    camping:transmitCompleteItemToClients();
+                    --camping:transmitCompleteItemToClients();
                 end
 
                 -- Remove the placeholder 
