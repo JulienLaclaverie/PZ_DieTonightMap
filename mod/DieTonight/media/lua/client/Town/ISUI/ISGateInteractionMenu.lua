@@ -36,14 +36,16 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
 
     for i,v in ipairs(worldobjects) do
         -- It's a security terminal sprite
-        if v and luautils.stringStarts(v:getSprite():getName(), "security_01_") then
-            -- We browse the gates security terminals to see if it's registered
-            for ind,term in ipairs(ISGateInteractionMenu.terminals) do
-                if v:getSquare():getX() == term.x and
-                   v:getSquare():getY() == term.y then
-                    terminal = term;
-                    print("[DT-INFO] ISGateInteractionMenu: found the Security Terminal for ".. tostring(terminal.gate));
-                    break;
+        if v then
+            if luautils.stringStarts(v:getSprite():getName(), "security_01_") then
+                -- We browse the gates security terminals to see if it's registered
+                for ind,term in ipairs(ISGateInteractionMenu.terminals) do
+                    if v:getSquare():getX() == term.x and
+                       v:getSquare():getY() == term.y then
+                        terminal = term;
+                        print("[DT-INFO] ISGateInteractionMenu: found the Security Terminal for ".. tostring(terminal.gate));
+                        break;
+                    end
                 end
             end
         end
