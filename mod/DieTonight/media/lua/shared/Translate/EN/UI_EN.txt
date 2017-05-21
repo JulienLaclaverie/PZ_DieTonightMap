@@ -1,0 +1,14 @@
+UI_EN = {
+	UI_DT_profdesc_resident = "A Resident is effectively a normal citizen with free points to spend.",
+	UI_DT_profdesc_scavenger = "The Scavenger is able to find many more objects when searching in the desert.",
+	UI_DT_profdesc_scout = "The Scout can sneak past groups of zombies undetected, <LINE> allowing them to explore the farthest reaches of the desert.",
+	UI_DT_profdesc_survivalist = "Having chosen to live in the most extreme solitude, the Survivalist is the guy nobody has talked to in years. <LINE>The good thing is, that they have learned how to always get by on their own when it comes down to it.",
+	UI_DT_profdesc_technician = "The Technician, abandoned alone on a desert island with nothing but a toothpick, <LINE> could construct an enormous entirely autonomous wheel. <LINE> <LINE> Can operate generators, and knows various traps recipes.",
+	UI_DT_profdesc_guide = "The Guide to the World Beyond is a special citizen. <LINE> The responsibility of discovering facilities in the World Beyond falls on his shoulders.",
+	UI_DT_profdesc_guardian = "In the World Beyond, the Guardian can keep more zombies at bay than an average citizen. <LINE> Guardians are stronger than other citizens and does not reach states of panic.",
+	UI_DT_profdesc_carpenter = "Always ready to get involved with any construction project, <LINE> the Carpenter can also successfully repair blunt weapons",
+	UI_DT_profdesc_metalworker = "The Metalworker can weld foraged metal to create items and strong barricades.",
+	UI_DT_profdesc_cook = "This skilled Cook is in charge of creating tasty food for everybody. <LINE> The Cook also knows how to make bread and sharpen blades.",
+	UI_DT_profdesc_gardener = "The Gardener uses the pit's water to grow crops and knows how to keep them healthy.",
+	UI_DT_profdesc_dealer = "This former surgeon is now the city's shady dealer. <LINE> When the dealer performs first aid, the wound is cured faster.",
+}
