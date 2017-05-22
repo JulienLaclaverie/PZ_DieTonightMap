@@ -1,4 +1,5 @@
 -- random a plant/insect, more chance in deep forest
+
 function ISScavengeAction:scavenge()
     self.character:getStats():setEndurance(self.character:getStats():getEndurance() - 0.004)
     local zone = self:getScavengeZone();
@@ -46,14 +47,16 @@ function ISScavengeAction:scavenge()
             --            print("register new zone");
             zone = getWorld():registerZone(scavengeZoneNumber .. "", "PlantScavenge",self.x - 20, self.y - 20, 0, 40, 40);
             zone:setLastActionTimestamp(getGametimeTimestamp());
-            zone:setName(3 .. "");
+            zone:setName(2 .. "");
             zone:setOriginalName(3 .. "");
         else -- update the plant available
             local plantLeft = tonumber(zone:getName());
             zone:setName(plantLeft - 1 .. "");
             zone:setLastActionTimestamp(getGametimeTimestamp());
         end
-        if isClient() then zone:sendToServer() end
+        if isClient() then
+            zone:sendToServer()
+        end
         return true;
     end
     return false;

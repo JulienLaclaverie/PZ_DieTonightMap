@@ -39,7 +39,7 @@ function ISScavengeUI:initialise()
     self.options:addOption("Pharmaceuticals", "MedicinalPlants");
     if savedScavengeOptions then
         for i=1,#self.options.optionData do
-            if savedScavengeOptions[self.options.optionData[i]] then
+            if savedScavengeOptions[ self.options.optionData[i] ] then
                 self.options:setSelected(i, true);
             end
         end
