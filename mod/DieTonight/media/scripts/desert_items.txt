@@ -1,0 +1,20 @@
+module Base
+{
+    item Deserthopper
+    {
+        HungerChange    =   -5,
+        Weight  =   0.1,
+        Type    =   Food,
+        DisplayName =   Deserthopper,
+        Icon    =   Deserthopper,
+        UnhappyChange   =   25,
+        FishingLure     =   true,
+        IsCookable  =   TRUE,
+        MinutesToBurn   =   25,
+        MinutesToCook   =   5,
+        Carbohydrates = 3,
+        Proteins = 5.55,
+        Lipids = 0.24,
+        Calories = 25,
+    }
+}

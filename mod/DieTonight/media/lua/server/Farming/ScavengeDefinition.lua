@@ -17,11 +17,11 @@ Cricket.type = "Base.Cricket";
 Cricket.minCount = 1;
 Cricket.maxCount = 1;
 Cricket.skill = 0;
-local Grasshopper = {};
-Grasshopper.type = "Base.Grasshopper";
-Grasshopper.minCount = 1;
-Grasshopper.maxCount = 1;
-Grasshopper.skill = 0;
+local Deserthopper = {};
+Deserthopper.type = "Base.Deserthopper";
+Deserthopper.minCount = 1;
+Deserthopper.maxCount = 1;
+Deserthopper.skill = 0;
 -- Rank 1 - Cockroach
 local Cockroach = {};
 Cockroach.type = "Base.Cockroach";
@@ -111,7 +111,7 @@ Watermelon.maxCount = 1;
 Watermelon.skill = 8;
 
 table.insert(scavenges.insects, Cricket);
-table.insert(scavenges.insects, Grasshopper);
+table.insert(scavenges.insects, Deserthopper);
 table.insert(scavenges.insects, Cockroach);
 table.insert(scavenges.insects, Lollipop);
 table.insert(scavenges.insects, Modjeska);
