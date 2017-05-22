@@ -17,28 +17,28 @@ Cricket.type = "Base.Cricket";
 Cricket.minCount = 1;
 Cricket.maxCount = 1;
 Cricket.skill = 0;
+local Grasshopper = {};
+Grasshopper.type = "Base.Grasshopper";
+Grasshopper.minCount = 1;
+Grasshopper.maxCount = 1;
+Grasshopper.skill = 0;
+-- Rank 1 - Cockroach
 local Cockroach = {};
 Cockroach.type = "Base.Cockroach";
 Cockroach.minCount = 1;
 Cockroach.maxCount = 1;
-Cockroach.skill = 0;
+Cockroach.skill = 1;
+local MintCandy = {};
+MintCandy.type = "Base.MintCandy";
+MintCandy.minCount = 1;
+MintCandy.maxCount = 2;
+MintCandy.skill = 1;
+-- Rank 2 - More candies & Chips
 local Lollipop = {};
 Lollipop.type = "Base.Lollipop";
 Lollipop.minCount = 1;
 Lollipop.maxCount = 1;
-Lollipop.skill = 0;
--- Rank 1 - Modjeska candies
-local Modjeska = {};
-Modjeska.type = "Base.Modjeska";
-Modjeska.minCount = 1;
-Modjeska.maxCount = 1;
-Modjeska.skill = 1;
--- Rank 2 - More candies & Chips
-local MintCandy = {};
-MintCandy.type = "Base.MintCandy";
-MintCandy.minCount = 1;
-MintCandy.maxCount = 1;
-MintCandy.skill = 2;
+Lollipop.skill = 2;
 local Chips = {};
 Chips.type = "Base.Crisps";
 Chips.minCount = 1;
@@ -61,6 +61,11 @@ Ramens.minCount = 1;
 Ramens.maxCount = 1;
 Ramens.skill = 3;
 -- Rank 4 - Wine & Fish Time
+local Modjeska = {};
+Modjeska.type = "Base.Modjeska";
+Modjeska.minCount = 1;
+Modjeska.maxCount = 1;
+Modjeska.skill = 4;
 local TunaTin = {};
 TunaTin.type = "Base.TunaTin";
 TunaTin.minCount = 1;
@@ -98,14 +103,15 @@ CandyPackage.type = "Base.CandyPackage";
 CandyPackage.minCount = 1;
 CandyPackage.maxCount = 1;
 CandyPackage.skill = 6;
--- Rank 7 - Water source vegetable
+-- Rank 8 - Water source vegetable
 local Watermelon = {};
-Watermelon.type = "Base.Watermelon";
+Watermelon.type = "Base.WatermelonSmashed";
 Watermelon.minCount = 1;
 Watermelon.maxCount = 1;
-Watermelon.skill = 7;
+Watermelon.skill = 8;
 
 table.insert(scavenges.insects, Cricket);
+table.insert(scavenges.insects, Grasshopper);
 table.insert(scavenges.insects, Cockroach);
 table.insert(scavenges.insects, Lollipop);
 table.insert(scavenges.insects, Modjeska);
