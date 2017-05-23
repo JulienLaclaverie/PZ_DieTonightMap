@@ -152,6 +152,7 @@
   <tile tile="fencing_01_048"/>
   <tile tile="fencing_01_049"/>
   <tile tile="fencing_01_050"/>
+  <tile tile="floors_exterior_street_01_018"/>
  </user_tiles>
  <used_tiles>4</used_tiles>
  <used_furniture></used_furniture>
@@ -162,6 +163,13 @@
 0,0,0,0,
 0,0,0,0
 </rooms>
+  <tiles layer="Floor">
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+4,4,4,4,4
+</tiles>
   <tiles layer="Walls">
 3,3,0,0,0,
 3,3,0,0,0,
