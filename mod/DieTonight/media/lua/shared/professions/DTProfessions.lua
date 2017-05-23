@@ -125,5 +125,66 @@ function DTProfessions.SetProfessionDescription(prof)
 end
 
 
+DTProfessions.onNewGame = function(playerObj, square)
+    print( "[DT-INFO] Random stuff..." );
 
+    --local randomPadlock = ZombRand(0,100);
+    --if (randomPadlock >= 60) then
+    --    playerObj:getInventory():AddItem("Base.CombinationPadlock");
+    --else
+    --	playerObj:getInventory():AddItem("Base.Padlock");
+    --end
+
+    local randomItem = ZombRand(0,100);
+    if (randomItem >= 90) then
+        playerObj:getInventory():AddItem("Base.Matches");
+    elseif (randomItem < 90) and (randomItem >= 80) then
+    	playerObj:getInventory():AddItem("Base.Newspaper");
+    elseif (randomItem < 80) and (randomItem >= 70) then
+    	playerObj:getInventory():AddItem("Base.Scotchtape");
+    elseif (randomItem < 70) and (randomItem >= 60) then
+    	playerObj:getInventory():AddItem("Base.Plank");
+    elseif (randomItem < 60) and (randomItem >= 50) then
+    	playerObj:getInventory():AddItem("Base.ButterKnife");
+    elseif (randomItem < 50) and (randomItem >= 40) then
+    	playerObj:getInventory():AddItem("Base.Pills");
+    elseif (randomItem < 40) and (randomItem >= 30) then
+    	playerObj:getInventory():AddItem("Base.Ramen");
+    elseif (randomItem < 30) and (randomItem >= 20) then
+    	playerObj:getInventory():AddItem("Base.MintCandy");
+    elseif (randomItem < 20) and (randomItem >= 10) then
+    	playerObj:getInventory():AddItem("Base.Garbagebag");
+    else
+    	playerObj:getInventory():AddItem("Base.Torch");
+    end
+
+    randomItem = ZombRand(0,100);
+    if (randomItem >= 90) then
+        playerObj:getInventory():AddItem("Base.Nails");
+        playerObj:getInventory():AddItem("Base.Nails");
+        playerObj:getInventory():AddItem("Base.Nails");
+    elseif (randomItem < 90) and (randomItem >= 80) then
+    	playerObj:getInventory():AddItem("Base.Plank");
+    elseif (randomItem < 80) and (randomItem >= 70) then
+    	playerObj:getInventory():AddItem("Base.Lollipop");
+    elseif (randomItem < 70) and (randomItem >= 60) then
+    	playerObj:getInventory():AddItem("Base.PillsBeta");
+    elseif (randomItem < 60) and (randomItem >= 50) then
+    	playerObj:getInventory():AddItem("Base.Scissors");
+    elseif (randomItem < 50) and (randomItem >= 40) then
+    	playerObj:getInventory():AddItem("Base.CDplayer");
+    elseif (randomItem < 40) and (randomItem >= 30) then
+    	playerObj:getInventory():AddItem("Base.Bleach");
+    elseif (randomItem < 30) and (randomItem >= 20) then
+    	playerObj:getInventory():AddItem("Base.Cologne");
+    elseif (randomItem < 20) and (randomItem >= 10) then
+    	playerObj:getInventory():AddItem("Base.Garbagebag");
+    else
+    	playerObj:getInventory():AddItem("Base.WeldingRods");
+    	playerObj:getInventory():AddItem("Base.WeldingRods");
+    end
+
+end
+
+Events.OnNewGame.Add(DTProfessions.onNewGame);
 Events.OnGameBoot.Add(DTProfessions.DoProfessions);
