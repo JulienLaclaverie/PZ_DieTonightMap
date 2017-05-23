@@ -124,7 +124,6 @@ function DTProfessions.SetProfessionDescription(prof)
     prof:setDescription(desc)
 end
 
-
 DTProfessions.onNewGame = function(playerObj, square)
     print( "[DT-INFO] Random stuff..." );
 
