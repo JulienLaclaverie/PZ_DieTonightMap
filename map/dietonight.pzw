@@ -58,10 +58,22 @@
  <objectgroup name="Vegitation" color="#b3b300" defaulttype="Vegitation"/>
  <objectgroup name="TrailerPark" color="#f50000" defaulttype="TrailerPark"/>
  <objectgroup name="Farm" color="#55ff7f" defaulttype="Farm"/>
- <cell x="0" y="0" map="nwdesert_0_0.tmx"/>
- <cell x="1" y="0" map="ndesert_1_0.tmx"/>
- <cell x="2" y="0" map="northeasetdesert_2_0.tmx"/>
- <cell x="0" y="1" map="wesdesert_0_1.tmx"/>
+ <cell x="0" y="0" map="nwdesert_0_0.tmx">
+  <lot x="-1" y="-1" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorthWestCorner.tbx"/>
+  <lot x="0" y="4" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceWest.tbx"/>
+  <lot x="4" y="0" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorth.tbx"/>
+ </cell>
+ <cell x="1" y="0" map="ndesert_1_0.tmx">
+  <lot x="-1" y="0" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorth.tbx"/>
+ </cell>
+ <cell x="2" y="0" map="northeasetdesert_2_0.tmx">
+  <lot x="295" y="-1" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorthEastCorner.tbx"/>
+  <lot x="-6" y="0" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorth.tbx"/>
+  <lot x="295" y="4" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceEast.tbx"/>
+ </cell>
+ <cell x="0" y="1" map="wesdesert_0_1.tmx">
+  <lot x="0" y="0" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceWest.tbx"/>
+ </cell>
  <cell x="1" y="1" map="townarea_1_1.tmx">
   <lot x="128" y="116" level="0" width="21" height="16" map="../tmx/buildings/town/HallBank.tbx"/>
   <lot x="129" y="132" level="0" width="11" height="11" map="../tmx/buildings/town/WatchTower.tbx"/>
@@ -166,8 +178,20 @@
   <object group="Forest" type="Forest" x="232" y="36" level="0" width="68" height="245"/>
   <object group="Forest" type="Forest" x="58" y="219" level="0" width="174" height="62"/>
  </cell>
- <cell x="2" y="1" map="edesert_2_1.tmx"/>
- <cell x="0" y="2" map="southwestdesertzone_0_2.tmx"/>
- <cell x="1" y="2" map="southdesert_1_2.tmx"/>
- <cell x="2" y="2" map="southeastdesert_2_2.tmx"/>
+ <cell x="2" y="1" map="edesert_2_1.tmx">
+  <lot x="295" y="0" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceEast.tbx"/>
+ </cell>
+ <cell x="0" y="2" map="southwestdesertzone_0_2.tmx">
+  <lot x="0" y="295" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouthWest.tbx"/>
+  <lot x="5" y="295" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouth.tbx"/>
+  <lot x="0" y="-6" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceWest.tbx"/>
+ </cell>
+ <cell x="1" y="2" map="southdesert_1_2.tmx">
+  <lot x="0" y="295" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouth.tbx"/>
+ </cell>
+ <cell x="2" y="2" map="southeastdesert_2_2.tmx">
+  <lot x="295" y="295" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouthEastCorner.tbx"/>
+  <lot x="295" y="-6" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceEast.tbx"/>
+  <lot x="-6" y="295" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouth.tbx"/>
+ </cell>
 </world>
