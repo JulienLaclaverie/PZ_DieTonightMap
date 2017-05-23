@@ -17,4 +17,12 @@ module Base
         Lipids = 0.24,
         Calories = 25,
     }
+
+    item TreeBranch
+    {
+        Weight  =   0.2,
+        Type    =   Normal,
+        DisplayName =   Tree Branch,
+        Icon    =   Branchdry,
+    }
 }

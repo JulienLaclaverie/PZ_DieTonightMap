@@ -304,11 +304,6 @@ Pipe.type = "Base.Pipe";
 Pipe.minCount = 1;
 Pipe.maxCount = 2;
 Pipe.skill = 2;
-local Pillow = {};
-Pillow.type = "Base.Pillow";
-Pillow.minCount = 1;
-Pillow.maxCount = 2;
-Pillow.skill = 2;
 -- Rank 3 - Medium+ quality loots
 local Bleach = {};
 Bleach.type = "Base.Bleach";
@@ -542,7 +537,7 @@ NailsBox.type = "Base.NailsBox";
 NailsBox.minCount = 1;
 NailsBox.maxCount = 1;
 NailsBox.skill = 5;
--- Rank 6 - Lod and metal sheet
+-- Rank 6 - Log and metal sheet
 local Log = {};
 Log.type = "Base.Log";
 Log.minCount = 1;
@@ -553,7 +548,7 @@ SheetMetal.type = "Base.SheetMetal";
 SheetMetal.minCount = 1;
 SheetMetal.maxCount = 1;
 SheetMetal.skill = 6;
--- Rank 7 - Powders & log
+-- Rank 7 - Powders 
 local ConcretePowder = {};
 ConcretePowder.type = "Base.ConcretePowder";
 ConcretePowder.minCount = 1;
@@ -617,11 +612,6 @@ Pen.type = "Base.Pen";
 Pen.minCount = 1;
 Pen.maxCount = 1;
 Pen.skill = 0;
-local Pencil = {};
-Pencil.type = "Base.Pencil";
-Pencil.minCount = 1;
-Pencil.maxCount = 2;
-Pencil.skill = 0;
 local Fork = {};
 Fork.type = "Base.Fork";
 Fork.minCount = 1;
@@ -680,11 +670,6 @@ Poolcue.type = "Base.Poolcue";
 Poolcue.minCount = 1;
 Poolcue.maxCount = 1;
 Poolcue.skill = 3;
-local KitchenKnife = {};
-KitchenKnife.type = "Base.KitchenKnife";
-KitchenKnife.minCount = 1;
-KitchenKnife.maxCount = 1;
-KitchenKnife.skill = 3;
 local PlankNail = {};
 PlankNail.type = "Base.PlankNail";
 PlankNail.minCount = 1;
@@ -706,6 +691,11 @@ Hammer.type = "Base.Hammer";
 Hammer.minCount = 1;
 Hammer.maxCount = 1;
 Hammer.skill = 4;
+local KitchenKnife = {};
+KitchenKnife.type = "Base.KitchenKnife";
+KitchenKnife.minCount = 1;
+KitchenKnife.maxCount = 1;
+KitchenKnife.skill = 4;
 -- Rank 5 - Metal warfare & tool 
 local Crowbar = {};
 Crowbar.type = "Base.Crowbar";
