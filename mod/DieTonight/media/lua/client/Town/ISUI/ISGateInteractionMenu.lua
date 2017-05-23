@@ -36,7 +36,7 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
 
     for i,v in ipairs(worldobjects) do
         -- It's a security terminal sprite
-        if v then
+        if v and v:getSprite():getName() then
             if luautils.stringStarts(v:getSprite():getName(), "security_01_") then
                 -- We browse the gates security terminals to see if it's registered
                 for ind,term in ipairs(ISGateInteractionMenu.terminals) do
@@ -52,9 +52,11 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
         object = v;
     end
 
-    if terminal and ISGateInteractionMenu.isOnInteractionZone(terminal, getPlayer()) then
-        print("[DT-INFO] ISGateInteractionMenu: Interacting with ".. tostring(terminal.gate) .." !");
-        context:addOption("Toggle gate", worldobjects, ISGate.toggle, getSpecificPlayer(player), terminal, object);
+    if terminal and object then
+        if ISGateInteractionMenu.isOnInteractionZone(terminal, getPlayer()) then
+            print("[DT-INFO] ISGateInteractionMenu: Interacting with ".. tostring(terminal.gate) .." !");
+            context:addOption("Toggle gate", worldobjects, ISGate.toggle, getSpecificPlayer(player), terminal, object);
+        end
     end
 end
 
