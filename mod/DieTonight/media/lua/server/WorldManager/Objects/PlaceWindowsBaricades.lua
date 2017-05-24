@@ -37,33 +37,40 @@ PlaceWindowsBaricades.loadGridsquare = function(sq)
 
                         local args = {}
 
+                        local randomBaricadeLocation = ZombRand(0,4);
+                        local barricadeLocation = true;
+
+                        if (randomBaricadeLocation > 2) then
+                            barricadeLocation = false;
+                        end
+
                         local randomBaricade = ZombRand(0,100);
                         --print("[DT-INFO] Random percentage for baricade : " .. randomBaricade);
 
                         if (randomBaricade >= 95) then
                             --print("[DT-INFO] This window is metal sheet");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=true, isMetalBar=false, itemID='Base.MetalBar', condition=10, amount=1 }
-                            PlaceWindowsBaricades.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object, barricadeLocation);
                         elseif (randomBaricade < 95) and (randomBaricade >= 87) then
                             --print("[DT-INFO] This window is metal bars");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=true, itemID='Base.SheetMetal', condition=10, amount=1 }
-                            PlaceWindowsBaricades.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object, barricadeLocation);
                         elseif (randomBaricade < 87) and (randomBaricade >= 79) then
                             --print("[DT-INFO] This window has four planks");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10, amount=4 }
-                            PlaceWindowsBaricades.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object, barricadeLocation);
                         elseif (randomBaricade < 79) and (randomBaricade >= 67) then
                             --print("[DT-INFO] This window has three planks");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10, amount=3 }
-                            PlaceWindowsBaricades.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object, barricadeLocation);
                         elseif (randomBaricade < 67) and (randomBaricade >= 49) then
                             --print("[DT-INFO] This window has two planks");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10, amount=2 }
-                            PlaceWindowsBaricades.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object, barricadeLocation);
                         elseif (randomBaricade < 49) and (randomBaricade >= 30) then
                             --print("[DT-INFO] This window has one plank");
                             local args = { x=coords.x, y=coords.y, z=coords.z, index=i, isMetal=false, isMetalBar=false, itemID='Base.Plank', condition=10, amount=1 }
-                            PlaceWindowsBaricades.placeBarricade(args, object);
+                            PlaceWindowsBaricades.placeBarricade(args, object, barricadeLocation);
                         --else
                             --print("[DT-INFO] This window has no baricade");
                         end
@@ -93,9 +100,9 @@ PlaceWindowsBaricades.getBarricadeAble = function(x, y, z, index)
     return nil
 end
 
-PlaceWindowsBaricades.placeBarricade = function(args, object)
+PlaceWindowsBaricades.placeBarricade = function(args, object, barricadeLocation)
 
-    local barricade = IsoBarricade.AddBarricadeToObject(object, false) ;
+    local barricade = IsoBarricade.AddBarricadeToObject(object, barricadeLocation) ;
 
     if barricade then
         if args.isMetal then
