@@ -30,7 +30,6 @@ ISWorldObjectContextMenu.doScavengeOptions = function(context, player, scavengeZ
     local scavengeOption = context:addOption("Scavenge " .. text, nil, ISWorldObjectContextMenu.onScavenge, getSpecificPlayer(player), scavengeZone, clickedSquare);
 
     -- In the desert, you can't forage without a shovel
-    local hasShovel = playerObj:getInventory():contains("Shovel");
     if (playerObj:getInventory():contains("HandShovel") == false) and (playerObj:getInventory():contains("Shovel") == false) then  
         scavengeOption.notAvailable = true;
         local tooltip = ISWorldObjectContextMenu.addToolTip();
