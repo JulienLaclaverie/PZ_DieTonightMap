@@ -30,12 +30,22 @@ ISWorldObjectContextMenu.doScavengeOptions = function(context, player, scavengeZ
     local scavengeOption = context:addOption("Scavenge " .. text, nil, ISWorldObjectContextMenu.onScavenge, getSpecificPlayer(player), scavengeZone, clickedSquare);
 
     -- In the desert, you can't forage without a shovel
+    local hasShovel = playerObj:getInventory():contains("Shovel");
     if (playerObj:getInventory():contains("HandShovel") == false) and (playerObj:getInventory():contains("Shovel") == false) then  
         scavengeOption.notAvailable = true;
         local tooltip = ISWorldObjectContextMenu.addToolTip();
         tooltip:setName("Scavenge the desert");
         tooltip.description = "You need a shovel or a trovel to scavenge";
         scavengeOption.toolTip = tooltip;
+    elseif (playerObj:getInventory():contains("Shovel") == true) and (playerObj:getInventory():contains("HandShovel") == false) then
+        local shovel = playerObj:getInventory():FindAndReturn("Shovel");
+        if shovel:getCondition() <= 0 or shovel:isBroken() then
+            scavengeOption.notAvailable = true;
+            local tooltip = ISWorldObjectContextMenu.addToolTip();
+            tooltip:setName("Scavenge the desert");
+            tooltip.description = "Your shovel is broken, find a trovel or a new shovel to scavenge";
+            scavengeOption.toolTip = tooltip;
+        end
     end
 
 end
