@@ -103,8 +103,7 @@ function ISCloseGate:new(character, gate, terminalTile)
     o.nbIteration = 0;
     -- nb iterations between 2 square update (open or close)
     ---- it seems like update() is called 25 times more than self.maxTime
-    ---- fixme: I wrote 20 because it can arrive that update() is triggered only 23 or 24 times more than self.maxTime... :'(
-    o.intervalIteration = math.ceil((o.maxTime+20)*2/o.gateLength);
+    o.intervalIteration = math.ceil((o.maxTime+GateProperties.animationPonderator)*2/o.gateLength);
 
     return o
 end
