@@ -62,17 +62,27 @@
   <lot x="-1" y="-1" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorthWestCorner.tbx"/>
   <lot x="0" y="4" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceWest.tbx"/>
   <lot x="4" y="0" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorth.tbx"/>
+  <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="86" height="300"/>
+  <object group="DeepForest" type="DeepForest" x="86" y="1" level="0" width="214" height="82"/>
+  <object group="Forest" type="Forest" x="86" y="83" level="0" width="214" height="217"/>
  </cell>
  <cell x="1" y="0" map="ndesert_1_0.tmx">
   <lot x="-1" y="0" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorth.tbx"/>
+  <object group="Forest" type="Forest" x="0" y="83" level="0" width="300" height="217"/>
+  <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="300" height="83"/>
  </cell>
  <cell x="2" y="0" map="northeasetdesert_2_0.tmx">
   <lot x="295" y="-1" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorthEastCorner.tbx"/>
   <lot x="-6" y="0" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorth.tbx"/>
   <lot x="295" y="4" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceEast.tbx"/>
+  <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="300" height="83"/>
+  <object group="DeepForest" type="DeepForest" x="218" y="83" level="0" width="81" height="217"/>
+  <object group="Forest" type="Forest" x="0" y="83" level="0" width="218" height="217"/>
  </cell>
  <cell x="0" y="1" map="wesdesert_0_1.tmx">
   <lot x="0" y="0" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceWest.tbx"/>
+  <object group="Forest" type="Forest" x="86" y="0" level="0" width="214" height="300"/>
+  <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="86" height="300"/>
  </cell>
  <cell x="1" y="1" map="townarea_1_1.tmx">
   <lot x="128" y="116" level="0" width="21" height="16" map="../tmx/buildings/town/HallBank.tbx"/>
@@ -180,18 +190,28 @@
  </cell>
  <cell x="2" y="1" map="edesert_2_1.tmx">
   <lot x="295" y="0" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceEast.tbx"/>
+  <object group="Forest" type="Forest" x="0" y="0" level="0" width="218" height="300"/>
+  <object group="DeepForest" type="DeepForest" x="218" y="0" level="0" width="81" height="300"/>
  </cell>
  <cell x="0" y="2" map="southwestdesertzone_0_2.tmx">
   <lot x="0" y="295" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouthWest.tbx"/>
   <lot x="5" y="295" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouth.tbx"/>
   <lot x="0" y="-6" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceWest.tbx"/>
+  <object group="Forest" type="Forest" x="86" y="0" level="0" width="214" height="209"/>
+  <object group="DeepForest" type="DeepForest" x="0" y="209" level="0" width="300" height="90"/>
+  <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="86" height="209"/>
  </cell>
  <cell x="1" y="2" map="southdesert_1_2.tmx">
   <lot x="0" y="295" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouth.tbx"/>
+  <object group="Forest" type="Forest" x="0" y="0" level="0" width="300" height="209"/>
+  <object group="DeepForest" type="DeepForest" x="0" y="209" level="0" width="300" height="90"/>
  </cell>
  <cell x="2" y="2" map="southeastdesert_2_2.tmx">
   <lot x="295" y="295" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouthEastCorner.tbx"/>
   <lot x="295" y="-6" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceEast.tbx"/>
   <lot x="-6" y="295" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouth.tbx"/>
+  <object group="DeepForest" type="DeepForest" x="218" y="0" level="0" width="81" height="299"/>
+  <object group="DeepForest" type="DeepForest" x="0" y="209" level="0" width="218" height="90"/>
+  <object group="Forest" type="Forest" x="0" y="0" level="0" width="218" height="209"/>
  </cell>
 </world>

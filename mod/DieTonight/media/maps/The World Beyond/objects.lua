@@ -1,4 +1,14 @@
 objects = {
+  { name = "", type = "DeepForest", x = 7500, y = 6000, z = 0, width = 86, height = 300 },
+  { name = "", type = "DeepForest", x = 7586, y = 6001, z = 0, width = 214, height = 82 },
+  { name = "", type = "Forest", x = 7586, y = 6083, z = 0, width = 214, height = 217 },
+  { name = "", type = "Forest", x = 7800, y = 6083, z = 0, width = 300, height = 217 },
+  { name = "", type = "DeepForest", x = 7800, y = 6000, z = 0, width = 300, height = 83 },
+  { name = "", type = "DeepForest", x = 8100, y = 6000, z = 0, width = 300, height = 83 },
+  { name = "", type = "DeepForest", x = 8318, y = 6083, z = 0, width = 81, height = 217 },
+  { name = "", type = "Forest", x = 8100, y = 6083, z = 0, width = 218, height = 217 },
+  { name = "", type = "Forest", x = 7586, y = 6300, z = 0, width = 214, height = 300 },
+  { name = "", type = "DeepForest", x = 7500, y = 6300, z = 0, width = 86, height = 300 },
   { name = "", type = "TownZone", x = 7915, y = 6384, z = 0, width = 59, height = 80 },
   { name = "", type = "SpawnPoint", x = 7961, y = 6454, z = 0, width = 1, height = 1,
     properties = {
@@ -99,5 +109,15 @@ objects = {
   { name = "", type = "Forest", x = 7800, y = 6319, z = 0, width = 58, height = 262 },
   { name = "", type = "Forest", x = 7858, y = 6319, z = 0, width = 242, height = 17 },
   { name = "", type = "Forest", x = 8032, y = 6336, z = 0, width = 68, height = 245 },
-  { name = "", type = "Forest", x = 7858, y = 6519, z = 0, width = 174, height = 62 }
+  { name = "", type = "Forest", x = 7858, y = 6519, z = 0, width = 174, height = 62 },
+  { name = "", type = "Forest", x = 8100, y = 6300, z = 0, width = 218, height = 300 },
+  { name = "", type = "DeepForest", x = 8318, y = 6300, z = 0, width = 81, height = 300 },
+  { name = "", type = "Forest", x = 7586, y = 6600, z = 0, width = 214, height = 209 },
+  { name = "", type = "DeepForest", x = 7500, y = 6809, z = 0, width = 300, height = 90 },
+  { name = "", type = "DeepForest", x = 7500, y = 6600, z = 0, width = 86, height = 209 },
+  { name = "", type = "Forest", x = 7800, y = 6600, z = 0, width = 300, height = 209 },
+  { name = "", type = "DeepForest", x = 7800, y = 6809, z = 0, width = 300, height = 90 },
+  { name = "", type = "DeepForest", x = 8318, y = 6600, z = 0, width = 81, height = 299 },
+  { name = "", type = "DeepForest", x = 8100, y = 6809, z = 0, width = 218, height = 90 },
+  { name = "", type = "Forest", x = 8100, y = 6600, z = 0, width = 218, height = 209 }
 }
