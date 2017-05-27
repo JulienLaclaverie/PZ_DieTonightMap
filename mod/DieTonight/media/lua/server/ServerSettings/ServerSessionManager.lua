@@ -1,5 +1,5 @@
 -- ================================================
---           PZ Die Tonight Map & mod              
+--           PZ Die2Nite Map & mod
 --           File created by Sylvain               
 --           Date: 19/05/2017                         
 --           Time: 13:33                         

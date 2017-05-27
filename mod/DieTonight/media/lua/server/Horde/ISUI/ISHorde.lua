@@ -1,5 +1,5 @@
 -- ================================================
---           PZ Die Tonight Map & mod              
+--           PZ Die2Nite Map & mod
 --           File created by Sylvain              
 --           Date: 09/05/2017                        
 --           Time: 19:11                        
@@ -11,22 +11,22 @@ ISHorde = {
         -- north gate
         {
             x = 7936, y = 6376, x2 = 7939, y2 = 6378,
-            noiseSource = {x = 7939, y = 6389, z = 0}
+            noiseSource = {x = 7939, y = 6396, z = 0, radius = 34}
         },
         -- south gate
         {
             x = 7938, y = 6470, x2 = 7946, y2 = 6476,
-            noiseSource = {x = 7943, y = 6457, z = 0}
+            noiseSource = {x = 7943, y = 6444, z = 0, radius = 48}
         },
         -- west gate
         {
             x = 7911, y = 6421, x2 = 7913, y2 = 6416,
-            noiseSource = {x = 7921, y = 6420, z = 0}
+            noiseSource = {x = 7944, y = 6421, z = 0, radius = 70}
         },
         -- east gate
         {
             x = 7976, y = 6422, x2 = 7980, y2 = 6427,
-            noiseSource = {x = 7965, y = 6424, z = 0}
+            -- noiseSource is the same than the west gate
         }
     },
 
@@ -45,9 +45,8 @@ ISHorde = {
     noiseProps = {
         sound = "PZ_MaleBeingEaten_Death",
         pitchVar = 1,
-        radius = 65,
-        maxGain = 1.0,
-        ignoreOutside = true
+        maxGain = 10.0,
+        ignoreOutside = false
     }
 
 };
@@ -106,8 +105,10 @@ end
 
 ISHorde.spawn = function(region, nbZombiesToSpawn)
     spawnHorde(region.x,region.y,region.x2,region.y2, 0, nbZombiesToSpawn);
-    local squareNoiseSrc = getCell():getGridSquare(region.noiseSource.x, region.noiseSource.y, region.noiseSource.z);
-    getSoundManager():PlayWorldSound(ISHorde.noiseProps.sound, squareNoiseSrc, ISHorde.noiseProps.pitchVar, ISHorde.noiseProps.radius, ISHorde.noiseProps.maxGain, ISHorde.noiseProps.ignoreOutside);
+    if region.noiseSource then
+        local squareNoiseSrc = getCell():getGridSquare(region.noiseSource.x, region.noiseSource.y, region.noiseSource.z);
+        getSoundManager():PlayWorldSound(ISHorde.noiseProps.sound, squareNoiseSrc, ISHorde.noiseProps.pitchVar, region.noiseSource.radius, ISHorde.noiseProps.maxGain, ISHorde.noiseProps.ignoreOutside);
+    end
 end
 
 ISHorde.buildHorde = function()
