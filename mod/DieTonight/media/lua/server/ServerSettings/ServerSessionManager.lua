@@ -27,8 +27,8 @@ ServerSessionManager = {
 ServerSessionManager.UpdateServerAccess = function()
     if isServer() then
         local daysSurvived = getGameTime():getDay();
-        local option = ServerSessionManager.currentSessionSettings:getServerOptions():getOptionByName("Open");
-        -- print("[DT-INFO] ServerSesssionManager: Day survived="..tostring(daysSurvived).."/"..ServerSessionManager.currentSession.closeSubscriptionAfter..", isOpen="..tostring(option:getValue()));
+        local option = ServerOptions.instance:getOptionByName("Open");
+        print("[DT-INFO] ServerSesssionManager: Day survived="..tostring(daysSurvived).."/"..ServerSessionManager.currentSession.closeSubscriptionAfter..", isOpen="..tostring(option:getValue()));
         if option:getValue() == true and daysSurvived >= ServerSessionManager.currentSession.closeSubscriptionAfter then
             print("[DT-INFO] ServerSesssionManager: Closing subscriptions...");
             ServerSessionManager.updateOpenOption("false");
@@ -38,9 +38,12 @@ end
 
 ServerSessionManager.updateOpenOption = function(value)
     print("[DT-INFO] Expecting Open="..value)
-    ServerSessionManager.currentSessionSettings:getServerOptions():getOptionByName("Open"):parse(value);
-    ServerSessionManager.currentSessionSettings:saveFiles();
-    print("[DT-INFO] After saving Open="..tostring(ServerSessionManager.currentSessionSettings:getServerOptions():getOptionByName("Open"):getValue()));
+    ServerOptions.instance:init();
+    ServerOptions.instance:changeOption("Open",value);
+    -- ServerSessionManager.currentSessionSettings:getServerOptions():getOptionByName("Open"):parse(value);
+    -- ServerSessionManager.currentSessionSettings:saveFiles();
+    print("[DT-INFO] After saving Open="..tostring(ServerOptions.instance:getOptionByName("Open"):getValue()));
+    -- print("[DT-INFO] After saving Open="..tostring(ServerSessionManager.currentSessionSettings:getServerOptions():getOptionByName("Open"):getValue()));
 end
 
 ServerSessionManager.PrepareSession = function()
@@ -52,8 +55,8 @@ ServerSessionManager.PrepareSession = function()
                 ServerSessionManager.currentSession = session;
                 if session.closeSubscriptionAfter or session.closeSubscriptionAfter == 0 then
                     print("[DT-INFO] ServerSessionManager: Server will close subs after "..session.closeSubscriptionAfter.." days survived");
-                    ServerSessionManager.currentSessionSettings = ServerSettings.new(ServerSessionManager.currentServerName);
-                    ServerSessionManager.currentSessionSettings:loadFiles();
+                    -- ServerSessionManager.currentSessionSettings = ServerSettings.new(ServerSessionManager.currentServerName);
+                    -- ServerSessionManager.currentSessionSettings:loadFiles();
 
                     -- Activating Open option when server start
                     ServerSessionManager.updateOpenOption("true");
@@ -68,7 +71,7 @@ ServerSessionManager.PrepareSession = function()
 end
 
 -- Reload the options one time if necessary
-ServerSessionManager.ReloadOptions = function()
+--[[ServerSessionManager.ReloadOptions = function()
     local daysSurvived = getGameTime():getDay();
     local option = getServerOptions():getOptionByName("Open");
 
@@ -100,5 +103,5 @@ ServerSessionManager.PrepareClientSession = function()
 
 end
 
-Events.OnGameStart.Add(ServerSessionManager.PrepareClientSession);
+Events.OnGameStart.Add(ServerSessionManager.PrepareClientSession);]]
 Events.OnServerStarted.Add(ServerSessionManager.PrepareSession);
