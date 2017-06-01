@@ -14,7 +14,7 @@ ServerSessionManager = {
     specialSessions = {
         {
             name = "onedayasaquarter",
-            closeSubscriptionAfter = 2
+            closeSubscriptionAfter = 3
         }
     }
 
