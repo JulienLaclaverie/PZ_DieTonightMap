@@ -5,59 +5,53 @@
 --           Time: 13:33                         
 -- ================================================
 
---[[
+
 ServerSessionManager = {
 
-    currentServerName = "",
+    -- currentServerName = "",
 
-    currentSession = nil,
+    -- currentSession = nil,
 
     specialSessions = {
         {
             name = "onedayasaquarter",
-            closeSubscriptionAfter = 3
+            closeSubscriptionAfter = 86400
+            -- closeSubscriptionAfter = 3,
         }
     }
 
 };
 
-ServerSessionManager.UpdateServerAccess = function()
-    if isServer() then
-        local daysSurvived = getGameTime():getDay();
-        local option = ServerOptions.instance:getOptionByName("Open");
-        -- print("[DT-INFO] ServerSesssionManager: Day survived="..tostring(daysSurvived).."/"..ServerSessionManager.currentSession.closeSubscriptionAfter..", isOpen="..tostring(option:getValue()));
-        if option:getValue() == true and daysSurvived >= ServerSessionManager.currentSession.closeSubscriptionAfter then
-            print("[DT-INFO] ServerSesssionManager: Closing subscriptions...");
-            ServerSessionManager.updateOpenOption("false");
-        end
-    end
-end
-
-ServerSessionManager.updateOpenOption = function(value)
-    -- print("[DT-INFO] Expecting Open="..value)
-    ServerOptions.instance:init();
-    ServerOptions.instance:changeOption("Open",value);
-    -- print("[DT-INFO] After saving Open="..tostring(ServerOptions.instance:getOptionByName("Open"):getValue()));
-end
-
 ServerSessionManager.PrepareSession = function()
     if isServer() then
-        ServerSessionManager.currentServerName = getServerName();
-        for i,session in ipairs(ServerSessionManager.specialSessions) do
-            if string.find(string.lower(ServerSessionManager.currentServerName), session.name) then
-                ServerSessionManager.currentSession = session;
-                if session.closeSubscriptionAfter or session.closeSubscriptionAfter == 0 then
-                    print("[DT-INFO] ServerSessionManager: Server will close subs after "..session.closeSubscriptionAfter.." days survived");
-                    -- Activating Open option when server start
-                    ServerSessionManager.updateOpenOption("true");
-                    -- EveryHours or EveryDays | EveryTenMinutes
-                    Events.EveryHours.Add(ServerSessionManager.UpdateServerAccess);
+        getGameTime():getModData()["DT_currentServerName"] = getServerName();
+        getGameTime():getModData()["DT_serverStartedAt"] = getGametimeTimestamp();
+    end
+
+end
+
+ServerSessionManager.OnGameStart = function()
+    if isClient() and getWorld():getGameMode() == "Multiplayer" then
+        local currentServerName = getGameTime():getModData()["DT_currentServerName"];
+        print("[DT-INFO] player connected to server ! serverName="..currentServerName..", isClient="..tostring(isClient())..", isMultiplayer="..tostring(getWorld():getGameMode() == "Multiplayer,")..", serverStartedAt="..getGameTime():getModData()["DT_serverStartedAt"])
+        if currentServerName then
+            for i,session in ipairs(ServerSessionManager.specialSessions) do
+                if string.find(string.lower(currentServerName), session.name) then
+                    if session.closeSubscriptionAfter or session.closeSubscriptionAfter == 0 then
+                        local diff = getGametimeTimestamp() - getGameTime():getModData()["DT_serverStartedAt"];
+                        -- print("[DT-INFO] ServerSessionManager: Checking session persistence --> "..diff.."/"..session.closeSubscriptionAfter.." days survived");
+                        if diff > session.closeSubscriptionAfter then
+                            print("[DT-INFO] ServerSessionManager: Disconnecting client because "..diff.."/"..session.closeSubscriptionAfter.." days survived");
+                            -- triggerEvent("OnConnectFailed", "You can't reconnect to the server until the game is restarted.")
+                            forceDisconnect();
+                        end
+                    end
+                    break;
                 end
-                break;
             end
         end
     end
-
 end
 
-Events.OnServerStarted.Add(ServerSessionManager.PrepareSession);]]
+Events.OnGameStart.Add(ServerSessionManager.OnGameStart);
+Events.OnServerStarted.Add(ServerSessionManager.PrepareSession);
