@@ -5,6 +5,7 @@
 --           Time: 13:33                         
 -- ================================================
 
+--[[
 ServerSessionManager = {
 
     currentServerName = "",
@@ -59,4 +60,4 @@ ServerSessionManager.PrepareSession = function()
 
 end
 
-Events.OnServerStarted.Add(ServerSessionManager.PrepareSession);
+Events.OnServerStarted.Add(ServerSessionManager.PrepareSession);]]
