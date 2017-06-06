@@ -8,15 +8,10 @@
 
 ServerSessionManager = {
 
-    -- currentServerName = "",
-
-    -- currentSession = nil,
-
     specialSessions = {
         {
             name = "onedayasaquarter",
             closeSubscriptionAfter = 86400
-            -- closeSubscriptionAfter = 3,
         }
     }
 
@@ -33,17 +28,21 @@ end
 ServerSessionManager.OnGameStart = function()
     if isClient() and getWorld():getGameMode() == "Multiplayer" then
         local currentServerName = getGameTime():getModData()["DT_currentServerName"];
-        print("[DT-INFO] player connected to server ! serverName="..currentServerName..", isClient="..tostring(isClient())..", isMultiplayer="..tostring(getWorld():getGameMode() == "Multiplayer,")..", serverStartedAt="..getGameTime():getModData()["DT_serverStartedAt"])
+        -- print("[DT-INFO] player connected to server ! serverName="..currentServerName..", isClient="..tostring(isClient())..", isMultiplayer="..tostring(getWorld():getGameMode() == "Multiplayer")..", serverStartedAt="..getGameTime():getModData()["DT_serverStartedAt"])
         if currentServerName then
             for i,session in ipairs(ServerSessionManager.specialSessions) do
                 if string.find(string.lower(currentServerName), session.name) then
                     if session.closeSubscriptionAfter or session.closeSubscriptionAfter == 0 then
-                        local diff = getGametimeTimestamp() - getGameTime():getModData()["DT_serverStartedAt"];
-                        -- print("[DT-INFO] ServerSessionManager: Checking session persistence --> "..diff.."/"..session.closeSubscriptionAfter.." days survived");
+                        local timestamp = getGametimeTimestamp();
+                        local diff = timestamp - getGameTime():getModData()["DT_serverStartedAt"];
+                        -- print("[DT-INFO] ServerSessionManager: Server started at --> ".. getGameTime():getModData()["DT_serverStartedAt"] .. ", we are now "..timestamp)
+                        -- print("[DT-INFO] ServerSessionManager: Checking session persistence --> "..diff.." > "..session.closeSubscriptionAfter);
                         if diff > session.closeSubscriptionAfter then
-                            print("[DT-INFO] ServerSessionManager: Disconnecting client because "..diff.."/"..session.closeSubscriptionAfter.." days survived");
+                            print("[DT-INFO] ServerSessionManager: Disconnecting client because the server is closed after "..session.closeSubscriptionAfter.." seconds.");
                             -- triggerEvent("OnConnectFailed", "You can't reconnect to the server until the game is restarted.")
+                            -- FIXME: this method seem's to well disconnect the client but it cause the game crash too...
                             forceDisconnect();
+                            return;
                         end
                     end
                     break;
