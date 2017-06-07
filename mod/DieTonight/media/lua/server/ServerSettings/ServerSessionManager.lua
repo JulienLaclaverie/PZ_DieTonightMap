@@ -40,8 +40,7 @@ ServerSessionManager.OnGameStart = function()
                         if diff > session.closeSubscriptionAfter then
                             print("[DT-INFO] ServerSessionManager: Disconnecting client because the server is closed after "..session.closeSubscriptionAfter.." seconds.");
                             -- triggerEvent("OnConnectFailed", "You can't reconnect to the server until the game is restarted.")
-                            -- FIXME: this method seem's to well disconnect the client but it cause the game crash too...
-                            forceDisconnect();
+                            getCore():exitToMenu()
                             return;
                         end
                     end
