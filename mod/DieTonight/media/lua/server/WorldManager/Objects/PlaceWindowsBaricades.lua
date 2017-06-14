@@ -7,7 +7,7 @@ PlaceWindowsBaricades = {};
 -- Methods
 --
 
-PlaceWindowsBaricades.loadGridsquare = function(sq)
+PlaceWindowsBaricades.spawnObjects = function(sq)
 
     if isClient() == false then
 
@@ -133,5 +133,3 @@ PlaceWindowsBaricades.placeBarricade = function(args, object, barricadeLocation)
     end
 
 end
-
-Events.LoadGridsquare.Add(PlaceWindowsBaricades.loadGridsquare);

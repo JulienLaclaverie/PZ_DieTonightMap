@@ -7,7 +7,7 @@ CityObjects = {}
 -- Methods
 --
 
-CityObjects.loadGridsquare = function(sq)
+CityObjects.spawnObjects = function(sq)
 
 
     for i=0,sq:getObjects():size()-1 do
@@ -113,5 +113,3 @@ CityObjects.createCompost = function(sq)
     --javaObject:transmitCompleteItemToServer();
     
 end
-
-Events.LoadGridsquare.Add(CityObjects.loadGridsquare);
