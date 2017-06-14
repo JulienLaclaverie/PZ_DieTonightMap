@@ -68,6 +68,10 @@
  </cell>
  <cell x="1" y="0" map="ndesert_1_0.tmx">
   <lot x="-1" y="0" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorth.tbx"/>
+  <lot x="80" y="165" level="0" width="21" height="21" map="../tmx/buildings/wasteland/AbandonedPark.tbx"/>
+  <lot x="197" y="224" level="0" width="9" height="9" map="../tmx/buildings/wasteland/LostTent01.tbx"/>
+  <lot x="216" y="75" level="0" width="26" height="36" map="../tmx/buildings/wasteland/Warehouses04.tbx"/>
+  <lot x="43" y="34" level="0" width="41" height="31" map="../tmx/buildings/wasteland/CosmeticLab.tbx"/>
   <object group="Forest" type="Forest" x="0" y="83" level="0" width="300" height="217"/>
   <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="300" height="83"/>
  </cell>
