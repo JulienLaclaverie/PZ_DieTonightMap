@@ -92,13 +92,15 @@ end
 -- Check if a player is in the town zone
 ISHorde.isPlayerInTown = function(player)
     local pSquare = player:getCurrentSquare();
-       -- north west check
-    if pSquare:getX() >= 7915 and
-       pSquare:getY() >= 6382 and
-       -- south east check
-       pSquare:getX() <= 7971 and
-       pSquare:getY() <= 6465 then
-        return true;
+    if pSquare then
+           -- north west check
+        if pSquare:getX() >= 7915 and
+           pSquare:getY() >= 6382 and
+           -- south east check
+           pSquare:getX() <= 7971 and
+           pSquare:getY() <= 6465 then
+            return true;
+        end
     end
     return false;
 end
