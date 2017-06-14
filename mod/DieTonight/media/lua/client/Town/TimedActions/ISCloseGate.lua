@@ -19,44 +19,6 @@ end
 -- Animation to close the gate
 -- The gate is closing from each side to the middle
 function ISCloseGate:update()
-    if type(self.squareIndex) == "table" then
-        if (self.squareIndex.bottom < self.squareIndex.top) and (self.nbIteration == 0 or self.nbIteration%self.intervalIteration == 0) then
-
-            -- if gate direction to the south
-            if self.gate.startPos.x == self.gate.endPos.x then
-                local squares = {
-                    top = getCell():getGridSquare(self.gate.startPos.x, self.gate.startPos.y-self.squareIndex.top, 0),
-                    bottom = getCell():getGridSquare(self.gate.startPos.x, self.gate.startPos.y-self.squareIndex.bottom, 0)
-                };
-                ISGate.addFenceOnSquare(squares.top, self.gate.sprite, false);
-                ISGate.addFenceOnSquare(squares.bottom, self.gate.sprite, false);
-            -- if gate direction to the north
-            elseif self.gate.startPos.y == self.gate.endPos.y then
-                local squares = {
-                    top = getCell():getGridSquare(self.gate.startPos.x-self.squareIndex.top, self.gate.startPos.y, 0),
-                    bottom = getCell():getGridSquare(self.gate.startPos.x-self.squareIndex.bottom, self.gate.startPos.y, 0)
-                };
-                ISGate.addFenceOnSquare(squares.top, self.gate.sprite, true);
-                ISGate.addFenceOnSquare(squares.bottom, self.gate.sprite, true);
-            end
-            self.squareIndex = { bottom = self.squareIndex.bottom+1, top = self.squareIndex.top-1 };
-
-        elseif (self.squareIndex.top == math.floor(self.gateLength/2) and self.squareIndex.bottom == math.floor(self.gateLength/2)) and (self.nbIteration == 0 or self.nbIteration%self.intervalIteration == 0) then
-
-            self.squareIndex = math.floor(self.gateLength/2);
-            -- if gate direction to the south
-            if self.gate.startPos.x == self.gate.endPos.x then
-                local sq = getCell():getGridSquare(self.gate.startPos.x, self.gate.startPos.y-self.squareIndex, 0);
-                ISGate.addFenceOnSquare(sq, self.gate.sprite, false);
-            -- if gate direction to the north
-            elseif self.gate.startPos.y == self.gate.endPos.y then
-                local sq = getCell():getGridSquare(self.gate.startPos.x-self.squareIndex, self.gate.startPos.y, 0);
-                ISGate.addFenceOnSquare(sq, self.gate.sprite, true);
-            end
-
-        end
-    end
-    self.nbIteration = self.nbIteration+1; -- action timer
 end
 
 function ISCloseGate:start()
@@ -72,7 +34,9 @@ function ISCloseGate:stop()
 end
 
 function ISCloseGate:perform()
-    print("[DT-INFO] ISCloseGate: Gate closed !")
+    -- On génère ici l'animation à partir de l'event Tick
+    -- C'est le seul moyen d'obtenir un tempo multithreadé
+    Events.OnTick.Add(ISCloseGate.OnTick);
     ISBaseTimedAction.perform(self);
 end
 
@@ -85,26 +49,76 @@ function ISCloseGate:new(character, gate, terminalTile)
     o.stopOnRun = GateProperties.stopOnRun;
     o.caloriesModifier = GateProperties.caloriesModifier;
     o.maxTime = GateProperties.maxTime;
-    o.gate = gate;
     o.terminalTile = terminalTile;
 
+    ISCloseGate.animationDuration = GateProperties.animationDuration*100;
+    ISCloseGate.gate = gate;
     -- calculate and store the gate length
-    o.gateLength = 0;
+    ISCloseGate.gateLength = 0;
     -- animation left to right
     if gate.startPos.x == gate.endPos.x then
-        o.gateLength = gate.startPos.y - gate.endPos.y;
+        ISCloseGate.gateLength = gate.startPos.y - gate.endPos.y;
     elseif gate.startPos.y == gate.endPos.y then
     -- animation right to left
-        o.gateLength = gate.startPos.x - gate.endPos.x;
+        ISCloseGate.gateLength = gate.startPos.x - gate.endPos.x;
     end
     -- squares which will contain the first fences
-    o.squareIndex = { bottom = 0, top = o.gateLength };
+    ISCloseGate.squareIndex = { bottom = 0, top = ISCloseGate.gateLength };
     -- nb iterations by the method ISCloseGate.update()
-    o.nbIteration = 0;
+    ISCloseGate.nbIteration = 0;
+    ISCloseGate.nbIterationTotale = 0;
     -- nb iterations between 2 square update (open or close)
-    ---- it seems like update() is called 25 times more than self.maxTime
-    o.intervalIteration = math.ceil((o.maxTime+GateProperties.animationPonderator)*2/o.gateLength);
+    ISCloseGate.intervalIteration = math.ceil(ISCloseGate.animationDuration/ISCloseGate.gateLength);
 
     return o
+end
+
+ISCloseGate.OnTick = function()
+    if type(ISCloseGate.squareIndex) == "table" then
+        if (ISCloseGate.squareIndex.bottom < ISCloseGate.squareIndex.top) and (ISCloseGate.nbIteration == ISCloseGate.intervalIteration) then
+
+            -- if gate direction to the south
+            if ISCloseGate.gate.startPos.x == ISCloseGate.gate.endPos.x then
+                local squares = {
+                    top = getCell():getGridSquare(ISCloseGate.gate.startPos.x, ISCloseGate.gate.startPos.y-ISCloseGate.squareIndex.top, 0),
+                    bottom = getCell():getGridSquare(ISCloseGate.gate.startPos.x, ISCloseGate.gate.startPos.y-ISCloseGate.squareIndex.bottom, 0)
+                };
+                ISGate.addFenceOnSquare(squares.top, ISCloseGate.gate.sprite, false);
+                ISGate.addFenceOnSquare(squares.bottom, ISCloseGate.gate.sprite, false);
+                -- if gate direction to the north
+            elseif ISCloseGate.gate.startPos.y == ISCloseGate.gate.endPos.y then
+                local squares = {
+                    top = getCell():getGridSquare(ISCloseGate.gate.startPos.x-ISCloseGate.squareIndex.top, ISCloseGate.gate.startPos.y, 0),
+                    bottom = getCell():getGridSquare(ISCloseGate.gate.startPos.x-ISCloseGate.squareIndex.bottom, ISCloseGate.gate.startPos.y, 0)
+                };
+                ISGate.addFenceOnSquare(squares.top, ISCloseGate.gate.sprite, true);
+                ISGate.addFenceOnSquare(squares.bottom, ISCloseGate.gate.sprite, true);
+            end
+            ISCloseGate.squareIndex = { bottom = ISCloseGate.squareIndex.bottom+1, top = ISCloseGate.squareIndex.top-1 };
+            -- On remet à zéro le nombre d'itérations servant d'intervales
+            ISCloseGate.nbIteration = 0;
+
+        elseif (ISCloseGate.squareIndex.top == math.floor(ISCloseGate.gateLength/2) and ISCloseGate.squareIndex.bottom == math.floor(ISCloseGate.gateLength/2)) and (ISCloseGate.nbIteration == ISCloseGate.intervalIteration) then
+
+            ISCloseGate.squareIndex = math.floor(ISCloseGate.gateLength/2);
+            -- if gate direction to the south
+            if ISCloseGate.gate.startPos.x == ISCloseGate.gate.endPos.x then
+                local sq = getCell():getGridSquare(ISCloseGate.gate.startPos.x, ISCloseGate.gate.startPos.y-ISCloseGate.squareIndex, 0);
+                ISGate.addFenceOnSquare(sq, ISCloseGate.gate.sprite, false);
+                -- if gate direction to the north
+            elseif ISCloseGate.gate.startPos.y == ISCloseGate.gate.endPos.y then
+                local sq = getCell():getGridSquare(ISCloseGate.gate.startPos.x-ISCloseGate.squareIndex, ISCloseGate.gate.startPos.y, 0);
+                ISGate.addFenceOnSquare(sq, ISCloseGate.gate.sprite, true);
+            end
+            -- On remet à zéro le nombre d'itérations servant d'intervales
+            ISCloseGate.nbIteration = 0;
+
+        end
+    end
+    ISCloseGate.nbIteration = ISCloseGate.nbIteration+1; -- action timer
+    ISCloseGate.nbIterationTotale = ISCloseGate.nbIterationTotale + 1;
+    if ISCloseGate.nbIterationTotale > ISCloseGate.animationDuration then
+        Events.OnTick.Remove(ISCloseGate.OnTick);
+    end
 end
 

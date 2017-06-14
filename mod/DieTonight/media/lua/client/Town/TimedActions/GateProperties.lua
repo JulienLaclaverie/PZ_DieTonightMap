@@ -11,8 +11,9 @@ GateProperties = {
     stopOnWalk = false,
     stopOnRun = false,
     caloriesModifier = 1,
-    maxTime = 100 ,              -- 100=2sec , 250=6sec
-    soundPlayed = "shoveling",    -- see media/lua/shared/SoundBanks/SoundBanks.lua
+    maxTime = 0 ,                 -- 100=2sec , 250=6sec
+    animationDuration = 2,          -- in seconds
+    soundPlayed = "shoveling",      -- see media/lua/shared/SoundBanks/SoundBanks.lua
     thumpDmg = 8,
     maxHealth = 200,
     ---- fixme: I wrote 12 because it can arrive that update() is triggered less than 25 times :'(
