@@ -7,11 +7,11 @@
 
 SpawnFromPlaceholders = {};
 
-SpawnFromPlaceholders.onGridsquareLoaded = function()
+SpawnFromPlaceholders.onGridsquareLoaded = function(sq)
 
-    CityObjects.spawnObjects();
-    PlaceWindowsBaricades.spawnObjects();
-    CustomZombieSpawn.spawnObjects();
+    CityObjects.spawnObjects(sq);
+    PlaceWindowsBaricades.spawnObjects(sq);
+    CustomZombieSpawn.spawnObjects(sq);
 
 end
 
