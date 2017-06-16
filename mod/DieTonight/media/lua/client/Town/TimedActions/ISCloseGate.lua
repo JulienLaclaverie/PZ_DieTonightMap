@@ -118,6 +118,7 @@ ISCloseGate.OnTick = function()
     ISCloseGate.nbIteration = ISCloseGate.nbIteration+1; -- action timer
     ISCloseGate.nbIterationTotale = ISCloseGate.nbIterationTotale + 1;
     if ISCloseGate.nbIterationTotale > ISCloseGate.animationDuration then
+        ISGate.setToggleState(false);
         Events.OnTick.Remove(ISCloseGate.OnTick);
     end
 end

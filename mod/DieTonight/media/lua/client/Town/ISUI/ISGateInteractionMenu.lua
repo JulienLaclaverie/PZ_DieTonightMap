@@ -73,14 +73,15 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
         if ISGateInteractionMenu.isOnInteractionZone(terminal, getPlayer()) then
             print("[DT-INFO] ISGateInteractionMenu: Interacting with ".. tostring(terminal.gate) .." !");
             local toggleOption = context:addOption("Toggle gate", worldobjects, ISGate.toggle, getSpecificPlayer(player), terminal, object);
+            local tooltip;
 
             -- If the gate has no more health, we add the repair option to the menu
             if gateHealth <= 0 then
                 object:getSquare():playSound("breakdoor", true);
 
                 toggleOption.notAvailable = true;
-                local tooltip = ISWorldObjectContextMenu.addToolTip();
-                tooltip.description = "The gate mecanism is broken, you need to repair it to be able to use it !";
+                tooltip = ISWorldObjectContextMenu.addToolTip();
+                tooltip.description = "The gate mechanism is broken, you need to repair it to be able to use it !";
                 toggleOption.toolTip = tooltip;
 
                 local repairOption = context:addOption("Repair terminal", worldobjects, ISGate.repairTerminal, getSpecificPlayer(player), object);
@@ -91,6 +92,11 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
                     repairOption.notAvailable = true;
                 end
                 repairOption.toolTip = tooltip;
+            elseif ISGate.isToggled() then
+                toggleOption.notAvailable = true;
+                tooltip = ISWorldObjectContextMenu.addToolTip();
+                tooltip.description = "The gate mechanism is busy...";
+                toggleOption.toolTip = tooltip;
             end
 
             -- If the player is a technician, we display the terminal condition in a tooltip
@@ -99,8 +105,14 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
                 if gateHealth > 0 then
                     condition = ((gateHealth*100)/TerminalHealthInfos.health);
                 end
-                local tooltip = ISWorldObjectContextMenu.addToolTip();
-                tooltip.description = "Condition - "..condition.."%";
+                local tooltipDesc = "Condition - "..condition.."%";
+
+                if not tooltip then
+                    tooltip = ISWorldObjectContextMenu.addToolTip();
+                    tooltip.description = tooltipDesc;
+                else
+                    tooltip.description = tooltip.description .. "\n\n" .. tooltipDesc;
+                end
                 toggleOption.toolTip = tooltip;
             end
 

@@ -123,6 +123,7 @@ ISOpenGate.OnTick = function()
     ISOpenGate.nbIteration = ISOpenGate.nbIteration+1; -- action timer
     ISOpenGate.nbIterationTotale = ISOpenGate.nbIterationTotale+1;
     if ISOpenGate.nbIterationTotale > ISOpenGate.animationDuration then
+        ISGate.setToggleState(false);
         Events.OnTick.Remove(ISOpenGate.OnTick);
     end
 end
