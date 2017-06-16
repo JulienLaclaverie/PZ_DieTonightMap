@@ -239,7 +239,6 @@
  <used_tiles>4</used_tiles>
  <used_furniture>0</used_furniture>
  <floor>
-  <object type="furniture" FurnitureTiles="0" orient="W" x="3" y="3"/>
   <rooms>
 0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,
