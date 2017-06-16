@@ -95,15 +95,21 @@ end
 
 -- Remove fence on the square passed in parameter
 ISGate.removeFenceOnSquare = function(square)
+    local objectsToRemove = {};
+    -- we store all the objects we need to remove
+    -- this prevent an OutboundException when we iterate over an array
+    -- which will be shifted during iterations
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
         if obj:getSprite():getName() and luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
-            square:transmitRemoveItemFromSquare(obj);
-            square:RemoveTileObject(obj);
-            -- FIXME: Remove break to prevent duplicated fence on the same square
-            -- but some problems appear : the index of the table has changed after deletion
-            break;
+            table.insert(objectsToRemove, obj);
         end
+    end
+    -- Then we remove the objects from the square
+    for i=#objectsToRemove,1,-1 do
+        local obj = objectsToRemove[i];
+        square:transmitRemoveItemFromSquare(obj);
+        square:RemoveTileObject(obj);
     end
 end
 
@@ -111,7 +117,6 @@ end
 ISGate.squareHasFence = function(square)
     for i=0,square:getObjects():size()-1 do
         local obj = square:getObjects():get(i);
-        -- print( "[DT-INFO] ISGate: square contains --> " .. tostring(obj:getSprite():getName()) .. " ("..tostring(obj)..") |--> obj is IsoWorldInventoryObject : " .. tostring(instanceof(obj, "IsoWorldInventoryObject")) )
         if obj:getSprite():getName() and luautils.stringStarts(obj:getSprite():getName(), ISGate.fenceSpriteName) then
             return true;
         end
