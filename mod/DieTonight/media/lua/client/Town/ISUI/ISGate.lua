@@ -12,6 +12,7 @@
 --
 
 ISGate = {
+    currentObjectModData = {},
     fenceSpriteName = "fencing_01",
 
     gates = {
@@ -54,6 +55,7 @@ ISGate.toggle = function(target, player, terminal, terminalTile)
             print( "[DT-INFO] ISGate: " .. terminal.gate .. " is closed ! Opening..." );
             ISTimedActionQueue.add(ISOpenGate:new(player, gate, terminalTile));
         end
+        ISGate.setHealth(ISGate.getHealth() - ZombRand(5,10));
     else
         print( "[DT-INFO] ISGate: No gate found for this security terminal ! The gate registered for this terminal is " .. terminal.gate );
     end
@@ -137,4 +139,17 @@ ISGate.newFence = function(square, sprite, isNorth)
     -- the sound that will be played when our furniture will be broken
     fence:setBreakSound("breakdoor");
     return fence;
+end
+
+ISGate.getHealth = function()
+    return ISGate.currentSquareForModData:getSquare():getModData()["DT_Gate_Health"];
+end
+
+ISGate.setHealth = function(value)
+    ISGate.currentSquareForModData:getSquare():getModData()["DT_Gate_Health"] = value;
+    ISGate.currentSquareForModData:getSquare():transmitModdata();
+end
+
+ISGate.repairTerminal = function(target, player, worldObject)
+    ISTimedActionQueue.add(ISRepairGate:new(player, worldObject));
 end
