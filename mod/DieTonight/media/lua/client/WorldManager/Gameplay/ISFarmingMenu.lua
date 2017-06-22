@@ -18,7 +18,6 @@ ISFarmingMenu.canDigHere = function(worldObjects)
         for i=1,square:getObjects():size() do
             local obj = square:getObjects():get(i-1);
             if ISFarmingMenu.isDiggable(obj) and not ISFarmingMenu.isDesert(obj) then
-                print("[DT-INFO] ISFarmingMenu: texture --> "..tostring(obj:getTextureName()))
                 return true;
             end
         end
