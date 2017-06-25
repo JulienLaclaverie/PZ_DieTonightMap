@@ -5,9 +5,9 @@
 --           Time: 10:45                         
 -- ================================================
 
-SpawnFromPlaceholders = {};
+SpawnFromHordesPlaceholders = {};
 
-SpawnFromPlaceholders.onGridsquareLoaded = function(sq)
+SpawnFromHordesPlaceholders.onGridsquareLoaded = function(sq)
 
     CityObjects.spawnObjects(sq);
     PlaceWindowsBaricades.spawnObjects(sq);
@@ -15,4 +15,4 @@ SpawnFromPlaceholders.onGridsquareLoaded = function(sq)
 
 end
 
-Events.LoadGridsquare.Add(SpawnFromPlaceholders.onGridsquareLoaded);
+Events.LoadGridsquare.Add(SpawnFromHordesPlaceholders.onGridsquareLoaded);
