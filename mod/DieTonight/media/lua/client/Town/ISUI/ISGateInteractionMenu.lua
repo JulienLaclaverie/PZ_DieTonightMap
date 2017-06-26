@@ -67,9 +67,10 @@ ISGateInteractionMenu.doInteractMenu = function(player, context, worldobjects, t
         object = v;
     end
 
-    local gateHealth = ISGate.getHealth();
 
     if terminal and object then
+        local gateHealth = ISGate.getHealth();
+
         if ISGateInteractionMenu.isOnInteractionZone(terminal, getPlayer()) then
             print("[DT-INFO] ISGateInteractionMenu: Interacting with ".. tostring(terminal.gate) .." !");
             local toggleOption = context:addOption("Toggle gate", worldobjects, ISGate.toggle, getSpecificPlayer(player), terminal, object);
