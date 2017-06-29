@@ -15,4 +15,4 @@ SpawnFromHordesPlaceholders.onGridsquareLoaded = function(sq)
 
 end
 
-Events.LoadGridsquare.Add(SpawnFromHordesPlaceholders.onGridsquareLoaded);
+--Events.LoadGridsquare.Add(SpawnFromHordesPlaceholders.onGridsquareLoaded);
