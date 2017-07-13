@@ -149,23 +149,23 @@
   <tile enum="North" tile="fixtures_windows_01_001"/>
  </tile_entry>
  <user_tiles>
-  <tile tile="carpentry_02_080"/>
-  <tile tile="carpentry_02_081"/>
-  <tile tile="carpentry_02_083"/>
   <tile tile="fixtures_windows_01_000"/>
   <tile tile="overlay_blood_floor_01_014"/>
   <tile tile="overlay_blood_floor_01_018"/>
   <tile tile="overlay_blood_floor_01_045"/>
   <tile tile="overlay_blood_wall_01_019"/>
   <tile tile="overlay_blood_wall_01_030"/>
-  <tile tile="trash_01_009"/>
-  <tile tile="trash_01_011"/>
-  <tile tile="walls_exterior_wooden_01_040"/>
-  <tile tile="walls_exterior_wooden_01_041"/>
-  <tile tile="walls_exterior_wooden_01_043"/>
-  <tile tile="walls_exterior_wooden_01_046"/>
-  <tile tile="walls_exterior_wooden_01_048"/>
-  <tile tile="walls_exterior_wooden_01_052"/>
+  <tile tile="placeholder_carpentry_02_040"/>
+  <tile tile="placeholder_carpentry_02_043"/>
+  <tile tile="placeholder_carpentry_02_080"/>
+  <tile tile="placeholder_carpentry_02_081"/>
+  <tile tile="placeholder_carpentry_02_083"/>
+  <tile tile="placeholder_carpentry_02_100"/>
+  <tile tile="placeholder_carpentry_02_101"/>
+  <tile tile="placeholder_walls_wooden_01_020"/>
+  <tile tile="placeholder_walls_wooden_01_021"/>
+  <tile tile="placeholder_walls_wooden_01_022"/>
+  <tile tile="placeholder_walls_wooden_01_028"/>
  </user_tiles>
  <used_tiles>4</used_tiles>
  <used_furniture></used_furniture>
@@ -184,25 +184,13 @@
   <tiles layer="FloorOverlay">
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
-0,0,0,0,0,7,0,
+0,0,0,0,0,4,0,
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
-0,0,0,5,0,0,0,
+0,0,0,2,0,0,0,
 0,0,0,0,0,0,0,
-0,0,6,0,0,0,0,
+0,0,3,0,0,0,0,
 0,0,0,0,0,0,0,
-0,0,0,0,0,0,0
-</tiles>
-  <tiles layer="Furniture">
-0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,
-0,0,0,10,0,0,0,
-0,0,0,0,0,0,0,
-0,0,0,11,0,0,0,
 0,0,0,0,0,0,0
 </tiles>
   <tiles layer="WallOverlay">
@@ -211,23 +199,23 @@
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
-0,0,0,9,0,0,0,
+0,0,0,6,0,0,0,
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
-0,0,0,0,8,0,0
+0,0,0,0,5,0,0
 </tiles>
   <tiles layer="Walls">
 0,0,0,0,0,0,0,
-2,2,2,2,2,1,0,
-0,0,0,0,0,1,0,
-2,2,2,1,0,1,0,
-0,0,0,1,0,1,0,
-0,0,0,12,2,3,0,
-0,0,0,17,0,0,0,
-0,0,15,14,0,0,0,
-0,0,16,0,0,0,0,
-0,0,13,13,16,0,0
+10,10,10,10,10,9,0,
+0,0,0,0,0,9,0,
+10,10,10,9,0,9,0,
+0,0,0,9,0,9,0,
+0,0,0,14,10,11,0,
+0,0,0,7,0,0,0,
+0,0,16,8,0,0,0,
+0,0,12,0,0,0,0,
+0,0,15,13,17,0,0
 </tiles>
   <tiles layer="Walls2">
 0,0,0,0,0,0,0,
@@ -235,7 +223,7 @@
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
-0,0,0,2,0,0,0,
+0,0,0,10,0,0,0,
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
@@ -248,10 +236,10 @@
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,
-0,0,0,4,0,0,0,
 0,0,0,0,0,0,0,
-0,0,4,0,0,0,0,
-0,0,0,0,4,0,0
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,1,0,0
 </tiles>
  </floor>
 </building>

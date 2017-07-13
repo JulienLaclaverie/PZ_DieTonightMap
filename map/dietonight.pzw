@@ -128,7 +128,6 @@
   <lot x="41" y="85" level="0" width="6" height="9" map="../tmx/buildings/wasteland/Decoration03.tbx"/>
   <lot x="87" y="249" level="0" width="7" height="7" map="../tmx/buildings/wasteland/Decoration04.tbx"/>
   <lot x="73" y="0" level="0" width="21" height="16" map="../tmx/buildings/wasteland/ScavengeSite01.tbx"/>
-  <lot x="119" y="38" level="0" width="41" height="41" map="../../PZ_SpawnObjectsUtil/testmap.tbx"/>
   <object group="TownZone" type="TownZone" x="115" y="84" level="0" width="59" height="80"/>
   <object type="SpawnPoint" x="161" y="154" level="0" width="1" height="1">
    <template name="SpawnPoint"/>
