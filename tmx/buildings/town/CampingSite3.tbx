@@ -149,18 +149,7 @@
   <tile enum="North" tile="fixtures_windows_01_001"/>
  </tile_entry>
  <user_tiles>
-  <tile tile="camping_01_000"/>
-  <tile tile="camping_01_001"/>
-  <tile tile="camping_01_002"/>
-  <tile tile="camping_01_003"/>
   <tile tile="carpentry_01_019"/>
-  <tile tile="carpentry_02_041"/>
-  <tile tile="carpentry_02_044"/>
-  <tile tile="carpentry_02_045"/>
-  <tile tile="carpentry_02_047"/>
-  <tile tile="constructedobjects_01_060"/>
-  <tile tile="constructedobjects_01_061"/>
-  <tile tile="constructedobjects_01_062"/>
   <tile tile="overlay_blood_floor_01_008"/>
   <tile tile="overlay_blood_floor_01_043"/>
   <tile tile="overlay_blood_floor_01_044"/>
@@ -168,6 +157,14 @@
   <tile tile="overlay_grime_floor_01_003"/>
   <tile tile="overlay_grime_floor_01_010"/>
   <tile tile="overlay_grime_floor_01_011"/>
+  <tile tile="placeholder_camping_compost_01_000"/>
+  <tile tile="placeholder_camping_compost_01_003"/>
+  <tile tile="placeholder_carpentry_02_041"/>
+  <tile tile="placeholder_carpentry_02_048"/>
+  <tile tile="placeholder_carpentry_02_051"/>
+  <tile tile="placeholder_constructedobjects_01_060"/>
+  <tile tile="placeholder_constructedobjects_01_061"/>
+  <tile tile="placeholder_constructedobjects_01_063"/>
   <tile tile="trash_01_003"/>
   <tile tile="trash_01_007"/>
   <tile tile="trash_01_008"/>
@@ -187,31 +184,24 @@
 </rooms>
   <tiles layer="FloorOverlay">
 0,0,0,0,0,0,0,0,
-0,0,0,15,0,0,0,0,
-0,0,0,18,19,13,0,0,
-0,0,0,17,16,0,14,0,
+0,0,0,4,0,0,0,0,
+0,0,0,7,8,2,0,0,
+0,0,0,6,5,0,3,0,
 0,0,0,0,0,0,0,0
 </tiles>
   <tiles layer="Furniture">
 0,0,0,0,0,0,0,0,
-0,3,4,0,0,26,2,0,
-0,20,23,0,0,24,1,0,
-0,5,25,22,0,0,21,0,
+0,0,10,0,0,23,0,0,
+0,17,20,0,0,21,9,0,
+0,1,22,19,0,0,18,0,
 0,0,0,0,0,0,0,0
 </tiles>
   <tiles layer="Walls">
 0,0,0,0,0,0,0,0,
-0,11,11,0,0,8,6,7,
-0,0,0,0,0,0,0,9,
+0,16,15,14,0,11,11,12,
+0,14,0,0,0,0,0,13,
 0,0,0,0,0,0,0,0,
-0,11,10,0,0,0,0,0
-</tiles>
-  <tiles layer="Walls2">
-0,0,0,0,0,0,0,0,
-0,12,0,0,0,0,0,0,
-0,10,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0
+0,15,14,0,0,0,0,0
 </tiles>
  </floor>
 </building>

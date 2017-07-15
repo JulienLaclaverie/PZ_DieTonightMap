@@ -20,77 +20,7 @@ objects = {
       Professions = "all"
     }
   },
-  { name = "", type = "SpawnPoint", x = 7963, y = 6438, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7960, y = 6429, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7921, y = 6450, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7933, y = 6456, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7933, y = 6446, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7925, y = 6441, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7921, y = 6434, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
   { name = "", type = "SpawnPoint", x = 7923, y = 6428, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7922, y = 6422, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7922, y = 6400, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7930, y = 6409, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7931, y = 6401, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7926, y = 6391, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7942, y = 6411, z = 0, width = 1, height = 1,
-    properties = {
-      Professions = "all"
-    }
-  },
-  { name = "", type = "SpawnPoint", x = 7939, y = 6392, z = 0, width = 1, height = 1,
     properties = {
       Professions = "all"
     }
@@ -110,6 +40,21 @@ objects = {
   { name = "", type = "Forest", x = 7858, y = 6319, z = 0, width = 242, height = 17 },
   { name = "", type = "Forest", x = 8032, y = 6336, z = 0, width = 68, height = 245 },
   { name = "", type = "Forest", x = 7858, y = 6519, z = 0, width = 174, height = 62 },
+  { name = "", type = "SpawnPoint", x = 7939, y = 6446, z = 5, width = 1, height = 1,
+    properties = {
+      Professions = "all"
+    }
+  },
+  { name = "", type = "SpawnPoint", x = 7940, y = 6420, z = 5, width = 1, height = 1,
+    properties = {
+      Professions = "all"
+    }
+  },
+  { name = "", type = "SpawnPoint", x = 7944, y = 6417, z = 5, width = 1, height = 1,
+    properties = {
+      Professions = "all"
+    }
+  },
   { name = "", type = "Forest", x = 8100, y = 6300, z = 0, width = 218, height = 300 },
   { name = "", type = "DeepForest", x = 8318, y = 6300, z = 0, width = 81, height = 300 },
   { name = "", type = "Forest", x = 7586, y = 6600, z = 0, width = 214, height = 209 },

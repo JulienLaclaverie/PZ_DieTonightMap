@@ -168,13 +168,13 @@
   <tile tile="d_generic_1_055"/>
   <tile tile="e_redmaple_1_001"/>
   <tile tile="e_redmaple_1_003"/>
-  <tile tile="location_community_park_01_017"/>
   <tile tile="location_shop_greenes_01_035"/>
   <tile tile="location_shop_greenes_01_037"/>
   <tile tile="overlay_blood_floor_01_024"/>
   <tile tile="overlay_blood_floor_01_025"/>
   <tile tile="overlay_blood_floor_01_026"/>
   <tile tile="overlay_blood_floor_01_027"/>
+  <tile tile="placeholder_zombies_01_008"/>
   <tile tile="trash_01_003"/>
   <tile tile="trash_01_016"/>
   <tile tile="trash_01_029"/>
@@ -208,8 +208,8 @@
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,24,26,0,0,0,0,0,
 0,0,23,25,0,0,0,0,0,
+0,0,22,24,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
@@ -232,8 +232,8 @@
 0,12,10,0,0,0,0,0,0,
 0,30,9,0,0,0,0,0,0,
 0,0,0,0,0,13,28,0,0,
-0,0,20,0,0,11,21,0,0,
-0,0,0,0,0,22,20,0,18,
+0,0,26,0,0,11,20,0,0,
+0,0,0,0,0,21,26,0,18,
 0,0,0,0,0,0,0,0,0,
 27,0,0,0,0,0,0,0,0
 </tiles>

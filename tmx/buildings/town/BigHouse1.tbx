@@ -1069,10 +1069,6 @@
 </tiles>
  </floor>
  <floor>
-  <object type="wall" length="1" InteriorTile="0" ExteriorTrim="0" InteriorTrim="0" x="1" y="7" dir="W" Tile="45"/>
-  <object type="wall" length="2" InteriorTile="0" ExteriorTrim="0" InteriorTrim="0" x="1" y="5" dir="N" Tile="45"/>
-  <object type="wall" length="1" InteriorTile="0" ExteriorTrim="0" InteriorTrim="0" x="1" y="1" dir="N" Tile="45"/>
-  <object type="wall" length="1" InteriorTile="0" ExteriorTrim="0" InteriorTrim="0" x="1" y="1" dir="W" Tile="45"/>
   <rooms>
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,

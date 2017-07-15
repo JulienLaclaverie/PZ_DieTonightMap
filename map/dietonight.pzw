@@ -72,6 +72,7 @@
   <lot x="197" y="224" level="0" width="9" height="9" map="../tmx/buildings/wasteland/LostTent01.tbx"/>
   <lot x="216" y="75" level="0" width="26" height="36" map="../tmx/buildings/wasteland/Warehouses04.tbx"/>
   <lot x="43" y="34" level="0" width="41" height="31" map="../tmx/buildings/wasteland/CosmeticLab.tbx"/>
+  <lot x="3" y="200" level="0" width="10" height="10" map="../tmx/buildings/town/Housing3.tbx"/>
   <object group="Forest" type="Forest" x="0" y="83" level="0" width="300" height="217"/>
   <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="300" height="83"/>
  </cell>
@@ -85,38 +86,35 @@
  </cell>
  <cell x="0" y="1" map="wesdesert_0_1.tmx">
   <lot x="0" y="0" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceWest.tbx"/>
-  <lot x="171" y="78" level="0" width="51" height="21" map="../tmx/buildings/wasteland/Road01.tbx"/>
+  <lot x="180" y="78" level="0" width="51" height="21" map="../tmx/buildings/wasteland/Road01.tbx"/>
   <lot x="210" y="265" level="0" width="26" height="26" map="../tmx/buildings/wasteland/AbandonedMineshaft.tbx"/>
   <lot x="89" y="167" level="0" width="26" height="26" map="../tmx/buildings/wasteland/LostHouse03.tbx"/>
-  <lot x="57" y="20" level="0" width="21" height="19" map="../tmx/buildings/wasteland/GunStore.tbx"/>
+  <lot x="43" y="46" level="0" width="21" height="19" map="../tmx/buildings/wasteland/GunStore.tbx"/>
+  <lot x="124" y="15" level="0" width="7" height="10" map="../tmx/buildings/town/Housing4.tbx"/>
   <object group="Forest" type="Forest" x="86" y="0" level="0" width="214" height="300"/>
   <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="86" height="300"/>
  </cell>
  <cell x="1" y="1" map="townarea_1_1.tmx">
   <lot x="128" y="116" level="0" width="21" height="16" map="../tmx/buildings/town/HallBank.tbx"/>
-  <lot x="129" y="132" level="0" width="11" height="11" map="../tmx/buildings/town/WatchTower.tbx"/>
-  <lot x="129" y="144" level="0" width="10" height="10" map="../tmx/buildings/town/Housing3.tbx"/>
-  <lot x="130" y="155" level="0" width="8" height="5" map="../tmx/buildings/town/CampingSite3.tbx"/>
+  <lot x="128" y="133" level="0" width="11" height="11" map="../tmx/buildings/town/WatchTower.tbx"/>
+  <lot x="180" y="46" level="0" width="8" height="5" map="../tmx/buildings/town/CampingSite3.tbx"/>
   <lot x="139" y="144" level="0" width="21" height="16" map="../tmx/buildings/town/Workshop.tbx"/>
   <lot x="115" y="87" level="0" width="6" height="74" map="../tmx/buildings/town/WallWest.tbx"/>
   <lot x="167" y="92" level="0" width="6" height="69" map="../tmx/buildings/town/WallEast.tbx"/>
   <lot x="115" y="81" level="0" width="51" height="6" map="../tmx/buildings/town/WallNorth.tbx"/>
   <lot x="166" y="82" level="0" width="7" height="10" map="../tmx/buildings/town/WallEastPlus.tbx"/>
-  <lot x="119" y="147" level="0" width="10" height="14" map="../tmx/buildings/town/BigHouse2.tbx"/>
-  <lot x="119" y="133" level="0" width="11" height="13" map="../tmx/buildings/town/Housing6.tbx"/>
-  <lot x="119" y="109" level="0" width="9" height="11" map="../tmx/buildings/town/HousingBurnt.tbx"/>
+  <lot x="121" y="146" level="0" width="10" height="14" map="../tmx/buildings/town/BigHouse2.tbx"/>
   <lot x="120" y="120" level="0" width="9" height="13" map="../tmx/buildings/town/Housing8.tbx"/>
-  <lot x="120" y="99" level="0" width="8" height="9" map="../tmx/buildings/town/Housing9.tbx"/>
-  <lot x="124" y="89" level="0" width="10" height="10" map="../tmx/buildings/town/Housing7.tbx"/>
-  <lot x="128" y="106" level="0" width="11" height="11" map="../tmx/buildings/town/CampingSite1.tbx"/>
-  <lot x="129" y="100" level="0" width="10" height="6" map="../tmx/buildings/town/Housing5.tbx"/>
+  <lot x="51" y="161" level="0" width="8" height="9" map="../tmx/buildings/town/Housing9.tbx"/>
+  <lot x="122" y="88" level="0" width="10" height="10" map="../tmx/buildings/town/Housing7.tbx"/>
+  <lot x="122" y="99" level="0" width="11" height="11" map="../tmx/buildings/town/CampingSite1.tbx"/>
   <lot x="136" y="89" level="0" width="13" height="10" map="../tmx/buildings/town/BigHouse1.tbx"/>
   <lot x="157" y="146" level="0" width="11" height="13" map="../tmx/buildings/town/CampingSite2.tbx"/>
-  <lot x="161" y="136" level="0" width="7" height="10" map="../tmx/buildings/town/Housing4.tbx"/>
+  <lot x="236" y="166" level="0" width="7" height="10" map="../tmx/buildings/town/Housing4.tbx"/>
   <lot x="116" y="161" level="0" width="56" height="5" map="../tmx/buildings/town/WallSouth.tbx"/>
   <lot x="148" y="85" level="0" width="21" height="41" map="../tmx/buildings/town/ConstructionSite.tbx"/>
   <lot x="158" y="126" level="0" width="9" height="9" map="../tmx/buildings/town/Housing1.tbx"/>
-  <lot x="139" y="108" level="0" width="9" height="9" map="../tmx/buildings/town/Housing2.tbx"/>
+  <lot x="137" y="106" level="0" width="9" height="9" map="../tmx/buildings/town/Housing2.tbx"/>
   <lot x="241" y="250" level="0" width="31" height="21" map="../tmx/buildings/wasteland/Warehouses01.tbx"/>
   <lot x="5" y="38" level="0" width="12" height="12" map="../tmx/buildings/wasteland/LostHouse01.tbx"/>
   <lot x="267" y="31" level="0" width="11" height="13" map="../tmx/buildings/wasteland/Warehouses02.tbx"/>
@@ -128,6 +126,8 @@
   <lot x="41" y="85" level="0" width="6" height="9" map="../tmx/buildings/wasteland/Decoration03.tbx"/>
   <lot x="87" y="249" level="0" width="7" height="7" map="../tmx/buildings/wasteland/Decoration04.tbx"/>
   <lot x="73" y="0" level="0" width="21" height="16" map="../tmx/buildings/wasteland/ScavengeSite01.tbx"/>
+  <lot x="156" y="142" level="0" width="2" height="2" map="../tmx/buildings/town/LoneCompost.tbx"/>
+  <lot x="141" y="135" level="0" width="2" height="2" map="../tmx/buildings/town/LoneCampfire.tbx"/>
   <object group="TownZone" type="TownZone" x="115" y="84" level="0" width="59" height="80"/>
   <object type="SpawnPoint" x="161" y="154" level="0" width="1" height="1">
    <template name="SpawnPoint"/>
@@ -135,49 +135,7 @@
   <object type="SpawnPoint" x="164" y="150" level="0" width="1" height="1">
    <template name="SpawnPoint"/>
   </object>
-  <object type="SpawnPoint" x="163" y="138" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="160" y="129" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="121" y="150" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="133" y="156" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="133" y="146" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="125" y="141" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="121" y="134" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
   <object type="SpawnPoint" x="123" y="128" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="122" y="122" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="122" y="100" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="130" y="109" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="131" y="101" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="126" y="91" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="142" y="111" level="0" width="1" height="1">
-   <template name="SpawnPoint"/>
-  </object>
-  <object type="SpawnPoint" x="139" y="92" level="0" width="1" height="1">
    <template name="SpawnPoint"/>
   </object>
   <object group="Forest" type="Forest" x="58" y="36" level="0" width="30" height="183"/>
@@ -195,9 +153,19 @@
   <object group="Forest" type="Forest" x="58" y="19" level="0" width="242" height="17"/>
   <object group="Forest" type="Forest" x="232" y="36" level="0" width="68" height="245"/>
   <object group="Forest" type="Forest" x="58" y="219" level="0" width="174" height="62"/>
+  <object type="SpawnPoint" x="139" y="146" level="5" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="140" y="120" level="5" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
+  <object type="SpawnPoint" x="144" y="117" level="5" width="1" height="1">
+   <template name="SpawnPoint"/>
+  </object>
  </cell>
  <cell x="2" y="1" map="edesert_2_1.tmx">
   <lot x="295" y="0" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceEast.tbx"/>
+  <lot x="20" y="5" level="0" width="11" height="13" map="../tmx/buildings/town/Housing6.tbx"/>
   <object group="Forest" type="Forest" x="0" y="0" level="0" width="218" height="300"/>
   <object group="DeepForest" type="DeepForest" x="218" y="0" level="0" width="81" height="300"/>
  </cell>
@@ -211,6 +179,7 @@
  </cell>
  <cell x="1" y="2" map="southdesert_1_2.tmx">
   <lot x="0" y="295" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouth.tbx"/>
+  <lot x="10" y="28" level="0" width="9" height="11" map="../tmx/buildings/town/HousingBurnt.tbx"/>
   <object group="Forest" type="Forest" x="0" y="0" level="0" width="300" height="209"/>
   <object group="DeepForest" type="DeepForest" x="0" y="209" level="0" width="300" height="90"/>
  </cell>

@@ -158,12 +158,12 @@
   <tile tile="blends_street_01_025"/>
   <tile tile="blends_streetoverlays_01_019"/>
   <tile tile="blends_streetoverlays_01_025"/>
-  <tile tile="constructedobjects_01_060"/>
-  <tile tile="constructedobjects_01_062"/>
-  <tile tile="constructedobjects_01_063"/>
   <tile tile="d_generic_1_022"/>
   <tile tile="d_generic_1_023"/>
   <tile tile="industry_01_023"/>
+  <tile tile="placeholder_constructedobjects_01_060"/>
+  <tile tile="placeholder_constructedobjects_01_062"/>
+  <tile tile="placeholder_constructedobjects_01_063"/>
   <tile tile="trash_01_003"/>
   <tile tile="trash_01_005"/>
   <tile tile="trash_01_009"/>
@@ -204,17 +204,17 @@
 </tiles>
   <tiles layer="Furniture">
 0,0,0,0,0,0,
-0,15,18,17,0,0,
-0,16,0,0,0,14,
+0,12,18,17,0,0,
+0,16,0,0,0,11,
 0,0,0,0,0,0,
-0,13,0,0,0,0,
+0,10,0,0,0,0,
 0,0,0,0,0,0
 </tiles>
   <tiles layer="Walls">
 0,0,0,0,0,0,
-0,12,10,0,0,0,
-0,11,0,0,0,0,
-0,10,0,0,0,0,
+0,15,13,0,0,0,
+0,14,0,0,0,0,
+0,13,0,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0
 </tiles>

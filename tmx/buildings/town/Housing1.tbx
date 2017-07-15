@@ -161,15 +161,6 @@
  <user_tiles>
   <tile tile="carpentry_01_019"/>
   <tile tile="carpentry_01_049"/>
-  <tile tile="constructedobjects_01_048"/>
-  <tile tile="constructedobjects_01_049"/>
-  <tile tile="constructedobjects_01_051"/>
-  <tile tile="constructedobjects_01_057"/>
-  <tile tile="constructedobjects_01_059"/>
-  <tile tile="constructedobjects_01_064"/>
-  <tile tile="constructedobjects_01_065"/>
-  <tile tile="constructedobjects_01_066"/>
-  <tile tile="constructedobjects_01_072"/>
   <tile tile="d_generic_1_002"/>
   <tile tile="d_generic_1_023"/>
   <tile tile="d_generic_1_047"/>
@@ -180,14 +171,23 @@
   <tile tile="fixtures_windows_01_032"/>
   <tile tile="fixtures_windows_01_033"/>
   <tile tile="fixtures_windows_curtains_01_021"/>
+  <tile tile="placeholder_constructedobjects_01_048"/>
+  <tile tile="placeholder_constructedobjects_01_049"/>
+  <tile tile="placeholder_constructedobjects_01_051"/>
+  <tile tile="placeholder_constructedobjects_01_056"/>
+  <tile tile="placeholder_constructedobjects_01_059"/>
+  <tile tile="placeholder_constructedobjects_01_064"/>
+  <tile tile="placeholder_constructedobjects_01_065"/>
+  <tile tile="placeholder_constructedobjects_01_066"/>
+  <tile tile="placeholder_constructedobjects_01_073"/>
+  <tile tile="placeholder_walls_wooden_01_016"/>
+  <tile tile="placeholder_walls_wooden_01_020"/>
+  <tile tile="placeholder_walls_wooden_01_021"/>
+  <tile tile="placeholder_walls_wooden_01_025"/>
+  <tile tile="placeholder_walls_wooden_01_028"/>
   <tile tile="trash_01_007"/>
   <tile tile="trash_01_017"/>
   <tile tile="trash_walls_01_003"/>
-  <tile tile="walls_exterior_wooden_01_040"/>
-  <tile tile="walls_exterior_wooden_01_044"/>
-  <tile tile="walls_exterior_wooden_01_045"/>
-  <tile tile="walls_exterior_wooden_01_052"/>
-  <tile tile="walls_exterior_wooden_01_053"/>
  </user_tiles>
  <used_tiles>3</used_tiles>
  <used_furniture>0 1</used_furniture>
@@ -208,7 +208,7 @@
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,21,0,0,
+0,0,0,0,0,0,12,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
@@ -229,7 +229,7 @@
   <tiles layer="Furniture">
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,15,0,0,
+0,0,0,0,0,0,6,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
@@ -240,8 +240,8 @@
   <tiles layer="Furniture2">
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,0,24,0,0,0,0,0,
-0,0,23,22,0,0,0,0,0,
+0,0,0,29,0,0,0,0,0,
+0,0,28,27,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
@@ -250,12 +250,12 @@
 </tiles>
   <tiles layer="Vegetation">
 0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,14,0,0,
-0,0,0,0,0,0,0,13,0,
+0,0,0,0,0,0,5,0,0,
+0,0,0,0,0,0,0,4,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,12,0,0,0,0,0,0,0,
+0,3,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0
 </tiles>
@@ -267,29 +267,29 @@
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,0,16,0,0,0,0,0,
+0,0,0,7,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0
 </tiles>
   <tiles layer="Walls">
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,10,27,29,27,27,26,0,
-0,0,3,0,0,0,0,28,0,
-0,0,8,0,0,0,0,26,0,
-0,0,11,0,0,0,0,25,0,
-0,0,3,0,0,0,0,8,0,
-0,0,9,9,6,7,4,5,0,
+0,0,20,24,25,24,24,23,0,
+0,0,13,0,0,0,0,26,0,
+0,0,18,0,0,0,0,23,0,
+0,0,16,0,0,0,0,22,0,
+0,0,13,0,0,0,0,18,0,
+0,0,19,14,21,17,14,15,0,
 0,0,0,0,0,0,0,0,0
 </tiles>
   <tiles layer="Windows">
 0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,0,0,18,0,0,0,0,
-0,0,0,0,0,0,0,17,0,
+0,0,0,0,9,0,0,0,0,
+0,0,0,0,0,0,0,8,0,
 0,0,0,0,0,0,0,0,0,
-0,0,19,0,0,0,0,0,0,
+0,0,10,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,
-0,0,0,0,20,0,0,0,0,
+0,0,0,0,11,0,0,0,0,
 0,0,0,0,0,0,0,0,0
 </tiles>
  </floor>
