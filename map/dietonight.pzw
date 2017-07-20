@@ -108,7 +108,7 @@
   <lot x="51" y="161" level="0" width="8" height="9" map="../tmx/buildings/town/Housing9.tbx"/>
   <lot x="122" y="88" level="0" width="10" height="10" map="../tmx/buildings/town/Housing7.tbx"/>
   <lot x="122" y="99" level="0" width="11" height="11" map="../tmx/buildings/town/CampingSite1.tbx"/>
-  <lot x="136" y="89" level="0" width="13" height="10" map="../tmx/buildings/town/BigHouse1.tbx"/>
+  <lot x="135" y="89" level="0" width="13" height="10" map="../tmx/buildings/town/BigHouse1.tbx"/>
   <lot x="157" y="146" level="0" width="11" height="13" map="../tmx/buildings/town/CampingSite2.tbx"/>
   <lot x="236" y="166" level="0" width="7" height="10" map="../tmx/buildings/town/Housing4.tbx"/>
   <lot x="116" y="161" level="0" width="56" height="5" map="../tmx/buildings/town/WallSouth.tbx"/>
@@ -180,6 +180,10 @@
  <cell x="1" y="2" map="southdesert_1_2.tmx">
   <lot x="0" y="295" level="0" width="301" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouth.tbx"/>
   <lot x="10" y="28" level="0" width="9" height="11" map="../tmx/buildings/town/HousingBurnt.tbx"/>
+  <lot x="199" y="215" level="0" width="26" height="21" map="../tmx/buildings/wasteland/SpiffoFastFood.tbx"/>
+  <lot x="119" y="87" level="0" width="26" height="36" map="../tmx/buildings/wasteland/Road02.tbx"/>
+  <lot x="223" y="84" level="0" width="16" height="13" map="../tmx/buildings/wasteland/LostTent02.tbx"/>
+  <lot x="57" y="160" level="0" width="16" height="14" map="../tmx/buildings/wasteland/SmuglersCamp.tbx"/>
   <object group="Forest" type="Forest" x="0" y="0" level="0" width="300" height="209"/>
   <object group="DeepForest" type="DeepForest" x="0" y="209" level="0" width="300" height="90"/>
  </cell>
