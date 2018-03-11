@@ -51,6 +51,7 @@
  <objecttype name="Vegitation"/>
  <objecttype name="TrailerPark"/>
  <objecttype name="Farm"/>
+ <objecttype name="ParkingStall"/>
  <objectgroup name="TownZone" color="#aa0000" defaulttype="TownZone"/>
  <objectgroup name="Forest" color="#00aa00" defaulttype="Forest"/>
  <objectgroup name="Nav" color="#55aaff" defaulttype="Nav"/>
@@ -58,6 +59,7 @@
  <objectgroup name="Vegitation" color="#b3b300" defaulttype="Vegitation"/>
  <objectgroup name="TrailerPark" color="#f50000" defaulttype="TrailerPark"/>
  <objectgroup name="Farm" color="#55ff7f" defaulttype="Farm"/>
+ <objectgroup name="ParkingStall" color="#85929e" defaulttype="ParkingStall"/>
  <cell x="0" y="0" map="nwdesert_0_0.tmx">
   <lot x="-1" y="-1" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceNorthWestCorner.tbx"/>
   <lot x="0" y="4" level="0" width="5" height="301" map="../tmx/buildings/wasteland/BarbedFenceWest.tbx"/>
@@ -93,6 +95,9 @@
   <lot x="124" y="15" level="0" width="7" height="10" map="../tmx/buildings/town/Housing4.tbx"/>
   <object group="Forest" type="Forest" x="86" y="0" level="0" width="214" height="300"/>
   <object group="DeepForest" type="DeepForest" x="0" y="0" level="0" width="86" height="300"/>
+  <object name="rtrafficjamw" group="ParkingStall" type="ParkingStall" x="180" y="85" level="0" width="20" height="6"/>
+  <object x="176" y="124" level="0" width="1" height="1"/>
+  <object name="rtrafficjamw" group="ParkingStall" type="ParkingStall" x="211" y="85" level="0" width="16" height="6"/>
  </cell>
  <cell x="1" y="1" map="townarea_1_1.tmx">
   <lot x="128" y="116" level="0" width="21" height="16" map="../tmx/buildings/town/HallBank.tbx"/>
@@ -186,6 +191,8 @@
   <lot x="57" y="160" level="0" width="16" height="14" map="../tmx/buildings/wasteland/SmuglersCamp.tbx"/>
   <object group="Forest" type="Forest" x="0" y="0" level="0" width="300" height="209"/>
   <object group="DeepForest" type="DeepForest" x="0" y="209" level="0" width="300" height="90"/>
+  <object name="rtrafficjams" group="ParkingStall" type="ParkingStall" x="129" y="111" level="0" width="6" height="12"/>
+  <object name="rtrafficjams" group="ParkingStall" type="ParkingStall" x="129" y="86" level="0" width="6" height="12"/>
  </cell>
  <cell x="2" y="2" map="southeastdesert_2_2.tmx">
   <lot x="295" y="295" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouthEastCorner.tbx"/>

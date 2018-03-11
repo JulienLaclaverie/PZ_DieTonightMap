@@ -9,6 +9,9 @@ objects = {
   { name = "", type = "Forest", x = 8100, y = 6083, z = 0, width = 218, height = 217 },
   { name = "", type = "Forest", x = 7586, y = 6300, z = 0, width = 214, height = 300 },
   { name = "", type = "DeepForest", x = 7500, y = 6300, z = 0, width = 86, height = 300 },
+  { name = "rtrafficjamw", type = "ParkingStall", x = 7680, y = 6385, z = 0, width = 20, height = 6 },
+  { name = "", type = "", x = 7676, y = 6424, z = 0, width = 1, height = 1 },
+  { name = "rtrafficjamw", type = "ParkingStall", x = 7711, y = 6385, z = 0, width = 16, height = 6 },
   { name = "", type = "TownZone", x = 7915, y = 6384, z = 0, width = 59, height = 80 },
   { name = "", type = "SpawnPoint", x = 7961, y = 6454, z = 0, width = 1, height = 1,
     properties = {
@@ -62,6 +65,8 @@ objects = {
   { name = "", type = "DeepForest", x = 7500, y = 6600, z = 0, width = 86, height = 209 },
   { name = "", type = "Forest", x = 7800, y = 6600, z = 0, width = 300, height = 209 },
   { name = "", type = "DeepForest", x = 7800, y = 6809, z = 0, width = 300, height = 90 },
+  { name = "rtrafficjams", type = "ParkingStall", x = 7929, y = 6711, z = 0, width = 6, height = 12 },
+  { name = "rtrafficjams", type = "ParkingStall", x = 7929, y = 6686, z = 0, width = 6, height = 12 },
   { name = "", type = "DeepForest", x = 8318, y = 6600, z = 0, width = 81, height = 299 },
   { name = "", type = "DeepForest", x = 8100, y = 6809, z = 0, width = 218, height = 90 },
   { name = "", type = "Forest", x = 8100, y = 6600, z = 0, width = 218, height = 209 }
