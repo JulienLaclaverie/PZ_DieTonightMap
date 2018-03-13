@@ -174,12 +174,19 @@
   <lot x="20" y="5" level="0" width="11" height="13" map="../tmx/buildings/town/Housing6.tbx"/>
   <lot x="69" y="204" level="0" width="21" height="41" map="../tmx/buildings/wasteland/BurntSchool.tbx"/>
   <lot x="189" y="92" level="0" width="41" height="31" map="../tmx/buildings/wasteland/WreckedCars.tbx"/>
+  <lot x="228" y="244" level="0" width="31" height="31" map="../tmx/buildings/wasteland/DisusedCarPark.tbx"/>
   <object group="Forest" type="Forest" x="0" y="0" level="0" width="218" height="300"/>
   <object group="DeepForest" type="DeepForest" x="218" y="0" level="0" width="81" height="300"/>
   <object name="trafficjame" group="ParkingStall" type="ParkingStall" x="188" y="112" level="0" width="16" height="6"/>
   <object name="trafficjame" group="ParkingStall" type="ParkingStall" x="215" y="112" level="0" width="12" height="6"/>
-  <object group="ParkingStall" type="ParkingStall" x="200" y="97" level="0" width="6" height="8"/>
+  <object name="junkyard" group="ParkingStall" type="ParkingStall" x="200" y="97" level="0" width="6" height="8"/>
   <object name="junkyard" group="ParkingStall" type="ParkingStall" x="208" y="97" level="0" width="6" height="8"/>
+  <object name="trafficjams" group="ParkingStall" type="ParkingStall" x="234" y="261" level="0" width="12" height="8"/>
+  <object name="junkyard" group="ParkingStall" type="ParkingStall" x="234" y="251" level="0" width="12" height="8"/>
+  <object name="bad" group="ParkingStall" type="ParkingStall" x="250" y="251" level="0" width="3" height="8"/>
+  <object name="bad" group="ParkingStall" type="ParkingStall" x="247" y="255" level="0" width="3" height="4"/>
+  <object name="bad" group="ParkingStall" type="ParkingStall" x="250" y="261" level="0" width="3" height="8"/>
+  <object name="bad" group="ParkingStall" type="ParkingStall" x="247" y="261" level="0" width="3" height="4"/>
  </cell>
  <cell x="0" y="2" map="southwestdesertzone_0_2.tmx">
   <lot x="0" y="295" level="0" width="5" height="5" map="../tmx/buildings/wasteland/BarbedFenceSouthWest.tbx"/>
